@@ -1,0 +1,49 @@
+{
+  "id": "idea_trance",
+  "title": "trance_eurodance",
+  "bpm": 144,
+  "key": "A minor",
+  "time_signature": "4/4",
+  "bars": 4,
+  "style_targets": ["DJ Heartstring"],
+  "emotional_targets": ["nostalgic", "uplifting"],
+  "energy_target": { "start": 0.4, "end": 0.85 },
+  "sections": [
+    { "name": "loop_A", "start_bar": 1, "length_bars": 4, "energy": 0.6, "description": "emotional trance loop" }
+  ],
+  "tracks": [
+    {
+      "id": "track_chords",
+      "name": "supersaw_chords",
+      "role": "harmony",
+      "instrument_hint": "supersaw",
+      "mixer_hint": { "volume_db": -9, "pan": 0, "effects": ["reverb_large", "sidechain_light"] },
+      "notes": [
+        { "pitch": "A3", "midi": 57, "start_beat": 0, "duration_beats": 4, "velocity": 84 },
+        { "pitch": "C4", "midi": 60, "start_beat": 0, "duration_beats": 4, "velocity": 84 },
+        { "pitch": "E4", "midi": 64, "start_beat": 0, "duration_beats": 4, "velocity": 84 }
+      ],
+      "drum_events": [],
+      "is_drum": false
+    },
+    {
+      "id": "track_drums",
+      "name": "trance_kit",
+      "role": "drums",
+      "instrument_hint": "punchy kick",
+      "mixer_hint": { "volume_db": -5, "pan": 0, "effects": [] },
+      "notes": [],
+      "drum_events": [
+        { "instrument": "kick", "midi": 36, "start_beat": 0, "duration_beats": 0.25, "velocity": 115 },
+        { "instrument": "kick", "midi": 36, "start_beat": 1, "duration_beats": 0.25, "velocity": 115 },
+        { "instrument": "kick", "midi": 36, "start_beat": 2, "duration_beats": 0.25, "velocity": 115 },
+        { "instrument": "kick", "midi": 36, "start_beat": 3, "duration_beats": 0.25, "velocity": 115 }
+      ],
+      "is_drum": true
+    }
+  ],
+  "automation": [],
+  "decision_log": [],
+  "export_paths": {},
+  "user_feedback": []
+}

@@ -1,0 +1,40 @@
+# SEION Import Idea.pyscript
+# Runs inside FL Studio (Piano Roll > Scripting).
+# Reads data/fl_drop/latest_idea.json (written by SEION) and inserts the notes
+# of one track into the current Piano Roll. FL never touches the network.
+#
+# Change TRACK_ROLE to "harmony", "bass", "arp" or "melody".
+
+import json
+import os
+
+import flpianoroll as flp
+
+TRACK_ROLE = "harmony"
+IDEA_PATH = os.path.expanduser(r"~/seion-music-lab/data/fl_drop/latest_idea.json")
+
+
+def _ticks(beats):
+    return int(round(beats * flp.score.PPQ))
+
+
+def import_notes():
+    if not os.path.exists(IDEA_PATH):
+        return
+    with open(IDEA_PATH, "r", encoding="utf-8") as fh:
+        idea = json.load(fh)
+
+    track = next((t for t in idea.get("tracks", []) if t.get("role") == TRACK_ROLE), None)
+    if track is None:
+        return
+
+    for ev in track.get("notes", []):
+        note = flp.Note()
+        note.number = int(ev["midi"])
+        note.time = _ticks(ev["start_beat"])
+        note.length = _ticks(ev["duration_beats"])
+        note.velocity = float(ev["velocity"]) / 127.0
+        flp.score.addNote(note)
+
+
+import_notes()

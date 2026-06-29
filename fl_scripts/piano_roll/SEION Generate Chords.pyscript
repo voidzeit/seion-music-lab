@@ -1,0 +1,33 @@
+# SEION Generate Chords.pyscript
+# Insert the harmony track from data/fl_drop/latest_idea.json into the Piano Roll.
+
+import json
+import os
+
+import flpianoroll as flp
+
+IDEA_PATH = os.path.expanduser(r"~/seion-music-lab/data/fl_drop/latest_idea.json")
+
+
+def _ticks(beats):
+    return int(round(beats * flp.score.PPQ))
+
+
+def run():
+    if not os.path.exists(IDEA_PATH):
+        return
+    with open(IDEA_PATH, "r", encoding="utf-8") as fh:
+        idea = json.load(fh)
+    track = next((t for t in idea.get("tracks", []) if t.get("role") == "harmony"), None)
+    if not track:
+        return
+    for ev in track.get("notes", []):
+        note = flp.Note()
+        note.number = int(ev["midi"])
+        note.time = _ticks(ev["start_beat"])
+        note.length = _ticks(ev["duration_beats"])
+        note.velocity = float(ev["velocity"]) / 127.0
+        flp.score.addNote(note)
+
+
+run()

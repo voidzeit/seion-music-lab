@@ -1,0 +1,23 @@
+# SEION Humanize.pyscript
+# Gently humanise the notes currently in the Piano Roll: small timing and
+# velocity variation. Deterministic per run via a fixed seed.
+
+import random
+
+import flpianoroll as flp
+
+TIMING_TICKS = 6      # max timing nudge (PPQ is usually 96-960; small is good)
+VELOCITY_JITTER = 0.06  # fraction of full velocity range
+
+
+def run():
+    rng = random.Random(2026)
+    score = flp.score
+    for i in range(score.noteCount):
+        note = score.getNote(i)
+        note.time = max(0, note.time + rng.randint(-TIMING_TICKS, TIMING_TICKS))
+        v = note.velocity + rng.uniform(-VELOCITY_JITTER, VELOCITY_JITTER)
+        note.velocity = min(1.0, max(0.05, v))
+
+
+run()

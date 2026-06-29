@@ -1,0 +1,59 @@
+{
+  "id": "idea_melodic_techno",
+  "title": "melodic_techno",
+  "bpm": 124,
+  "key": "A minor",
+  "time_signature": "4/4",
+  "bars": 4,
+  "style_targets": ["NTO", "Stephan Bodzin"],
+  "emotional_targets": ["hypnotic", "dark"],
+  "energy_target": { "start": 0.25, "end": 0.7 },
+  "sections": [
+    { "name": "loop_A", "start_bar": 1, "length_bars": 4, "energy": 0.5, "description": "dark melodic techno" }
+  ],
+  "tracks": [
+    {
+      "id": "track_arp",
+      "name": "hypnotic_chord_arp",
+      "role": "arp",
+      "instrument_hint": "analog pluck",
+      "mixer_hint": { "volume_db": -12, "pan": 0.15, "effects": ["delay_1_8", "reverb_large"] },
+      "notes": [
+        { "pitch": "A4", "midi": 69, "start_beat": 0, "duration_beats": 0.45, "velocity": 80 },
+        { "pitch": "C5", "midi": 72, "start_beat": 0.5, "duration_beats": 0.45, "velocity": 72 },
+        { "pitch": "E5", "midi": 76, "start_beat": 1, "duration_beats": 0.45, "velocity": 80 },
+        { "pitch": "G5", "midi": 79, "start_beat": 1.5, "duration_beats": 0.45, "velocity": 72 }
+      ],
+      "drum_events": [],
+      "is_drum": false
+    },
+    {
+      "id": "track_bass",
+      "name": "offbeat_root_bass",
+      "role": "bass",
+      "instrument_hint": "mono synth bass",
+      "mixer_hint": { "volume_db": -7, "pan": 0, "effects": ["low_pass"] },
+      "notes": [
+        { "pitch": "A2", "midi": 45, "start_beat": 0.5, "duration_beats": 0.45, "velocity": 98 },
+        { "pitch": "A2", "midi": 45, "start_beat": 1.5, "duration_beats": 0.45, "velocity": 98 }
+      ],
+      "drum_events": [],
+      "is_drum": false
+    }
+  ],
+  "automation": [
+    {
+      "target_track": "hypnotic_chord_arp",
+      "param": "filter_cutoff",
+      "start_beat": 0,
+      "end_beat": 16,
+      "start_value": 0.25,
+      "end_value": 0.72,
+      "curve": "exp",
+      "description": "slow filter open"
+    }
+  ],
+  "decision_log": [],
+  "export_paths": {},
+  "user_feedback": []
+}

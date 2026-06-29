@@ -1,0 +1,28 @@
+{
+  "templates": [
+    {
+      "name": "warm_house_offbeat",
+      "bpm_range": [118, 126],
+      "swing": 0.12,
+      "bass": "offbeat_root",
+      "hats": "offbeat_closed",
+      "open_hat_every_bars": 2
+    },
+    {
+      "name": "melodic_techno_drive",
+      "bpm_range": [122, 126],
+      "swing": 0.05,
+      "bass": "offbeat_root",
+      "hats": "offbeat_closed",
+      "open_hat_every_bars": 2
+    },
+    {
+      "name": "trance_eurodance",
+      "bpm_range": [140, 150],
+      "swing": 0.0,
+      "bass": "offbeat_root",
+      "hats": "offbeat_closed",
+      "open_hat_every_bars": 1
+    }
+  ]
+}

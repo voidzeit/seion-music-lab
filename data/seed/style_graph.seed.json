@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    { "id": "artist_computer_data", "type": "artist", "label": "Computer Data" },
+    { "id": "artist_dj_heartstring", "type": "artist", "label": "DJ Heartstring" },
+    { "id": "artist_floating_points", "type": "artist", "label": "Floating Points" },
+    { "id": "artist_fred_again", "type": "artist", "label": "Fred again.." },
+    { "id": "artist_nto", "type": "artist", "label": "NTO" },
+    { "id": "artist_stephan_bodzin", "type": "artist", "label": "Stephan Bodzin" },
+
+    { "id": "trait_warm_chords", "type": "trait", "label": "warm chords" },
+    { "id": "trait_offbeat_bass", "type": "trait", "label": "offbeat bass" },
+    { "id": "trait_repeating_arp", "type": "trait", "label": "repeating arpeggio" },
+    { "id": "trait_filter_open", "type": "trait", "label": "slow filter opening" },
+    { "id": "trait_supersaw_chords", "type": "trait", "label": "supersaw chords" },
+    { "id": "trait_vocal_intimacy", "type": "trait", "label": "vocal intimacy" },
+    { "id": "trait_organic_texture", "type": "trait", "label": "organic texture" },
+    { "id": "trait_detuned_lead", "type": "trait", "label": "detuned analog lead" },
+
+    { "id": "technique_minor7", "type": "technique", "label": "minor 7 chords" },
+    { "id": "technique_four_on_floor", "type": "technique", "label": "four on the floor" },
+
+    { "id": "emotion_nostalgia", "type": "emotion", "label": "nostalgia" },
+    { "id": "emotion_warmth", "type": "emotion", "label": "warmth" },
+    { "id": "emotion_hypnosis", "type": "emotion", "label": "hypnosis" },
+    { "id": "emotion_drive", "type": "emotion", "label": "forward motion" }
+  ],
+  "edges": [
+    { "source": "artist_computer_data", "relation": "uses", "target": "trait_warm_chords", "weight": 0.85 },
+    { "source": "artist_computer_data", "relation": "uses", "target": "technique_minor7", "weight": 0.8 },
+    { "source": "artist_nto", "relation": "uses", "target": "trait_repeating_arp", "weight": 0.9 },
+    { "source": "artist_nto", "relation": "uses", "target": "trait_filter_open", "weight": 0.85 },
+    { "source": "artist_dj_heartstring", "relation": "uses", "target": "trait_offbeat_bass", "weight": 0.8 },
+    { "source": "artist_dj_heartstring", "relation": "uses", "target": "trait_supersaw_chords", "weight": 0.8 },
+    { "source": "artist_fred_again", "relation": "uses", "target": "trait_vocal_intimacy", "weight": 0.85 },
+    { "source": "artist_floating_points", "relation": "uses", "target": "trait_organic_texture", "weight": 0.85 },
+    { "source": "artist_stephan_bodzin", "relation": "uses", "target": "trait_detuned_lead", "weight": 0.9 },
+    { "source": "artist_stephan_bodzin", "relation": "uses", "target": "trait_repeating_arp", "weight": 0.75 },
+
+    { "source": "technique_minor7", "relation": "creates", "target": "emotion_nostalgia", "weight": 0.75 },
+    { "source": "trait_warm_chords", "relation": "creates", "target": "emotion_warmth", "weight": 0.8 },
+    { "source": "trait_repeating_arp", "relation": "creates", "target": "emotion_hypnosis", "weight": 0.8 },
+    { "source": "trait_filter_open", "relation": "increases", "target": "emotion_hypnosis", "weight": 0.6 },
+    { "source": "trait_offbeat_bass", "relation": "creates", "target": "emotion_drive", "weight": 0.8 }
+  ]
+}

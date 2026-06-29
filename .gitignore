@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.python-version
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+*.local
+
+# SEION generated data (keep folder structure via .gitkeep, ignore contents)
+data/projects/*
+data/exports/*
+data/midi/*
+data/rendered_audio/*
+data/memory/*
+data/logs/*
+!data/**/.gitkeep
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp

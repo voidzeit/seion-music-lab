@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "SEION Music Lab is a local-first AI-assisted music production lab for FL Studio.",
+    "The MVP must run fully offline using deterministic Python music generation.",
+    "Do not require LLM API calls for the core `seion-music generate` command.",
+    "All internal objects are Pydantic models defined in app/schemas.",
+    "Music theory lives in app/music, scoring in app/seion, export in app/export.",
+    "Every musical decision must be explainable and every track must be editable."
+  ],
+  "providers": {
+    "openrouter": { "enabled": true },
+    "openai": { "enabled": true },
+    "anthropic": { "enabled": true },
+    "ollama": { "enabled": true }
+  }
+}
