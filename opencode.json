@@ -206,7 +206,7 @@
       "git commit*": "ask",
       "git restore*": "ask",
       "git checkout*": "ask",
-      "git push*": "deny",
+      "git push*": "ask",
       "rm *": "deny",
       "del *": "deny",
       "Remove-Item *": "deny"
