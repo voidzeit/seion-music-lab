@@ -1,33 +1,66 @@
 # SEION Generate Bass.pyscript
-# Insert the bass track from data/fl_drop/latest_idea.json into the Piano Roll.
+# Runs INSIDE FL Studio (Piano Roll > Scripting). Reads the latest SEION idea
+# and inserts notes into the current Piano Roll. FL never touches the network;
+# SEION writes the JSON, FL just consumes it.
+#
+# TRACK_ROLE: "all", "harmony", "bass", "arp" or "melody".
+# Override the JSON location with the SEION_IDEA_PATH environment variable.
 
 import json
 import os
 
 import flpianoroll as flp
 
-IDEA_PATH = os.path.expanduser(r"~/seion-music-lab/data/fl_drop/latest_idea.json")
+TRACK_ROLE = "bass"
+
+_CANDIDATES = [
+    os.environ.get("SEION_IDEA_PATH", ""),
+    os.path.expanduser(r"~/seion-music-lab/data/fl_drop/latest_idea.json"),
+    os.path.expanduser(r"~/Documents/seion-music-lab/data/fl_drop/latest_idea.json"),
+    os.path.expanduser(
+        r"~/Documents/Image-Line/FL Studio/Settings/Piano roll scripts/latest_idea.json"
+    ),
+]
+
+
+def _idea_path():
+    for path in _CANDIDATES:
+        if path and os.path.exists(path):
+            return path
+    return None
 
 
 def _ticks(beats):
-    return int(round(beats * flp.score.PPQ))
+    return int(round(float(beats) * flp.score.PPQ))
 
 
-def run():
-    if not os.path.exists(IDEA_PATH):
-        return
-    with open(IDEA_PATH, "r", encoding="utf-8") as fh:
-        idea = json.load(fh)
-    track = next((t for t in idea.get("tracks", []) if t.get("role") == "bass"), None)
-    if not track:
-        return
+def _add_track_notes(track, color):
     for ev in track.get("notes", []):
         note = flp.Note()
         note.number = int(ev["midi"])
-        note.time = _ticks(ev["start_beat"])
-        note.length = _ticks(ev["duration_beats"])
-        note.velocity = float(ev["velocity"]) / 127.0
+        note.time = _ticks(ev.get("start_beat", 0))
+        note.length = max(1, _ticks(ev.get("duration_beats", 0.5)))
+        note.velocity = min(1.0, max(0.05, float(ev.get("velocity", 100)) / 127.0))
+        try:
+            note.color = color  # group/colour notes by source track
+        except Exception:
+            pass
         flp.score.addNote(note)
 
 
-run()
+def import_notes():
+    path = _idea_path()
+    if not path:
+        return
+    with open(path, "r", encoding="utf-8") as fh:
+        idea = json.load(fh)
+
+    melodic = [t for t in idea.get("tracks", []) if not t.get("is_drum") and t.get("notes")]
+    if TRACK_ROLE != "all":
+        melodic = [t for t in melodic if t.get("role") == TRACK_ROLE]
+
+    for color, track in enumerate(melodic):
+        _add_track_notes(track, color % 16)
+
+
+import_notes()

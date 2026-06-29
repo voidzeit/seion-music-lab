@@ -91,8 +91,16 @@ data/projects/<project_id>/
 Other commands:
 
 ```powershell
-seion-music list                       # list saved projects
+seion-music list                       # list saved projects (variations marked *)
 seion-music feedback <project_id> --rating 7 --comment "darker, less happy" --liked "bass" --disliked "arp too busy"
+
+# Sprint 2 — directed variations + score diff
+seion-music vary <project_id> --direction "darker, simpler arp, more drive"
+seion-music compare <project_id> <variation_id>
+
+# Sprint 4 — install the FL Studio Piano Roll scripts
+seion-music install-fl                  # or --dest "<FL>/Settings/Piano roll scripts"
+
 seion-music version
 ```
 

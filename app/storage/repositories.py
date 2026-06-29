@@ -45,6 +45,8 @@ class ProjectStore:
                     key=data.get("key", ""),
                     overall_score=score,
                     path=str(idea_file.parent),
+                    version=data.get("version", 1),
+                    parent_id=data.get("parent_id"),
                 )
             )
         return summaries

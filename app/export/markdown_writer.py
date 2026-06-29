@@ -58,6 +58,23 @@ def _decision_section(idea: MusicalIdea) -> str:
     return "\n\n".join(blocks)
 
 
+def _arrangement_section(idea: MusicalIdea) -> str:
+    sections = idea.sections
+    if not sections or len(sections) < 2:
+        return (
+            "_Single steady loop (no full arrangement). Ask SEION to vary it or "
+            "generate 16+ bars for an intro/build/drop structure._"
+        )
+    rows = ["| Section | Bars | Energy | Role |", "| --- | --- | --- | --- |"]
+    for sec in sections:
+        last = sec.start_bar + sec.length_bars - 1
+        bar_range = f"{sec.start_bar}-{last}" if sec.length_bars > 1 else f"{sec.start_bar}"
+        bar = round(sec.energy * 20)
+        meter = "#" * bar + "." * (20 - bar)
+        rows.append(f"| {sec.name} | {bar_range} | `{meter}` {sec.energy:.2f} | {sec.description} |")
+    return "\n".join(rows)
+
+
 def _track_section(idea: MusicalIdea) -> str:
     lines = []
     for track in idea.tracks:
@@ -140,15 +157,19 @@ hypnotic chord-tone arp, and a four-on-the-floor kit. Overall SEION score:
 | Style targets | {styles} |
 | Emotional targets | {emotions} |
 
-## 3. Track-by-track
+## 3. Arrangement
+
+{_arrangement_section(idea)}
+
+## 4. Track-by-track
 
 {_track_section(idea)}
 
-## 4. Why these decisions (musical decision log)
+## 5. Why these decisions (musical decision log)
 
 {_decision_section(idea)}
 
-## 5. What the SEION score means
+## 6. What the SEION score means
 
 {_score_table(idea)}
 
@@ -157,19 +178,19 @@ tension 15%, editability 10%, novelty 10%). It is a compass, not a grade — a
 "good" loop you love can score lower than a safe one. Use the per-row notes to
 decide what to push next.
 
-## 6. Suggested FL Studio sound design
+## 7. Suggested FL Studio sound design
 
 {_sound_design_section(sound_design)}
 
-## 7. How to import the MIDI into FL Studio
+## 8. How to import the MIDI into FL Studio
 
 {chr(10).join(f"{i}. {step}" for i, step in enumerate(_FL_IMPORT_STEPS, 1))}
 
-## 8. Validation notes
+## 9. Validation notes
 
 {warning_block}
 
-## 9. Suggested next modifications
+## 10. Suggested next modifications
 
 {_next_steps_section(critique)}
 """

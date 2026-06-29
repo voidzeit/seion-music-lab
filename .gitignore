@@ -29,6 +29,8 @@ data/midi/*
 data/rendered_audio/*
 data/memory/*
 data/logs/*
+data/fl_drop/*
+data/references/*
 !data/**/.gitkeep
 
 # OS noise

@@ -71,6 +71,15 @@ class MusicalIdea(BaseModel):
     export_paths: dict[str, Any] = Field(default_factory=dict)
     user_feedback: list[Feedback] = Field(default_factory=list)
 
+    # --- version lineage (Sprint 2) ------------------------------------------ #
+    # A variation is a child of the idea it was derived from. ``version`` is 1
+    # for an original, 2+ for variations; ``lineage`` lists ancestor ids oldest
+    # first; ``variation_request`` records the free-form "make it darker" ask.
+    parent_id: str | None = None
+    version: int = Field(default=1, ge=1)
+    variation_request: str = ""
+    lineage: list[str] = Field(default_factory=list)
+
     # --- convenience accessors -------------------------------------------------
     def track_by_role(self, role: str) -> Track | None:
         for track in self.tracks:

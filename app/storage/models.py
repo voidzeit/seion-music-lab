@@ -15,3 +15,5 @@ class ProjectSummary(BaseModel):
     key: str
     overall_score: float | None = None
     path: str
+    version: int = 1
+    parent_id: str | None = None

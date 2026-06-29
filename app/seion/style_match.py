@@ -66,14 +66,16 @@ def compute_style_match(
             value = 0.3
         checks.append((1.0, value))
 
-    # Four-on-the-floor.
+    # Four-on-the-floor. A full arrangement deliberately drops the kick in the
+    # intro/break, so we don't require a kick in *every* bar — only that the
+    # kit is four-on-the-floor across the bars that drive (>= ~55% of bars).
     if style_context.get("wants_four_on_floor", True):
         drums = next((t for t in idea.tracks if t.is_drum), None)
         kicks = (
             sum(1 for e in drums.drum_events if e.instrument == "kick") if drums else 0
         )
         expected = idea.bars * 4
-        value = 1.0 if kicks >= expected else (0.6 if kicks else 0.2)
+        value = 1.0 if kicks >= expected * 0.55 else (0.6 if kicks else 0.2)
         checks.append((1.0, value))
 
     # Tension via filter automation (a signature melodic-techno move).

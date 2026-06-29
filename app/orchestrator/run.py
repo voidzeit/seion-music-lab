@@ -53,6 +53,39 @@ def _slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")[:24] or "loop"
 
 
+def _catalog_project(idea: MusicalIdea, score: SeionScore) -> None:
+    """Record the project in the SQLite catalog (best-effort)."""
+    try:
+        from app.storage.sqlite_store import SqliteStore
+
+        SqliteStore().upsert_project(
+            {
+                "id": idea.id,
+                "parent_id": idea.parent_id,
+                "title": idea.title,
+                "bpm": idea.bpm,
+                "key": idea.key,
+                "bars": idea.bars,
+                "version": idea.version,
+                "overall": score.overall,
+                "direction": idea.variation_request,
+                "created_at": str(idea.created_at),
+            }
+        )
+    except Exception:  # pragma: no cover - catalog is best-effort
+        logger.debug("Project catalog update skipped for %s.", idea.id)
+
+
+def _update_drop_folder(project_dir: Path) -> None:
+    """Mirror the export into data/fl_drop for FL Studio (best-effort)."""
+    try:
+        from app.fl_bridge import update_drop_folder
+
+        update_drop_folder(project_dir)
+    except Exception:  # pragma: no cover - FL integration is optional
+        logger.debug("Drop folder update skipped.")
+
+
 def _new_project_id(request: UserRequest, store: ProjectStore) -> str:
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     base = f"idea_{stamp}_{_slugify(request.title or 'loop')}"
@@ -81,10 +114,15 @@ def run_generation(request: UserRequest, store: ProjectStore | None = None) -> G
     tracker.enter(GenerationState.PLAN)
     plan = planner.create_plan(request, style_context)
 
-    # 4. Compose.
+    # 4. Compose. Build the arrangement first so the drums and filter automation
+    #    can follow the sections.
     tracker.enter(GenerationState.COMPOSE)
-    tracks, automation, decisions = composer_agent.compose(request, style_context)
-    sections = arranger_agent.arrange(request, plan.energy_start, plan.energy_end)
+    sections = arranger_agent.arrange(
+        request, plan.energy_start, plan.energy_end, full=plan.use_full_arrangement
+    )
+    tracks, automation, decisions = composer_agent.compose(
+        request, style_context, sections=sections, swing=plan.swing, humanize=plan.humanize
+    )
 
     project_id = _new_project_id(request, store)
     idea = MusicalIdea(
@@ -142,6 +180,8 @@ def run_generation(request: UserRequest, store: ProjectStore | None = None) -> G
         "explanation": str(explanation_path),
         "idea": str(project_dir / "idea.json"),
         "seion_score": str(project_dir / "seion_score.json"),
+        # Stash the progression so a later variation can recover it.
+        "progression": request.progression,
     }
 
     # 9. Save version (idea.json + seion_score.json, now complete).
@@ -149,6 +189,11 @@ def run_generation(request: UserRequest, store: ProjectStore | None = None) -> G
     file_paths = tools.save_project(idea, project_dir)
     file_paths.update({k: v for k, v in midi_paths.items()})
     file_paths["explanation"] = str(explanation_path)
+
+    # Catalog the project (SQLite index + lineage) and refresh the FL drop
+    # folder. Both are best-effort — generation must not fail if they do.
+    _catalog_project(idea, score)
+    _update_drop_folder(project_dir)
 
     tracker.enter(GenerationState.EXPLAIN)
     tracker.enter(GenerationState.DONE)
