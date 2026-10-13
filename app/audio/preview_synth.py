@@ -226,7 +226,7 @@ def render_mode(bundle: Path, out: Path, mode: str, *, sample_rate: int = SAMPLE
 
     mix = sum(lanes.values(), np.zeros(length, dtype=np.float32))
     rms = float(np.sqrt(np.mean(mix.astype(np.float64) ** 2)))
-    peak = float(np.max(np.abs(mix)))
+    peak = max(float(np.max(np.abs(mix))), *(float(np.max(np.abs(lane))) for lane in lanes.values()))
     if rms < 1e-7:
         raise ValueError("empty/silent preview mix")
     gain = min(3.0, 0.126 / rms, 0.78 / peak)
