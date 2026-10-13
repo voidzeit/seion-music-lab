@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "project_id": "seion-001-cumbia-de-los-monjes",
+  "version": "v001",
+  "title": "La Cumbia de los Monjes — Rave Rework (working title)",
+  "bpm": 156,
+  "key": "G minor",
+  "time_signature": "4/4",
+  "bars": 160,
+  "creative_direction": "Cumbia sonidera percussion fused with 156 BPM fast trance/hardgroove/hardbounce; high energy Latin rave.",
+  "harmonic_plan": {
+    "progression": [
+      "Gm",
+      "Ebmaj7",
+      "Bb",
+      "F"
+    ],
+    "duration_bars_each": 1,
+    "status": "newly_composed_provisional"
+  },
+  "melody": {
+    "status": "original_rough_motif",
+    "source_recording_melody_included": false
+  },
+  "sections": [
+    {
+      "name": "intro",
+      "start_bar": 1,
+      "length_bars": 16,
+      "energy_target": 0.2,
+      "active_roles": [
+        "texture",
+        "harmony",
+        "latin_perc"
+      ]
+    },
+    {
+      "name": "groove",
+      "start_bar": 17,
+      "length_bars": 16,
+      "energy_target": 0.45,
+      "active_roles": [
+        "drums",
+        "latin_perc",
+        "bass",
+        "harmony"
+      ]
+    },
+    {
+      "name": "cumbia_tease",
+      "start_bar": 33,
+      "length_bars": 16,
+      "energy_target": 0.56,
+      "active_roles": [
+        "drums",
+        "latin_perc",
+        "bass",
+        "lead"
+      ]
+    },
+    {
+      "name": "build_1",
+      "start_bar": 49,
+      "length_bars": 16,
+      "energy_target": 0.7,
+      "active_roles": [
+        "drums",
+        "latin_perc",
+        "bass",
+        "arp",
+        "lead"
+      ]
+    },
+    {
+      "name": "drop_1",
+      "start_bar": 65,
+      "length_bars": 32,
+      "energy_target": 0.91,
+      "active_roles": [
+        "drums",
+        "latin_perc",
+        "bass",
+        "harmony",
+        "arp",
+        "lead"
+      ]
+    },
+    {
+      "name": "break",
+      "start_bar": 97,
+      "length_bars": 16,
+      "energy_target": 0.36,
+      "active_roles": [
+        "latin_perc",
+        "harmony",
+        "lead"
+      ]
+    },
+    {
+      "name": "build_2",
+      "start_bar": 113,
+      "length_bars": 16,
+      "energy_target": 0.8,
+      "active_roles": [
+        "drums",
+        "latin_perc",
+        "bass",
+        "arp",
+        "lead"
+      ]
+    },
+    {
+      "name": "final_drop",
+      "start_bar": 129,
+      "length_bars": 24,
+      "energy_target": 1.0,
+      "active_roles": [
+        "drums",
+        "latin_perc",
+        "bass",
+        "harmony",
+        "arp",
+        "lead"
+      ]
+    },
+    {
+      "name": "outro",
+      "start_bar": 153,
+      "length_bars": 8,
+      "energy_target": 0.44,
+      "active_roles": [
+        "drums",
+        "latin_perc",
+        "bass"
+      ]
+    }
+  ],
+  "track_roles": [
+    "drums",
+    "latin_perc",
+    "bass",
+    "chords",
+    "arp",
+    "lead"
+  ],
+  "midi_files": {
+    "drums": "midi/drums.mid",
+    "latin_perc": "midi/latin_perc.mid",
+    "bass": "midi/bass.mid",
+    "chords": "midi/chords.mid",
+    "arp": "midi/arp.mid",
+    "lead": "midi/lead.mid",
+    "full_song": "midi/full_song.mid"
+  },
+  "mix_target": "unmastered MIDI skeleton; no rendered audio yet",
+  "rights_status": "original_song_and_master_not_licensed"
+}

@@ -1,0 +1,19 @@
+project:
+  name: generic-project
+  type: generic
+  status: active
+commands:
+  install: []
+  test: []
+  run: []
+source_of_truth:
+  memory_root: .ai
+  canonical:
+    - .ai/manifest.yaml
+    - .ai/state.md
+    - .ai/decisions.md
+    - .ai/tasks.md
+    - .ai/tests.md
+    - .ai/graph.md
+runtime_paths:
+  - .ai/runtime/

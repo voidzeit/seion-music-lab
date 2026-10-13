@@ -1,0 +1,19 @@
+{
+  "description": "Surge XT patches (arp = factory FM Pluck: 3rd-party Trance Pluck emitted DC + only a start-up burst). Gains tuned on drop_1 renders so the master does not clip; no limiter yet.",
+  "patches": {
+    "kick": "C:/ProgramData/Surge XT/patches_3rdparty/Cybersoda/Drums/Destroyed Kick.fxp",
+    "bass": "C:/ProgramData/Surge XT/patches_3rdparty/Giana Brotherz/Basses/Rave Detuner.fxp",
+    "chords": "C:/ProgramData/Surge XT/patches_3rdparty/Giana Brotherz/Chords/Synth Stab Minor.fxp",
+    "arp": "C:/ProgramData/Surge XT/patches_factory/Plucks/FM Pluck.fxp",
+    "lead": "C:/ProgramData/Surge XT/patches_3rdparty/Argitoth/Leads/Trance Lead 1.fxp"
+  },
+  "gains_db": {
+    "kick": -6,
+    "bass": 3,
+    "drums": 5,
+    "lead": -2,
+    "arp": 7,
+    "chords": -1
+  },
+  "master_gain_db": -4.5
+}

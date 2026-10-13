@@ -33,6 +33,12 @@ data/fl_drop/*
 data/references/*
 !data/**/.gitkeep
 
+# Third-party reference audio (copyrighted; never commit)
+received/
+
+# Rendered audio and per-render Ardour session copies
+projects/*/versions/*/renders/
+
 # OS noise
 .DS_Store
 Thumbs.db
@@ -41,3 +47,4 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+.ai/runtime/

@@ -1,0 +1,6 @@
+{
+  "description": "Seed v2: Surge XT on kick/bass/chords/arp/lead, GM kit on drums (+ latin perc merged in).",
+  "kit": "kits/hard_rave_v1.json",
+  "merge": {"latin_perc": "drums"},
+  "split": {"kick": {"from": "drums", "notes": [35, 36]}}
+}

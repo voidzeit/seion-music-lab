@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project_id": "seion-001-cumbia-de-los-monjes",
+  "version": "v001",
+  "daw": "Ardour",
+  "execution_mode": "proposed_headless_poc_not_verified",
+  "bpm": 156,
+  "midi_paths": [
+    "../midi/drums.mid",
+    "../midi/latin_perc.mid",
+    "../midi/bass.mid",
+    "../midi/chords.mid",
+    "../midi/arp.mid",
+    "../midi/lead.mid"
+  ],
+  "render_request": {
+    "master": true,
+    "stems": true,
+    "format": "wav",
+    "sample_rate": 48000
+  },
+  "required_gate": "On Windows, verify installed binary names/options, playable instrument, and non-silent WAV before claiming successful headless operation."
+}

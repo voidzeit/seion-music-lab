@@ -1,0 +1,872 @@
+# Graph
+
+Schema version: `0.2`
+
+## Nodes
+
+- `repository` — seion-music-lab (`repo:seion-music-lab`)
+- `memory` — .ai/manifest.yaml (`memory:manifest`)
+- `memory` — .ai/state.md (`memory:state`)
+- `memory` — .ai/decisions.md (`memory:decisions`)
+- `memory` — .ai/tasks.md (`memory:tasks`)
+- `memory` — .ai/tests.md (`memory:tests`)
+- `memory` — .ai/graph.md (`memory:graph`)
+- `file` — .ai/decisions.md (`file:.ai/decisions.md`)
+- `directory` — .ai (`dir:.ai`)
+- `file` — .ai/evidence/README.md (`file:.ai/evidence/README.md`)
+- `directory` — .ai/evidence (`dir:.ai/evidence`)
+- `file` — .ai/graph.md (`file:.ai/graph.md`)
+- `file` — .ai/machine/artifacts.json (`file:.ai/machine/artifacts.json`)
+- `directory` — .ai/machine (`dir:.ai/machine`)
+- `file` — .ai/machine/context_explain.json (`file:.ai/machine/context_explain.json`)
+- `file` — .ai/machine/context_units.json (`file:.ai/machine/context_units.json`)
+- `file` — .ai/machine/files.json (`file:.ai/machine/files.json`)
+- `file` — .ai/machine/validation.json (`file:.ai/machine/validation.json`)
+- `file` — .ai/manifest.yaml (`file:.ai/manifest.yaml`)
+- `file` — .ai/packs/quick.md (`file:.ai/packs/quick.md`)
+- `directory` — .ai/packs (`dir:.ai/packs`)
+- `context_pack` — .ai/packs/quick.md (`pack:.ai/packs/quick.md`)
+- `file` — .ai/state.md (`file:.ai/state.md`)
+- `file` — .ai/tasks.md (`file:.ai/tasks.md`)
+- `file` — .ai/tests.md (`file:.ai/tests.md`)
+- `file` — .amo.yaml (`file:.amo.yaml`)
+- `file` — AGENTS.md (`file:AGENTS.md`)
+- `file` — README.md (`file:README.md`)
+- `file` — app/__init__.py (`file:app/__init__.py`)
+- `directory` — app (`dir:app`)
+- `file` — app/agents/__init__.py (`file:app/agents/__init__.py`)
+- `directory` — app/agents (`dir:app/agents`)
+- `file` — app/agents/arranger_agent.py (`file:app/agents/arranger_agent.py`)
+- `file` — app/agents/composer_agent.py (`file:app/agents/composer_agent.py`)
+- `file` — app/agents/critic_agent.py (`file:app/agents/critic_agent.py`)
+- `file` — app/agents/intake_agent.py (`file:app/agents/intake_agent.py`)
+- `file` — app/agents/reference_agent.py (`file:app/agents/reference_agent.py`)
+- `file` — app/agents/seion_agent.py (`file:app/agents/seion_agent.py`)
+- `file` — app/agents/sound_design_agent.py (`file:app/agents/sound_design_agent.py`)
+- `file` — app/agents/teacher_agent.py (`file:app/agents/teacher_agent.py`)
+- `file` — app/agents/variation_agent.py (`file:app/agents/variation_agent.py`)
+- `file` — app/cli/__init__.py (`file:app/cli/__init__.py`)
+- `directory` — app/cli (`dir:app/cli`)
+- `file` — app/cli/seion_music.py (`file:app/cli/seion_music.py`)
+- `file` — app/config.py (`file:app/config.py`)
+- `file` — app/exceptions.py (`file:app/exceptions.py`)
+- `file` — app/export/__init__.py (`file:app/export/__init__.py`)
+- `directory` — app/export (`dir:app/export`)
+- `file` — app/export/fl_script_writer.py (`file:app/export/fl_script_writer.py`)
+- `file` — app/export/json_writer.py (`file:app/export/json_writer.py`)
+- `file` — app/export/markdown_writer.py (`file:app/export/markdown_writer.py`)
+- `file` — app/export/midi_writer.py (`file:app/export/midi_writer.py`)
+- `file` — app/fl_bridge/__init__.py (`file:app/fl_bridge/__init__.py`)
+- `directory` — app/fl_bridge (`dir:app/fl_bridge`)
+- `file` — app/fl_bridge/install_scripts.py (`file:app/fl_bridge/install_scripts.py`)
+- `file` — app/fl_bridge/midi_drop_folder.py (`file:app/fl_bridge/midi_drop_folder.py`)
+- `file` — app/fl_bridge/paths.py (`file:app/fl_bridge/paths.py`)
+- `file` — app/fl_bridge/piano_roll_script_template.py (`file:app/fl_bridge/piano_roll_script_template.py`)
+- `file` — app/logging_config.py (`file:app/logging_config.py`)
+- `file` — app/main.py (`file:app/main.py`)
+- `file` — app/music/__init__.py (`file:app/music/__init__.py`)
+- `directory` — app/music (`dir:app/music`)
+- `file` — app/music/analysis.py (`file:app/music/analysis.py`)
+- `file` — app/music/arpeggios.py (`file:app/music/arpeggios.py`)
+- `file` — app/music/arrangement.py (`file:app/music/arrangement.py`)
+- `file` — app/music/automation.py (`file:app/music/automation.py`)
+- `file` — app/music/bass.py (`file:app/music/bass.py`)
+- `file` — app/music/chords.py (`file:app/music/chords.py`)
+- `file` — app/music/constants.py (`file:app/music/constants.py`)
+- `file` — app/music/drums.py (`file:app/music/drums.py`)
+- `file` — app/music/groove.py (`file:app/music/groove.py`)
+- `file` — app/music/melody.py (`file:app/music/melody.py`)
+- `file` — app/music/notes.py (`file:app/music/notes.py`)
+- `file` — app/music/rhythm.py (`file:app/music/rhythm.py`)
+- `file` — app/music/scales.py (`file:app/music/scales.py`)
+- `file` — app/music/validation.py (`file:app/music/validation.py`)
+- `file` — app/music/variations.py (`file:app/music/variations.py`)
+- `file` — app/music/voicings.py (`file:app/music/voicings.py`)
+- `file` — app/orchestrator/__init__.py (`file:app/orchestrator/__init__.py`)
+- `directory` — app/orchestrator (`dir:app/orchestrator`)
+- `file` — app/orchestrator/guardrails.py (`file:app/orchestrator/guardrails.py`)
+- `file` — app/orchestrator/model_router.py (`file:app/orchestrator/model_router.py`)
+- `file` — app/orchestrator/planner.py (`file:app/orchestrator/planner.py`)
+- `file` — app/orchestrator/run.py (`file:app/orchestrator/run.py`)
+- `file` — app/orchestrator/state_machine.py (`file:app/orchestrator/state_machine.py`)
+- `file` — app/orchestrator/tool_registry.py (`file:app/orchestrator/tool_registry.py`)
+- `file` — app/orchestrator/variation_run.py (`file:app/orchestrator/variation_run.py`)
+- `file` — app/providers/__init__.py (`file:app/providers/__init__.py`)
+- `directory` — app/providers (`dir:app/providers`)
+- `file` — app/providers/anthropic_provider.py (`file:app/providers/anthropic_provider.py`)
+- `file` — app/providers/base.py (`file:app/providers/base.py`)
+- `file` — app/providers/ollama_provider.py (`file:app/providers/ollama_provider.py`)
+- `file` — app/providers/openai_provider.py (`file:app/providers/openai_provider.py`)
+- `file` — app/providers/openrouter_provider.py (`file:app/providers/openrouter_provider.py`)
+- `file` — app/providers/provider_errors.py (`file:app/providers/provider_errors.py`)
+- `file` — app/schemas/__init__.py (`file:app/schemas/__init__.py`)
+- `directory` — app/schemas (`dir:app/schemas`)
+- `file` — app/schemas/automation_event.py (`file:app/schemas/automation_event.py`)
+- `file` — app/schemas/drum_event.py (`file:app/schemas/drum_event.py`)
+- `file` — app/schemas/feedback.py (`file:app/schemas/feedback.py`)
+- `file` — app/schemas/musical_idea.py (`file:app/schemas/musical_idea.py`)
+- `file` — app/schemas/note_event.py (`file:app/schemas/note_event.py`)
+- `file` — app/schemas/seion_score.py (`file:app/schemas/seion_score.py`)
+- `file` — app/schemas/track.py (`file:app/schemas/track.py`)
+- `file` — app/schemas/user_request.py (`file:app/schemas/user_request.py`)
+- `file` — app/seion/__init__.py (`file:app/seion/__init__.py`)
+- `directory` — app/seion (`dir:app/seion`)
+- `file` — app/seion/edges.py (`file:app/seion/edges.py`)
+- `file` — app/seion/graph.py (`file:app/seion/graph.py`)
+- `file` — app/seion/memory.py (`file:app/seion/memory.py`)
+- `file` — app/seion/nodes.py (`file:app/seion/nodes.py`)
+- `file` — app/seion/novelty.py (`file:app/seion/novelty.py`)
+- `file` — app/seion/preference_model.py (`file:app/seion/preference_model.py`)
+- `file` — app/seion/scorer.py (`file:app/seion/scorer.py`)
+- `file` — app/seion/style_match.py (`file:app/seion/style_match.py`)
+- `file` — app/seion/tension_curve.py (`file:app/seion/tension_curve.py`)
+- `file` — app/storage/__init__.py (`file:app/storage/__init__.py`)
+- `directory` — app/storage (`dir:app/storage`)
+- `file` — app/storage/db.py (`file:app/storage/db.py`)
+- `file` — app/storage/models.py (`file:app/storage/models.py`)
+- `file` — app/storage/repositories.py (`file:app/storage/repositories.py`)
+- `file` — app/storage/sqlite_store.py (`file:app/storage/sqlite_store.py`)
+- `file` — app/tools/__init__.py (`file:app/tools/__init__.py`)
+- `directory` — app/tools (`dir:app/tools`)
+- `file` — app/tools/compare_versions.py (`file:app/tools/compare_versions.py`)
+- `file` — app/tools/create_fl_piano_roll_script.py (`file:app/tools/create_fl_piano_roll_script.py`)
+- `file` — app/tools/export_markdown.py (`file:app/tools/export_markdown.py`)
+- `file` — app/tools/export_midi.py (`file:app/tools/export_midi.py`)
+- `file` — app/tools/generate_arp.py (`file:app/tools/generate_arp.py`)
+- `file` — app/tools/generate_arrangement.py (`file:app/tools/generate_arrangement.py`)
+- `file` — app/tools/generate_bassline.py (`file:app/tools/generate_bassline.py`)
+- `file` — app/tools/generate_chords.py (`file:app/tools/generate_chords.py`)
+- `file` — app/tools/generate_drums.py (`file:app/tools/generate_drums.py`)
+- `file` — app/tools/log_feedback.py (`file:app/tools/log_feedback.py`)
+- `file` — app/tools/save_version.py (`file:app/tools/save_version.py`)
+- `file` — app/tools/score_idea.py (`file:app/tools/score_idea.py`)
+- `file` — conftest.py (`file:conftest.py`)
+- `file` — data/seed/groove_templates.seed.json (`file:data/seed/groove_templates.seed.json`)
+- `directory` — data (`dir:data`)
+- `directory` — data/seed (`dir:data/seed`)
+- `file` — data/seed/style_graph.seed.json (`file:data/seed/style_graph.seed.json`)
+- `file` — data/seed/user_preferences.seed.json (`file:data/seed/user_preferences.seed.json`)
+- `file` — docs/agent_contract.md (`file:docs/agent_contract.md`)
+- `directory` — docs (`dir:docs`)
+- `file` — docs/architecture.md (`file:docs/architecture.md`)
+- `file` — docs/fl_integration.md (`file:docs/fl_integration.md`)
+- `file` — docs/musical_idea_schema.md (`file:docs/musical_idea_schema.md`)
+- `file` — docs/roadmap.md (`file:docs/roadmap.md`)
+- `file` — docs/seion_engine.md (`file:docs/seion_engine.md`)
+- `file` — docs/style_language.md (`file:docs/style_language.md`)
+- `file` — fl_scripts/midi_controller/device_SEION_Controller.py (`file:fl_scripts/midi_controller/device_SEION_Controller.py`)
+- `directory` — fl_scripts (`dir:fl_scripts`)
+- `directory` — fl_scripts/midi_controller (`dir:fl_scripts/midi_controller`)
+- `file` — opencode.json (`file:opencode.json`)
+- `file` — prompts/styles/computer_data_healing.md (`file:prompts/styles/computer_data_healing.md`)
+- `directory` — prompts (`dir:prompts`)
+- `directory` — prompts/styles (`dir:prompts/styles`)
+- `file` — prompts/styles/dj_heartstring.md (`file:prompts/styles/dj_heartstring.md`)
+- `file` — prompts/styles/floating_points.md (`file:prompts/styles/floating_points.md`)
+- `file` — prompts/styles/fred_again.md (`file:prompts/styles/fred_again.md`)
+- `file` — prompts/styles/nto.md (`file:prompts/styles/nto.md`)
+- `file` — prompts/styles/stephan_bodzin.md (`file:prompts/styles/stephan_bodzin.md`)
+- `file` — prompts/system/composer.md (`file:prompts/system/composer.md`)
+- `directory` — prompts/system (`dir:prompts/system`)
+- `file` — prompts/system/critic.md (`file:prompts/system/critic.md`)
+- `file` — prompts/system/orchestrator.md (`file:prompts/system/orchestrator.md`)
+- `file` — prompts/system/reference_analyst.md (`file:prompts/system/reference_analyst.md`)
+- `file` — prompts/system/sound_designer.md (`file:prompts/system/sound_designer.md`)
+- `file` — prompts/system/teacher.md (`file:prompts/system/teacher.md`)
+- `file` — prompts/tasks/create_variations.md (`file:prompts/tasks/create_variations.md`)
+- `directory` — prompts/tasks (`dir:prompts/tasks`)
+- `file` — prompts/tasks/critique_loop.md (`file:prompts/tasks/critique_loop.md`)
+- `file` — prompts/tasks/generate_loop.md (`file:prompts/tasks/generate_loop.md`)
+- `file` — prompts/tasks/remake_structure.md (`file:prompts/tasks/remake_structure.md`)
+- `file` — pyproject.toml (`file:pyproject.toml`)
+- `file` — seion_music_lab.egg-info/SOURCES.txt (`file:seion_music_lab.egg-info/SOURCES.txt`)
+- `directory` — seion_music_lab.egg-info (`dir:seion_music_lab.egg-info`)
+- `file` — seion_music_lab.egg-info/dependency_links.txt (`file:seion_music_lab.egg-info/dependency_links.txt`)
+- `file` — seion_music_lab.egg-info/entry_points.txt (`file:seion_music_lab.egg-info/entry_points.txt`)
+- `file` — seion_music_lab.egg-info/requires.txt (`file:seion_music_lab.egg-info/requires.txt`)
+- `file` — seion_music_lab.egg-info/top_level.txt (`file:seion_music_lab.egg-info/top_level.txt`)
+- `file` — tests/fixtures/idea_basic_house.json (`file:tests/fixtures/idea_basic_house.json`)
+- `directory` — tests (`dir:tests`)
+- `directory` — tests/fixtures (`dir:tests/fixtures`)
+- `test` — tests/fixtures/idea_basic_house.json (`test:tests/fixtures/idea_basic_house.json`)
+- `file` — tests/fixtures/idea_melodic_techno.json (`file:tests/fixtures/idea_melodic_techno.json`)
+- `test` — tests/fixtures/idea_melodic_techno.json (`test:tests/fixtures/idea_melodic_techno.json`)
+- `file` — tests/fixtures/idea_trance.json (`file:tests/fixtures/idea_trance.json`)
+- `test` — tests/fixtures/idea_trance.json (`test:tests/fixtures/idea_trance.json`)
+- `file` — tests/test_arrangement.py (`file:tests/test_arrangement.py`)
+- `test` — tests/test_arrangement.py (`test:tests/test_arrangement.py`)
+- `file` — tests/test_chords.py (`file:tests/test_chords.py`)
+- `test` — tests/test_chords.py (`test:tests/test_chords.py`)
+- `file` — tests/test_fixtures.py (`file:tests/test_fixtures.py`)
+- `test` — tests/test_fixtures.py (`test:tests/test_fixtures.py`)
+- `file` — tests/test_fl_bridge.py (`file:tests/test_fl_bridge.py`)
+- `test` — tests/test_fl_bridge.py (`test:tests/test_fl_bridge.py`)
+- `file` — tests/test_midi_export.py (`file:tests/test_midi_export.py`)
+- `test` — tests/test_midi_export.py (`test:tests/test_midi_export.py`)
+- `file` — tests/test_orchestrator.py (`file:tests/test_orchestrator.py`)
+- `test` — tests/test_orchestrator.py (`test:tests/test_orchestrator.py`)
+- `file` — tests/test_scales.py (`file:tests/test_scales.py`)
+- `test` — tests/test_scales.py (`test:tests/test_scales.py`)
+- `file` — tests/test_seion_score.py (`file:tests/test_seion_score.py`)
+- `test` — tests/test_seion_score.py (`test:tests/test_seion_score.py`)
+- `file` — tests/test_sqlite_memory.py (`file:tests/test_sqlite_memory.py`)
+- `test` — tests/test_sqlite_memory.py (`test:tests/test_sqlite_memory.py`)
+- `file` — tests/test_variations.py (`file:tests/test_variations.py`)
+- `test` — tests/test_variations.py (`test:tests/test_variations.py`)
+- `module` — app (`module:app`)
+- `module` — app.agents (`module:app.agents`)
+- `module` — app.agents.arranger_agent (`module:app.agents.arranger_agent`)
+- `module` — __future__ (`module:__future__`)
+- `module` — app.music (`module:app.music`)
+- `module` — app.schemas (`module:app.schemas`)
+- `symbol` — arrange (`symbol:app.agents.arranger_agent:arrange`)
+- `module` — app.agents.composer_agent (`module:app.agents.composer_agent`)
+- `module` — app.music.constants (`module:app.music.constants`)
+- `symbol` — compose (`symbol:app.agents.composer_agent:compose`)
+- `symbol` — _drum_decision (`symbol:app.agents.composer_agent:_drum_decision`)
+- `symbol` — _automation_decision (`symbol:app.agents.composer_agent:_automation_decision`)
+- `symbol` — _arrangement_decision (`symbol:app.agents.composer_agent:_arrangement_decision`)
+- `module` — app.agents.critic_agent (`module:app.agents.critic_agent`)
+- `symbol` — critique (`symbol:app.agents.critic_agent:critique`)
+- `module` — app.agents.intake_agent (`module:app.agents.intake_agent`)
+- `module` — re (`module:re`)
+- `symbol` — normalize (`symbol:app.agents.intake_agent:normalize`)
+- `symbol` — parse_prompt (`symbol:app.agents.intake_agent:parse_prompt`)
+- `symbol` — _default_title (`symbol:app.agents.intake_agent:_default_title`)
+- `module` — app.agents.reference_agent (`module:app.agents.reference_agent`)
+- `symbol` — _lookup (`symbol:app.agents.reference_agent:_lookup`)
+- `symbol` — traits_for (`symbol:app.agents.reference_agent:traits_for`)
+- `symbol` — build_style_context (`symbol:app.agents.reference_agent:build_style_context`)
+- `module` — app.agents.seion_agent (`module:app.agents.seion_agent`)
+- `module` — app.seion (`module:app.seion`)
+- `symbol` — evaluate (`symbol:app.agents.seion_agent:evaluate`)
+- `module` — app.agents.sound_design_agent (`module:app.agents.sound_design_agent`)
+- `symbol` — suggest (`symbol:app.agents.sound_design_agent:suggest`)
+- `module` — app.agents.teacher_agent (`module:app.agents.teacher_agent`)
+- `module` — app.export.markdown_writer (`module:app.export.markdown_writer`)
+- `symbol` — explain (`symbol:app.agents.teacher_agent:explain`)
+- `module` — app.agents.variation_agent (`module:app.agents.variation_agent`)
+- `module` — app.music.variations (`module:app.music.variations`)
+- `symbol` — _has (`symbol:app.agents.variation_agent:_has`)
+- `symbol` — parse_direction (`symbol:app.agents.variation_agent:parse_direction`)
+- `module` — app.cli (`module:app.cli`)
+- `module` — app.cli.seion_music (`module:app.cli.seion_music`)
+- `module` — typer (`module:typer`)
+- `module` — rich.console (`module:rich.console`)
+- `module` — rich.panel (`module:rich.panel`)
+- `module` — rich.table (`module:rich.table`)
+- `module` — app.config (`module:app.config`)
+- `module` — app.orchestrator (`module:app.orchestrator`)
+- `module` — app.tools (`module:app.tools`)
+- `symbol` — _split (`symbol:app.cli.seion_music:_split`)
+- `symbol` — _delta_table (`symbol:app.cli.seion_music:_delta_table`)
+- `symbol` — generate (`symbol:app.cli.seion_music:generate`)
+- `symbol` — feedback (`symbol:app.cli.seion_music:feedback`)
+- `symbol` — vary (`symbol:app.cli.seion_music:vary`)
+- `symbol` — compare (`symbol:app.cli.seion_music:compare`)
+- `symbol` — list_projects (`symbol:app.cli.seion_music:list_projects`)
+- `symbol` — install_fl (`symbol:app.cli.seion_music:install_fl`)
+- `symbol` — version (`symbol:app.cli.seion_music:version`)
+- `module` — os (`module:os`)
+- `module` — functools (`module:functools`)
+- `module` — pathlib (`module:pathlib`)
+- `module` — pydantic (`module:pydantic`)
+- `symbol` — _env_path (`symbol:app.config:_env_path`)
+- `symbol` — Settings (`symbol:app.config:Settings`)
+- `symbol` — get_settings (`symbol:app.config:get_settings`)
+- `module` — app.exceptions (`module:app.exceptions`)
+- `symbol` — SeionError (`symbol:app.exceptions:SeionError`)
+- `symbol` — ConfigError (`symbol:app.exceptions:ConfigError`)
+- `symbol` — MusicTheoryError (`symbol:app.exceptions:MusicTheoryError`)
+- `symbol` — GenerationError (`symbol:app.exceptions:GenerationError`)
+- `symbol` — ValidationError (`symbol:app.exceptions:ValidationError`)
+- `symbol` — ExportError (`symbol:app.exceptions:ExportError`)
+- `symbol` — ProviderError (`symbol:app.exceptions:ProviderError`)
+- `symbol` — ProviderNotConfigured (`symbol:app.exceptions:ProviderNotConfigured`)
+- `module` — app.export (`module:app.export`)
+- `module` — app.export.json_writer (`module:app.export.json_writer`)
+- `module` — app.export.midi_writer (`module:app.export.midi_writer`)
+- `module` — app.export.fl_script_writer (`module:app.export.fl_script_writer`)
+- `module` — app.fl_bridge.piano_roll_script_template (`module:app.fl_bridge.piano_roll_script_template`)
+- `symbol` — write_piano_roll_import_script (`symbol:app.export.fl_script_writer:write_piano_roll_import_script`)
+- `symbol` — write_all_piano_roll_scripts (`symbol:app.export.fl_script_writer:write_all_piano_roll_scripts`)
+- `module` — json (`module:json`)
+- `module` — typing (`module:typing`)
+- `symbol` — write_json (`symbol:app.export.json_writer:write_json`)
+- `symbol` — _score_table (`symbol:app.export.markdown_writer:_score_table`)
+- `symbol` — _decision_section (`symbol:app.export.markdown_writer:_decision_section`)
+- `symbol` — _arrangement_section (`symbol:app.export.markdown_writer:_arrangement_section`)
+- `symbol` — _track_section (`symbol:app.export.markdown_writer:_track_section`)
+- `symbol` — _sound_design_section (`symbol:app.export.markdown_writer:_sound_design_section`)
+- `symbol` — _next_steps_section (`symbol:app.export.markdown_writer:_next_steps_section`)
+- `symbol` — build_explanation_markdown (`symbol:app.export.markdown_writer:build_explanation_markdown`)
+- `symbol` — write_markdown (`symbol:app.export.markdown_writer:write_markdown`)
+- `module` — mido (`module:mido`)
+- `symbol` — _time_signature_parts (`symbol:app.export.midi_writer:_time_signature_parts`)
+- `symbol` — _track_event_tuples (`symbol:app.export.midi_writer:_track_event_tuples`)
+- `symbol` — _build_midi_track (`symbol:app.export.midi_writer:_build_midi_track`)
+- `symbol` — write_track_midi (`symbol:app.export.midi_writer:write_track_midi`)
+- `symbol` — write_full_loop_midi (`symbol:app.export.midi_writer:write_full_loop_midi`)
+- `module` — app.fl_bridge (`module:app.fl_bridge`)
+- `module` — app.fl_bridge.install_scripts (`module:app.fl_bridge.install_scripts`)
+- `module` — app.fl_bridge.midi_drop_folder (`module:app.fl_bridge.midi_drop_folder`)
+- `module` — shutil (`module:shutil`)
+- `module` — app.fl_bridge.paths (`module:app.fl_bridge.paths`)
+- `symbol` — install_piano_roll_scripts (`symbol:app.fl_bridge.install_scripts:install_piano_roll_scripts`)
+- `symbol` — update_drop_folder (`symbol:app.fl_bridge.midi_drop_folder:update_drop_folder`)
+- `symbol` — fl_user_data_dir (`symbol:app.fl_bridge.paths:fl_user_data_dir`)
+- `symbol` — fl_piano_roll_scripts_dir (`symbol:app.fl_bridge.paths:fl_piano_roll_scripts_dir`)
+- `symbol` — build_import_script (`symbol:app.fl_bridge.piano_roll_script_template:build_import_script`)
+- `module` — app.logging_config (`module:app.logging_config`)
+- `module` — logging (`module:logging`)
+- `symbol` — configure_logging (`symbol:app.logging_config:configure_logging`)
+- `symbol` — get_logger (`symbol:app.logging_config:get_logger`)
+- `module` — app.main (`module:app.main`)
+- `symbol` — create_app (`symbol:app.main:create_app`)
+- `module` — app.music.arpeggios (`module:app.music.arpeggios`)
+- `module` — app.music.arrangement (`module:app.music.arrangement`)
+- `module` — app.music.automation (`module:app.music.automation`)
+- `module` — app.music.bass (`module:app.music.bass`)
+- `module` — app.music.chords (`module:app.music.chords`)
+- `module` — app.music.drums (`module:app.music.drums`)
+- `module` — app.music.notes (`module:app.music.notes`)
+- `module` — app.music.scales (`module:app.music.scales`)
+- `module` — app.music.voicings (`module:app.music.voicings`)
+- `module` — app.music.analysis (`module:app.music.analysis`)
+- `symbol` — all_melodic_notes (`symbol:app.music.analysis:all_melodic_notes`)
+- `symbol` — total_melodic_note_count (`symbol:app.music.analysis:total_melodic_note_count`)
+- `symbol` — notes_per_bar (`symbol:app.music.analysis:notes_per_bar`)
+- `symbol` — in_scale_ratio (`symbol:app.music.analysis:in_scale_ratio`)
+- `symbol` — bass_follows_roots_ratio (`symbol:app.music.analysis:bass_follows_roots_ratio`)
+- `symbol` — unique_pitch_classes (`symbol:app.music.analysis:unique_pitch_classes`)
+- `symbol` — role_set (`symbol:app.music.analysis:role_set`)
+- `symbol` — has_harmony (`symbol:app.music.analysis:has_harmony`)
+- `symbol` — has_bass (`symbol:app.music.analysis:has_bass`)
+- `symbol` — has_rhythm (`symbol:app.music.analysis:has_rhythm`)
+- `symbol` — uses_seventh_or_sixth_chords (`symbol:app.music.analysis:uses_seventh_or_sixth_chords`)
+- `symbol` — generate_arp_track (`symbol:app.music.arpeggios:generate_arp_track`)
+- `symbol` — build_loop_section (`symbol:app.music.arrangement:build_loop_section`)
+- `symbol` — _distribute_bars (`symbol:app.music.arrangement:_distribute_bars`)
+- `symbol` — build_song_sections (`symbol:app.music.arrangement:build_song_sections`)
+- `symbol` — filter_open_automation (`symbol:app.music.automation:filter_open_automation`)
+- `symbol` — section_filter_automation (`symbol:app.music.automation:section_filter_automation`)
+- `module` — app.music.rhythm (`module:app.music.rhythm`)
+- `symbol` — generate_bass_track (`symbol:app.music.bass:generate_bass_track`)
+- `module` — dataclasses (`module:dataclasses`)
+- `symbol` — Chord (`symbol:app.music.chords:Chord`)
+- `symbol` — parse_chord_symbol (`symbol:app.music.chords:parse_chord_symbol`)
+- `symbol` — chord_notes (`symbol:app.music.chords:chord_notes`)
+- `symbol` — chord_root_midi (`symbol:app.music.chords:chord_root_midi`)
+- `module` — app.music.groove (`module:app.music.groove`)
+- `symbol` — _section_modes (`symbol:app.music.drums:_section_modes`)
+- `symbol` — _pos (`symbol:app.music.drums:_pos`)
+- `symbol` — _vel (`symbol:app.music.drums:_vel`)
+- `symbol` — _add (`symbol:app.music.drums:_add`)
+- `symbol` — _bar_main (`symbol:app.music.drums:_bar_main`)
+- `symbol` — _bar_intro (`symbol:app.music.drums:_bar_intro`)
+- `symbol` — _bar_build (`symbol:app.music.drums:_bar_build`)
+- `symbol` — _bar_break (`symbol:app.music.drums:_bar_break`)
+- `symbol` — _bar_outro (`symbol:app.music.drums:_bar_outro`)
+- `symbol` — _add_fill (`symbol:app.music.drums:_add_fill`)
+- `symbol` — generate_drum_track (`symbol:app.music.drums:generate_drum_track`)
+- `module` — random (`module:random`)
+- `symbol` — apply_swing (`symbol:app.music.groove:apply_swing`)
+- `symbol` — humanize_velocity (`symbol:app.music.groove:humanize_velocity`)
+- `symbol` — humanize_timing (`symbol:app.music.groove:humanize_timing`)
+- `module` — app.music.melody (`module:app.music.melody`)
+- `symbol` — generate_melody_track (`symbol:app.music.melody:generate_melody_track`)
+- `symbol` — note_name_to_midi (`symbol:app.music.notes:note_name_to_midi`)
+- `symbol` — midi_to_note_name (`symbol:app.music.notes:midi_to_note_name`)
+- `symbol` — pitch_class (`symbol:app.music.notes:pitch_class`)
+- `symbol` — transpose (`symbol:app.music.notes:transpose`)
+- `symbol` — downbeats (`symbol:app.music.rhythm:downbeats`)
+- `symbol` — offbeat_eighths (`symbol:app.music.rhythm:offbeat_eighths`)
+- `symbol` — eighth_grid (`symbol:app.music.rhythm:eighth_grid`)
+- `symbol` — sixteenth_grid (`symbol:app.music.rhythm:sixteenth_grid`)
+- `symbol` — bar_start (`symbol:app.music.rhythm:bar_start`)
+- `symbol` — parse_key (`symbol:app.music.scales:parse_key`)
+- `symbol` — scale_pitch_classes (`symbol:app.music.scales:scale_pitch_classes`)
+- `symbol` — is_in_scale (`symbol:app.music.scales:is_in_scale`)
+- `symbol` — degree_in_scale (`symbol:app.music.scales:degree_in_scale`)
+- `module` — app.music.validation (`module:app.music.validation`)
+- `symbol` — validate_idea (`symbol:app.music.validation:validate_idea`)
+- `module` — collections (`module:collections`)
+- `symbol` — VariationSpec (`symbol:app.music.variations:VariationSpec`)
+- `symbol` — _clamp_vel (`symbol:app.music.variations:_clamp_vel`)
+- `symbol` — _clamp_midi (`symbol:app.music.variations:_clamp_midi`)
+- `symbol` — _scale_velocity (`symbol:app.music.variations:_scale_velocity`)
+- `symbol` — _shift_arp_octave (`symbol:app.music.variations:_shift_arp_octave`)
+- `symbol` — _thin_harmony_top (`symbol:app.music.variations:_thin_harmony_top`)
+- `symbol` — _simplify_arp (`symbol:app.music.variations:_simplify_arp`)
+- `symbol` — _keep_arp_ratio (`symbol:app.music.variations:_keep_arp_ratio`)
+- `symbol` — _double_bass (`symbol:app.music.variations:_double_bass`)
+- `symbol` — _thin_hats (`symbol:app.music.variations:_thin_hats`)
+- `symbol` — _keep_hat (`symbol:app.music.variations:_keep_hat`)
+- `symbol` — apply_variation (`symbol:app.music.variations:apply_variation`)
+- `symbol` — warm_voicing (`symbol:app.music.voicings:warm_voicing`)
+- `symbol` — generate_chord_track (`symbol:app.music.voicings:generate_chord_track`)
+- `module` — app.orchestrator.run (`module:app.orchestrator.run`)
+- `module` — app.orchestrator.variation_run (`module:app.orchestrator.variation_run`)
+- `module` — app.orchestrator.guardrails (`module:app.orchestrator.guardrails`)
+- `symbol` — check_request (`symbol:app.orchestrator.guardrails:check_request`)
+- `symbol` — passes_quality_gate (`symbol:app.orchestrator.guardrails:passes_quality_gate`)
+- `module` — app.orchestrator.model_router (`module:app.orchestrator.model_router`)
+- `symbol` — select_model (`symbol:app.orchestrator.model_router:select_model`)
+- `symbol` — get_provider (`symbol:app.orchestrator.model_router:get_provider`)
+- `module` — app.orchestrator.planner (`module:app.orchestrator.planner`)
+- `symbol` — GenerationPlan (`symbol:app.orchestrator.planner:GenerationPlan`)
+- `symbol` — create_plan (`symbol:app.orchestrator.planner:create_plan`)
+- `module` — datetime (`module:datetime`)
+- `module` — app.orchestrator.state_machine (`module:app.orchestrator.state_machine`)
+- `module` — app.storage (`module:app.storage`)
+- `symbol` — GenerationResult (`symbol:app.orchestrator.run:GenerationResult`)
+- `symbol` — _slugify (`symbol:app.orchestrator.run:_slugify`)
+- `symbol` — _catalog_project (`symbol:app.orchestrator.run:_catalog_project`)
+- `symbol` — _update_drop_folder (`symbol:app.orchestrator.run:_update_drop_folder`)
+- `symbol` — _new_project_id (`symbol:app.orchestrator.run:_new_project_id`)
+- `symbol` — run_generation (`symbol:app.orchestrator.run:run_generation`)
+- `module` — enum (`module:enum`)
+- `symbol` — GenerationState (`symbol:app.orchestrator.state_machine:GenerationState`)
+- `symbol` — StateTracker (`symbol:app.orchestrator.state_machine:StateTracker`)
+- `module` — app.orchestrator.tool_registry (`module:app.orchestrator.tool_registry`)
+- `module` — collections.abc (`module:collections.abc`)
+- `symbol` — _schema (`symbol:app.orchestrator.tool_registry:_schema`)
+- `symbol` — tool_schemas (`symbol:app.orchestrator.tool_registry:tool_schemas`)
+- `symbol` — get_tool (`symbol:app.orchestrator.tool_registry:get_tool`)
+- `module` — app.storage.sqlite_store (`module:app.storage.sqlite_store`)
+- `symbol` — VariationResult (`symbol:app.orchestrator.variation_run:VariationResult`)
+- `symbol` — _request_from_idea (`symbol:app.orchestrator.variation_run:_request_from_idea`)
+- `symbol` — _infer_progression (`symbol:app.orchestrator.variation_run:_infer_progression`)
+- `symbol` — _child_id (`symbol:app.orchestrator.variation_run:_child_id`)
+- `symbol` — run_variation (`symbol:app.orchestrator.variation_run:run_variation`)
+- `symbol` — _catalog (`symbol:app.orchestrator.variation_run:_catalog`)
+- `module` — app.providers (`module:app.providers`)
+- `module` — app.providers.base (`module:app.providers.base`)
+- `symbol` — get_provider (`symbol:app.providers:get_provider`)
+- `module` — app.providers.anthropic_provider (`module:app.providers.anthropic_provider`)
+- `module` — app.providers.provider_errors (`module:app.providers.provider_errors`)
+- `symbol` — AnthropicProvider (`symbol:app.providers.anthropic_provider:AnthropicProvider`)
+- `module` — abc (`module:abc`)
+- `symbol` — Message (`symbol:app.providers.base:Message`)
+- `symbol` — LLMProvider (`symbol:app.providers.base:LLMProvider`)
+- `module` — app.providers.ollama_provider (`module:app.providers.ollama_provider`)
+- `symbol` — OllamaProvider (`symbol:app.providers.ollama_provider:OllamaProvider`)
+- `module` — app.providers.openai_provider (`module:app.providers.openai_provider`)
+- `symbol` — OpenAIProvider (`symbol:app.providers.openai_provider:OpenAIProvider`)
+- `module` — app.providers.openrouter_provider (`module:app.providers.openrouter_provider`)
+- `symbol` — OpenRouterProvider (`symbol:app.providers.openrouter_provider:OpenRouterProvider`)
+- `symbol` — ProviderRequestError (`symbol:app.providers.provider_errors:ProviderRequestError`)
+- `symbol` — ProviderDependencyMissing (`symbol:app.providers.provider_errors:ProviderDependencyMissing`)
+- `module` — app.schemas.automation_event (`module:app.schemas.automation_event`)
+- `module` — app.schemas.drum_event (`module:app.schemas.drum_event`)
+- `module` — app.schemas.feedback (`module:app.schemas.feedback`)
+- `module` — app.schemas.musical_idea (`module:app.schemas.musical_idea`)
+- `module` — app.schemas.note_event (`module:app.schemas.note_event`)
+- `module` — app.schemas.seion_score (`module:app.schemas.seion_score`)
+- `module` — app.schemas.track (`module:app.schemas.track`)
+- `module` — app.schemas.user_request (`module:app.schemas.user_request`)
+- `symbol` — AutomationEvent (`symbol:app.schemas.automation_event:AutomationEvent`)
+- `symbol` — DrumEvent (`symbol:app.schemas.drum_event:DrumEvent`)
+- `symbol` — Feedback (`symbol:app.schemas.feedback:Feedback`)
+- `symbol` — EnergyTarget (`symbol:app.schemas.musical_idea:EnergyTarget`)
+- `symbol` — Section (`symbol:app.schemas.musical_idea:Section`)
+- `symbol` — DecisionLogEntry (`symbol:app.schemas.musical_idea:DecisionLogEntry`)
+- `symbol` — MusicalIdea (`symbol:app.schemas.musical_idea:MusicalIdea`)
+- `symbol` — NoteEvent (`symbol:app.schemas.note_event:NoteEvent`)
+- `symbol` — SeionScore (`symbol:app.schemas.seion_score:SeionScore`)
+- `symbol` — MixerHint (`symbol:app.schemas.track:MixerHint`)
+- `symbol` — Track (`symbol:app.schemas.track:Track`)
+- `symbol` — UserRequest (`symbol:app.schemas.user_request:UserRequest`)
+- `module` — app.seion.scorer (`module:app.seion.scorer`)
+- `module` — app.seion.edges (`module:app.seion.edges`)
+- `symbol` — Edge (`symbol:app.seion.edges:Edge`)
+- `module` — app.seion.graph (`module:app.seion.graph`)
+- `module` — app.seion.nodes (`module:app.seion.nodes`)
+- `symbol` — StyleGraph (`symbol:app.seion.graph:StyleGraph`)
+- `module` — app.seion.memory (`module:app.seion.memory`)
+- `module` — app.seion.preference_model (`module:app.seion.preference_model`)
+- `symbol` — SeionMemory (`symbol:app.seion.memory:SeionMemory`)
+- `symbol` — Node (`symbol:app.seion.nodes:Node`)
+- `module` — app.seion.novelty (`module:app.seion.novelty`)
+- `symbol` — compute_novelty (`symbol:app.seion.novelty:compute_novelty`)
+- `symbol` — PreferenceModel (`symbol:app.seion.preference_model:PreferenceModel`)
+- `module` — app.seion.style_match (`module:app.seion.style_match`)
+- `module` — app.seion.tension_curve (`module:app.seion.tension_curve`)
+- `symbol` — _density_ideal (`symbol:app.seion.scorer:_density_ideal`)
+- `symbol` — _voicing_spacing_ok (`symbol:app.seion.scorer:_voicing_spacing_ok`)
+- `symbol` — compute_coherence (`symbol:app.seion.scorer:compute_coherence`)
+- `symbol` — _eval_warm (`symbol:app.seion.scorer:_eval_warm`)
+- `symbol` — _eval_melancholic (`symbol:app.seion.scorer:_eval_melancholic`)
+- `symbol` — _eval_hypnotic (`symbol:app.seion.scorer:_eval_hypnotic`)
+- `symbol` — _eval_dark (`symbol:app.seion.scorer:_eval_dark`)
+- `symbol` — _eval_uplifting (`symbol:app.seion.scorer:_eval_uplifting`)
+- `symbol` — compute_emotional_clarity (`symbol:app.seion.scorer:compute_emotional_clarity`)
+- `symbol` — compute_editability (`symbol:app.seion.scorer:compute_editability`)
+- `symbol` — score_idea (`symbol:app.seion.scorer:score_idea`)
+- `symbol` — _bpm_value (`symbol:app.seion.style_match:_bpm_value`)
+- `symbol` — compute_style_match (`symbol:app.seion.style_match:compute_style_match`)
+- `symbol` — _section_terms (`symbol:app.seion.tension_curve:_section_terms`)
+- `symbol` — compute_tension_curve (`symbol:app.seion.tension_curve:compute_tension_curve`)
+- `module` — app.storage.repositories (`module:app.storage.repositories`)
+- `module` — app.storage.db (`module:app.storage.db`)
+- `symbol` — projects_root (`symbol:app.storage.db:projects_root`)
+- `module` — app.storage.models (`module:app.storage.models`)
+- `symbol` — ProjectSummary (`symbol:app.storage.models:ProjectSummary`)
+- `symbol` — ProjectStore (`symbol:app.storage.repositories:ProjectStore`)
+- `module` — sqlite3 (`module:sqlite3`)
+- `module` — contextlib (`module:contextlib`)
+- `symbol` — SqliteStore (`symbol:app.storage.sqlite_store:SqliteStore`)
+- `module` — app.tools.compare_versions (`module:app.tools.compare_versions`)
+- `module` — app.tools.create_fl_piano_roll_script (`module:app.tools.create_fl_piano_roll_script`)
+- `module` — app.tools.export_markdown (`module:app.tools.export_markdown`)
+- `module` — app.tools.export_midi (`module:app.tools.export_midi`)
+- `module` — app.tools.generate_arp (`module:app.tools.generate_arp`)
+- `module` — app.tools.generate_arrangement (`module:app.tools.generate_arrangement`)
+- `module` — app.tools.generate_bassline (`module:app.tools.generate_bassline`)
+- `module` — app.tools.generate_chords (`module:app.tools.generate_chords`)
+- `module` — app.tools.generate_drums (`module:app.tools.generate_drums`)
+- `module` — app.tools.log_feedback (`module:app.tools.log_feedback`)
+- `module` — app.tools.save_version (`module:app.tools.save_version`)
+- `module` — app.tools.score_idea (`module:app.tools.score_idea`)
+- `symbol` — compare_versions (`symbol:app.tools.compare_versions:compare_versions`)
+- `symbol` — create_fl_piano_roll_script (`symbol:app.tools.create_fl_piano_roll_script:create_fl_piano_roll_script`)
+- `symbol` — write_explanation_file (`symbol:app.tools.export_markdown:write_explanation_file`)
+- `symbol` — export_idea_midi (`symbol:app.tools.export_midi:export_idea_midi`)
+- `symbol` — generate_arpeggio (`symbol:app.tools.generate_arp:generate_arpeggio`)
+- `symbol` — generate_arrangement (`symbol:app.tools.generate_arrangement:generate_arrangement`)
+- `symbol` — generate_bassline (`symbol:app.tools.generate_bassline:generate_bassline`)
+- `symbol` — generate_chord_progression (`symbol:app.tools.generate_chords:generate_chord_progression`)
+- `symbol` — generate_drum_pattern (`symbol:app.tools.generate_drums:generate_drum_pattern`)
+- `symbol` — log_user_feedback (`symbol:app.tools.log_feedback:log_user_feedback`)
+- `symbol` — save_project (`symbol:app.tools.save_version:save_project`)
+- `symbol` — score_seion_idea (`symbol:app.tools.score_idea:score_seion_idea`)
+- `module` — conftest (`module:conftest`)
+- `module` — sys (`module:sys`)
+- `module` — tempfile (`module:tempfile`)
+- `module` — fl_scripts.midi_controller.device_SEION_Controller (`module:fl_scripts.midi_controller.device_SEION_Controller`)
+- `module` — device (`module:device`)
+- `symbol` — OnInit (`symbol:fl_scripts.midi_controller.device_SEION_Controller:OnInit`)
+- `symbol` — OnMidiMsg (`symbol:fl_scripts.midi_controller.device_SEION_Controller:OnMidiMsg`)
+- `module` — tests.test_arrangement (`module:tests.test_arrangement`)
+- `symbol` — test_song_sections_cover_all_bars (`symbol:tests.test_arrangement:test_song_sections_cover_all_bars`)
+- `symbol` — test_song_sections_have_energy_curve (`symbol:tests.test_arrangement:test_song_sections_have_energy_curve`)
+- `symbol` — test_short_request_falls_back_to_loop (`symbol:tests.test_arrangement:test_short_request_falls_back_to_loop`)
+- `symbol` — test_default_drums_unchanged (`symbol:tests.test_arrangement:test_default_drums_unchanged`)
+- `symbol` — test_section_drums_hold_back_the_intro (`symbol:tests.test_arrangement:test_section_drums_hold_back_the_intro`)
+- `symbol` — _idea (`symbol:tests.test_arrangement:_idea`)
+- `symbol` — test_full_arrangement_beats_flat_loop_on_tension (`symbol:tests.test_arrangement:test_full_arrangement_beats_flat_loop_on_tension`)
+- `module` — tests.test_chords (`module:tests.test_chords`)
+- `symbol` — test_am7_pitch_classes (`symbol:tests.test_chords:test_am7_pitch_classes`)
+- `symbol` — test_fmaj7_pitch_classes (`symbol:tests.test_chords:test_fmaj7_pitch_classes`)
+- `symbol` — test_chord_notes_root_position (`symbol:tests.test_chords:test_chord_notes_root_position`)
+- `symbol` — test_am7_note_names (`symbol:tests.test_chords:test_am7_note_names`)
+- `symbol` — test_triad_and_seventh_sizes (`symbol:tests.test_chords:test_triad_and_seventh_sizes`)
+- `symbol` — test_warm_voicing_in_range (`symbol:tests.test_chords:test_warm_voicing_in_range`)
+- `symbol` — test_default_progression_is_diatonic_to_a_minor (`symbol:tests.test_chords:test_default_progression_is_diatonic_to_a_minor`)
+- `module` — tests.test_fixtures (`module:tests.test_fixtures`)
+- `module` — pytest (`module:pytest`)
+- `symbol` — test_fixture_parses_and_scores (`symbol:tests.test_fixtures:test_fixture_parses_and_scores`)
+- `module` — tests.test_fl_bridge (`module:tests.test_fl_bridge`)
+- `symbol` — test_drop_folder_mirrors_latest (`symbol:tests.test_fl_bridge:test_drop_folder_mirrors_latest`)
+- `symbol` — test_install_scripts_into_dest (`symbol:tests.test_fl_bridge:test_install_scripts_into_dest`)
+- `symbol` — test_build_import_script_sets_role (`symbol:tests.test_fl_bridge:test_build_import_script_sets_role`)
+- `symbol` — test_write_all_scripts_bundle (`symbol:tests.test_fl_bridge:test_write_all_scripts_bundle`)
+- `module` — tests.test_midi_export (`module:tests.test_midi_export`)
+- `symbol` — _note_ons (`symbol:tests.test_midi_export:_note_ons`)
+- `symbol` — test_chord_track_midi_written (`symbol:tests.test_midi_export:test_chord_track_midi_written`)
+- `symbol` — test_bass_and_arp_have_notes (`symbol:tests.test_midi_export:test_bass_and_arp_have_notes`)
+- `symbol` — test_drum_track_on_channel_10 (`symbol:tests.test_midi_export:test_drum_track_on_channel_10`)
+- `symbol` — test_full_loop_combines_tracks (`symbol:tests.test_midi_export:test_full_loop_combines_tracks`)
+- `module` — tests.test_orchestrator (`module:tests.test_orchestrator`)
+- `symbol` — _request (`symbol:tests.test_orchestrator:_request`)
+- `symbol` — test_run_generation_creates_all_files (`symbol:tests.test_orchestrator:test_run_generation_creates_all_files`)
+- `symbol` — test_idea_json_roundtrips (`symbol:tests.test_orchestrator:test_idea_json_roundtrips`)
+- `symbol` — test_seion_score_json_has_components (`symbol:tests.test_orchestrator:test_seion_score_json_has_components`)
+- `symbol` — test_decision_log_has_required_fields (`symbol:tests.test_orchestrator:test_decision_log_has_required_fields`)
+- `module` — tests.test_scales (`module:tests.test_scales`)
+- `symbol` — test_note_name_to_midi (`symbol:tests.test_scales:test_note_name_to_midi`)
+- `symbol` — test_note_name_roundtrip (`symbol:tests.test_scales:test_note_name_roundtrip`)
+- `symbol` — test_flats_and_sharps (`symbol:tests.test_scales:test_flats_and_sharps`)
+- `symbol` — test_invalid_note_raises (`symbol:tests.test_scales:test_invalid_note_raises`)
+- `symbol` — test_parse_key (`symbol:tests.test_scales:test_parse_key`)
+- `symbol` — test_a_minor_and_c_major_share_notes (`symbol:tests.test_scales:test_a_minor_and_c_major_share_notes`)
+- `symbol` — test_is_in_scale (`symbol:tests.test_scales:test_is_in_scale`)
+- `module` — tests.test_seion_score (`module:tests.test_seion_score`)
+- `symbol` — _request (`symbol:tests.test_seion_score:_request`)
+- `symbol` — _idea (`symbol:tests.test_seion_score:_idea`)
+- `symbol` — _full_tracks (`symbol:tests.test_seion_score:_full_tracks`)
+- `symbol` — _score (`symbol:tests.test_seion_score:_score`)
+- `symbol` — test_full_idea_scores_reasonably (`symbol:tests.test_seion_score:test_full_idea_scores_reasonably`)
+- `symbol` — test_missing_bass_penalises_coherence (`symbol:tests.test_seion_score:test_missing_bass_penalises_coherence`)
+- `symbol` — test_out_of_scale_notes_penalise_coherence (`symbol:tests.test_seion_score:test_out_of_scale_notes_penalise_coherence`)
+- `symbol` — test_too_many_notes_penalise_editability (`symbol:tests.test_seion_score:test_too_many_notes_penalise_editability`)
+- `symbol` — test_automation_raises_tension_curve (`symbol:tests.test_seion_score:test_automation_raises_tension_curve`)
+- `symbol` — test_overall_matches_weighted_formula (`symbol:tests.test_seion_score:test_overall_matches_weighted_formula`)
+- `module` — tests.test_sqlite_memory (`module:tests.test_sqlite_memory`)
+- `symbol` — test_preferences_roundtrip (`symbol:tests.test_sqlite_memory:test_preferences_roundtrip`)
+- `symbol` — test_record_feedback_updates_preferences (`symbol:tests.test_sqlite_memory:test_record_feedback_updates_preferences`)
+- `symbol` — test_project_catalog_lineage (`symbol:tests.test_sqlite_memory:test_project_catalog_lineage`)
+- `symbol` — test_upsert_is_idempotent (`symbol:tests.test_sqlite_memory:test_upsert_is_idempotent`)
+- `module` — tests.test_variations (`module:tests.test_variations`)
+- `symbol` — _request (`symbol:tests.test_variations:_request`)
+- `symbol` — _avg_arp_pitch (`symbol:tests.test_variations:_avg_arp_pitch`)
+- `symbol` — test_parse_direction_keywords (`symbol:tests.test_variations:test_parse_direction_keywords`)
+- `symbol` — test_darker_lowers_arp_register (`symbol:tests.test_variations:test_darker_lowers_arp_register`)
+- `symbol` — test_simpler_arp_reduces_note_count (`symbol:tests.test_variations:test_simpler_arp_reduces_note_count`)
+- `symbol` — test_more_drive_adds_bass_notes (`symbol:tests.test_variations:test_more_drive_adds_bass_notes`)
+- `symbol` — test_run_variation_creates_child_with_lineage (`symbol:tests.test_variations:test_run_variation_creates_child_with_lineage`)
+- `symbol` — test_variation_reloads_from_store (`symbol:tests.test_variations:test_variation_reloads_from_store`)
+
+## Edges
+
+- `repo:seion-music-lab` -[contains]-> `memory:manifest`
+- `repo:seion-music-lab` -[contains]-> `memory:state`
+- `repo:seion-music-lab` -[contains]-> `memory:decisions`
+- `repo:seion-music-lab` -[contains]-> `memory:tasks`
+- `repo:seion-music-lab` -[contains]-> `memory:tests`
+- `repo:seion-music-lab` -[contains]-> `memory:graph`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/decisions.md`
+- `repo:seion-music-lab` -[contains]-> `dir:.ai`
+- `dir:.ai` -[contains]-> `file:.ai/decisions.md`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/evidence/README.md`
+- `dir:.ai` -[contains]-> `dir:.ai/evidence`
+- `dir:.ai/evidence` -[contains]-> `file:.ai/evidence/README.md`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/graph.md`
+- `dir:.ai` -[contains]-> `file:.ai/graph.md`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/machine/artifacts.json`
+- `dir:.ai` -[contains]-> `dir:.ai/machine`
+- `dir:.ai/machine` -[contains]-> `file:.ai/machine/artifacts.json`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/machine/context_explain.json`
+- `dir:.ai/machine` -[contains]-> `file:.ai/machine/context_explain.json`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/machine/context_units.json`
+- `dir:.ai/machine` -[contains]-> `file:.ai/machine/context_units.json`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/machine/files.json`
+- `dir:.ai/machine` -[contains]-> `file:.ai/machine/files.json`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/machine/validation.json`
+- `dir:.ai/machine` -[contains]-> `file:.ai/machine/validation.json`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/manifest.yaml`
+- `dir:.ai` -[contains]-> `file:.ai/manifest.yaml`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/packs/quick.md`
+- `dir:.ai` -[contains]-> `dir:.ai/packs`
+- `dir:.ai/packs` -[contains]-> `file:.ai/packs/quick.md`
+- `pack:.ai/packs/quick.md` -[derived_from]-> `file:.ai/packs/quick.md`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/state.md`
+- `dir:.ai` -[contains]-> `file:.ai/state.md`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/tasks.md`
+- `dir:.ai` -[contains]-> `file:.ai/tasks.md`
+- `repo:seion-music-lab` -[contains]-> `file:.ai/tests.md`
+- `dir:.ai` -[contains]-> `file:.ai/tests.md`
+- `repo:seion-music-lab` -[contains]-> `file:.amo.yaml`
+- `repo:seion-music-lab` -[contains]-> `file:AGENTS.md`
+- `repo:seion-music-lab` -[contains]-> `file:README.md`
+- `repo:seion-music-lab` -[contains]-> `file:app/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `dir:app`
+- `dir:app` -[contains]-> `file:app/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/__init__.py`
+- `dir:app` -[contains]-> `dir:app/agents`
+- `dir:app/agents` -[contains]-> `file:app/agents/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/arranger_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/arranger_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/composer_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/composer_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/critic_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/critic_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/intake_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/intake_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/reference_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/reference_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/seion_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/seion_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/sound_design_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/sound_design_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/teacher_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/teacher_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/agents/variation_agent.py`
+- `dir:app/agents` -[contains]-> `file:app/agents/variation_agent.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/cli/__init__.py`
+- `dir:app` -[contains]-> `dir:app/cli`
+- `dir:app/cli` -[contains]-> `file:app/cli/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/cli/seion_music.py`
+- `dir:app/cli` -[contains]-> `file:app/cli/seion_music.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/config.py`
+- `dir:app` -[contains]-> `file:app/config.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/exceptions.py`
+- `dir:app` -[contains]-> `file:app/exceptions.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/export/__init__.py`
+- `dir:app` -[contains]-> `dir:app/export`
+- `dir:app/export` -[contains]-> `file:app/export/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/export/fl_script_writer.py`
+- `dir:app/export` -[contains]-> `file:app/export/fl_script_writer.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/export/json_writer.py`
+- `dir:app/export` -[contains]-> `file:app/export/json_writer.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/export/markdown_writer.py`
+- `dir:app/export` -[contains]-> `file:app/export/markdown_writer.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/export/midi_writer.py`
+- `dir:app/export` -[contains]-> `file:app/export/midi_writer.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/fl_bridge/__init__.py`
+- `dir:app` -[contains]-> `dir:app/fl_bridge`
+- `dir:app/fl_bridge` -[contains]-> `file:app/fl_bridge/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/fl_bridge/install_scripts.py`
+- `dir:app/fl_bridge` -[contains]-> `file:app/fl_bridge/install_scripts.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/fl_bridge/midi_drop_folder.py`
+- `dir:app/fl_bridge` -[contains]-> `file:app/fl_bridge/midi_drop_folder.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/fl_bridge/paths.py`
+- `dir:app/fl_bridge` -[contains]-> `file:app/fl_bridge/paths.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/fl_bridge/piano_roll_script_template.py`
+- `dir:app/fl_bridge` -[contains]-> `file:app/fl_bridge/piano_roll_script_template.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/logging_config.py`
+- `dir:app` -[contains]-> `file:app/logging_config.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/main.py`
+- `dir:app` -[contains]-> `file:app/main.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/__init__.py`
+- `dir:app` -[contains]-> `dir:app/music`
+- `dir:app/music` -[contains]-> `file:app/music/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/analysis.py`
+- `dir:app/music` -[contains]-> `file:app/music/analysis.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/arpeggios.py`
+- `dir:app/music` -[contains]-> `file:app/music/arpeggios.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/arrangement.py`
+- `dir:app/music` -[contains]-> `file:app/music/arrangement.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/automation.py`
+- `dir:app/music` -[contains]-> `file:app/music/automation.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/bass.py`
+- `dir:app/music` -[contains]-> `file:app/music/bass.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/chords.py`
+- `dir:app/music` -[contains]-> `file:app/music/chords.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/constants.py`
+- `dir:app/music` -[contains]-> `file:app/music/constants.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/drums.py`
+- `dir:app/music` -[contains]-> `file:app/music/drums.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/groove.py`
+- `dir:app/music` -[contains]-> `file:app/music/groove.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/melody.py`
+- `dir:app/music` -[contains]-> `file:app/music/melody.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/notes.py`
+- `dir:app/music` -[contains]-> `file:app/music/notes.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/rhythm.py`
+- `dir:app/music` -[contains]-> `file:app/music/rhythm.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/scales.py`
+- `dir:app/music` -[contains]-> `file:app/music/scales.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/validation.py`
+- `dir:app/music` -[contains]-> `file:app/music/validation.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/variations.py`
+- `dir:app/music` -[contains]-> `file:app/music/variations.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/music/voicings.py`
+- `dir:app/music` -[contains]-> `file:app/music/voicings.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/__init__.py`
+- `dir:app` -[contains]-> `dir:app/orchestrator`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/guardrails.py`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/guardrails.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/model_router.py`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/model_router.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/planner.py`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/planner.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/run.py`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/run.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/state_machine.py`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/state_machine.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/tool_registry.py`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/tool_registry.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/orchestrator/variation_run.py`
+- `dir:app/orchestrator` -[contains]-> `file:app/orchestrator/variation_run.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/providers/__init__.py`
+- `dir:app` -[contains]-> `dir:app/providers`
+- `dir:app/providers` -[contains]-> `file:app/providers/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/providers/anthropic_provider.py`
+- `dir:app/providers` -[contains]-> `file:app/providers/anthropic_provider.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/providers/base.py`
+- `dir:app/providers` -[contains]-> `file:app/providers/base.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/providers/ollama_provider.py`
+- `dir:app/providers` -[contains]-> `file:app/providers/ollama_provider.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/providers/openai_provider.py`
+- `dir:app/providers` -[contains]-> `file:app/providers/openai_provider.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/providers/openrouter_provider.py`
+- `dir:app/providers` -[contains]-> `file:app/providers/openrouter_provider.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/providers/provider_errors.py`
+- `dir:app/providers` -[contains]-> `file:app/providers/provider_errors.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/__init__.py`
+- `dir:app` -[contains]-> `dir:app/schemas`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/automation_event.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/automation_event.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/drum_event.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/drum_event.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/feedback.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/feedback.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/musical_idea.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/musical_idea.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/note_event.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/note_event.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/seion_score.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/seion_score.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/track.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/track.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/schemas/user_request.py`
+- `dir:app/schemas` -[contains]-> `file:app/schemas/user_request.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/__init__.py`
+- `dir:app` -[contains]-> `dir:app/seion`
+- `dir:app/seion` -[contains]-> `file:app/seion/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/edges.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/edges.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/graph.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/graph.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/memory.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/memory.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/nodes.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/nodes.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/novelty.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/novelty.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/preference_model.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/preference_model.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/scorer.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/scorer.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/style_match.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/style_match.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/seion/tension_curve.py`
+- `dir:app/seion` -[contains]-> `file:app/seion/tension_curve.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/storage/__init__.py`
+- `dir:app` -[contains]-> `dir:app/storage`
+- `dir:app/storage` -[contains]-> `file:app/storage/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/storage/db.py`
+- `dir:app/storage` -[contains]-> `file:app/storage/db.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/storage/models.py`
+- `dir:app/storage` -[contains]-> `file:app/storage/models.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/storage/repositories.py`
+- `dir:app/storage` -[contains]-> `file:app/storage/repositories.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/storage/sqlite_store.py`
+- `dir:app/storage` -[contains]-> `file:app/storage/sqlite_store.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/__init__.py`
+- `dir:app` -[contains]-> `dir:app/tools`
+- `dir:app/tools` -[contains]-> `file:app/tools/__init__.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/compare_versions.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/compare_versions.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/create_fl_piano_roll_script.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/create_fl_piano_roll_script.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/export_markdown.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/export_markdown.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/export_midi.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/export_midi.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/generate_arp.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/generate_arp.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/generate_arrangement.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/generate_arrangement.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/generate_bassline.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/generate_bassline.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/generate_chords.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/generate_chords.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/generate_drums.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/generate_drums.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/log_feedback.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/log_feedback.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/save_version.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/save_version.py`
+- `repo:seion-music-lab` -[contains]-> `file:app/tools/score_idea.py`
+- `dir:app/tools` -[contains]-> `file:app/tools/score_idea.py`
+- `repo:seion-music-lab` -[contains]-> `file:conftest.py`
+- `repo:seion-music-lab` -[contains]-> `file:data/seed/groove_templates.seed.json`
+- `repo:seion-music-lab` -[contains]-> `dir:data`
+- `dir:data` -[contains]-> `dir:data/seed`
+- `dir:data/seed` -[contains]-> `file:data/seed/groove_templates.seed.json`
+- `repo:seion-music-lab` -[contains]-> `file:data/seed/style_graph.seed.json`
+- ... 1361 more edges

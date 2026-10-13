@@ -1,0 +1,2117 @@
+{
+  "units": [
+    {
+      "id": "file:.ai/decisions.md",
+      "type": "file_summary",
+      "title": ".ai/decisions.md",
+      "summary": "Repository file `.ai/decisions.md` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "memory"
+      ],
+      "expand": ".ai/decisions.md"
+    },
+    {
+      "id": "file:.ai/evidence/README.md",
+      "type": "file_summary",
+      "title": ".ai/evidence/README.md",
+      "summary": "Repository file `.ai/evidence/README.md` with 19 lines.",
+      "tokens": 76,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "memory"
+      ],
+      "expand": ".ai/evidence/README.md"
+    },
+    {
+      "id": "file:.ai/graph.md",
+      "type": "file_summary",
+      "title": ".ai/graph.md",
+      "summary": "Repository file `.ai/graph.md` with 10 lines.",
+      "tokens": 40,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "memory"
+      ],
+      "expand": ".ai/graph.md"
+    },
+    {
+      "id": "file:.ai/machine/artifacts.json",
+      "type": "file_summary",
+      "title": ".ai/machine/artifacts.json",
+      "summary": "Repository file `.ai/machine/artifacts.json` with 759 lines.",
+      "tokens": 3036,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "memory"
+      ],
+      "expand": ".ai/machine/artifacts.json"
+    },
+    {
+      "id": "file:.ai/machine/context_explain.json",
+      "type": "file_summary",
+      "title": ".ai/machine/context_explain.json",
+      "summary": "Repository file `.ai/machine/context_explain.json` with 6 lines.",
+      "tokens": 24,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "memory"
+      ],
+      "expand": ".ai/machine/context_explain.json"
+    },
+    {
+      "id": "file:.ai/machine/context_units.json",
+      "type": "file_summary",
+      "title": ".ai/machine/context_units.json",
+      "summary": "Repository file `.ai/machine/context_units.json` with 1996 lines.",
+      "tokens": 7984,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "memory"
+      ],
+      "expand": ".ai/machine/context_units.json"
+    },
+    {
+      "id": "file:.ai/machine/files.json",
+      "type": "file_summary",
+      "title": ".ai/machine/files.json",
+      "summary": "Repository file `.ai/machine/files.json` with 910 lines.",
+      "tokens": 3640,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "memory"
+      ],
+      "expand": ".ai/machine/files.json"
+    },
+    {
+      "id": "file:.ai/machine/validation.json",
+      "type": "file_summary",
+      "title": ".ai/machine/validation.json",
+      "summary": "Repository file `.ai/machine/validation.json` with 9 lines.",
+      "tokens": 36,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "memory"
+      ],
+      "expand": ".ai/machine/validation.json"
+    },
+    {
+      "id": "file:.ai/manifest.yaml",
+      "type": "file_summary",
+      "title": ".ai/manifest.yaml",
+      "summary": "Repository file `.ai/manifest.yaml` with 19 lines.",
+      "tokens": 76,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "yaml",
+        "memory"
+      ],
+      "expand": ".ai/manifest.yaml"
+    },
+    {
+      "id": "file:.ai/packs/quick.md",
+      "type": "file_summary",
+      "title": ".ai/packs/quick.md",
+      "summary": "Repository file `.ai/packs/quick.md` with 79 lines.",
+      "tokens": 316,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "memory"
+      ],
+      "expand": ".ai/packs/quick.md"
+    },
+    {
+      "id": "file:.ai/state.md",
+      "type": "file_summary",
+      "title": ".ai/state.md",
+      "summary": "Repository file `.ai/state.md` with 22 lines.",
+      "tokens": 88,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "memory"
+      ],
+      "expand": ".ai/state.md"
+    },
+    {
+      "id": "file:.ai/tasks.md",
+      "type": "file_summary",
+      "title": ".ai/tasks.md",
+      "summary": "Repository file `.ai/tasks.md` with 12 lines.",
+      "tokens": 48,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "memory"
+      ],
+      "expand": ".ai/tasks.md"
+    },
+    {
+      "id": "file:.ai/tests.md",
+      "type": "file_summary",
+      "title": ".ai/tests.md",
+      "summary": "Repository file `.ai/tests.md` with 9 lines.",
+      "tokens": 36,
+      "authority": 0.9,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "memory"
+      ],
+      "expand": ".ai/tests.md"
+    },
+    {
+      "id": "file:.amo.yaml",
+      "type": "file_summary",
+      "title": ".amo.yaml",
+      "summary": "Repository file `.amo.yaml` with 3 lines.",
+      "tokens": 12,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "yaml"
+      ],
+      "expand": ".amo.yaml"
+    },
+    {
+      "id": "file:AGENTS.md",
+      "type": "file_summary",
+      "title": "AGENTS.md",
+      "summary": "Repository file `AGENTS.md` with 9 lines.",
+      "tokens": 36,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "AGENTS.md"
+    },
+    {
+      "id": "file:README.md",
+      "type": "file_summary",
+      "title": "README.md",
+      "summary": "Repository file `README.md` with 191 lines.",
+      "tokens": 764,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "README.md"
+    },
+    {
+      "id": "file:app/__init__.py",
+      "type": "file_summary",
+      "title": "app/__init__.py",
+      "summary": "Repository file `app/__init__.py` with 17 lines.",
+      "tokens": 68,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/__init__.py"
+    },
+    {
+      "id": "file:app/agents/__init__.py",
+      "type": "file_summary",
+      "title": "app/agents/__init__.py",
+      "summary": "Repository file `app/agents/__init__.py` with 28 lines.",
+      "tokens": 112,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/__init__.py"
+    },
+    {
+      "id": "file:app/agents/arranger_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/arranger_agent.py",
+      "summary": "Repository file `app/agents/arranger_agent.py` with 26 lines.",
+      "tokens": 104,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/arranger_agent.py"
+    },
+    {
+      "id": "file:app/agents/composer_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/composer_agent.py",
+      "summary": "Repository file `app/agents/composer_agent.py` with 156 lines.",
+      "tokens": 624,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/composer_agent.py"
+    },
+    {
+      "id": "file:app/agents/critic_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/critic_agent.py",
+      "summary": "Repository file `app/agents/critic_agent.py` with 62 lines.",
+      "tokens": 248,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/critic_agent.py"
+    },
+    {
+      "id": "file:app/agents/intake_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/intake_agent.py",
+      "summary": "Repository file `app/agents/intake_agent.py` with 53 lines.",
+      "tokens": 212,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/intake_agent.py"
+    },
+    {
+      "id": "file:app/agents/reference_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/reference_agent.py",
+      "summary": "Repository file `app/agents/reference_agent.py` with 125 lines.",
+      "tokens": 500,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/reference_agent.py"
+    },
+    {
+      "id": "file:app/agents/seion_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/seion_agent.py",
+      "summary": "Repository file `app/agents/seion_agent.py` with 14 lines.",
+      "tokens": 56,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/seion_agent.py"
+    },
+    {
+      "id": "file:app/agents/sound_design_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/sound_design_agent.py",
+      "summary": "Repository file `app/agents/sound_design_agent.py` with 46 lines.",
+      "tokens": 184,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/sound_design_agent.py"
+    },
+    {
+      "id": "file:app/agents/teacher_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/teacher_agent.py",
+      "summary": "Repository file `app/agents/teacher_agent.py` with 23 lines.",
+      "tokens": 92,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/teacher_agent.py"
+    },
+    {
+      "id": "file:app/agents/variation_agent.py",
+      "type": "file_summary",
+      "title": "app/agents/variation_agent.py",
+      "summary": "Repository file `app/agents/variation_agent.py` with 71 lines.",
+      "tokens": 284,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/agents/variation_agent.py"
+    },
+    {
+      "id": "file:app/cli/__init__.py",
+      "type": "file_summary",
+      "title": "app/cli/__init__.py",
+      "summary": "Repository file `app/cli/__init__.py` with 5 lines.",
+      "tokens": 20,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/cli/__init__.py"
+    },
+    {
+      "id": "file:app/cli/seion_music.py",
+      "type": "file_summary",
+      "title": "app/cli/seion_music.py",
+      "summary": "Repository file `app/cli/seion_music.py` with 281 lines.",
+      "tokens": 1124,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/cli/seion_music.py"
+    },
+    {
+      "id": "file:app/config.py",
+      "type": "file_summary",
+      "title": "app/config.py",
+      "summary": "Repository file `app/config.py` with 94 lines.",
+      "tokens": 376,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/config.py"
+    },
+    {
+      "id": "file:app/exceptions.py",
+      "type": "file_summary",
+      "title": "app/exceptions.py",
+      "summary": "Repository file `app/exceptions.py` with 39 lines.",
+      "tokens": 156,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/exceptions.py"
+    },
+    {
+      "id": "file:app/export/__init__.py",
+      "type": "file_summary",
+      "title": "app/export/__init__.py",
+      "summary": "Repository file `app/export/__init__.py` with 13 lines.",
+      "tokens": 52,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/export/__init__.py"
+    },
+    {
+      "id": "file:app/export/fl_script_writer.py",
+      "type": "file_summary",
+      "title": "app/export/fl_script_writer.py",
+      "summary": "Repository file `app/export/fl_script_writer.py` with 45 lines.",
+      "tokens": 180,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/export/fl_script_writer.py"
+    },
+    {
+      "id": "file:app/export/json_writer.py",
+      "type": "file_summary",
+      "title": "app/export/json_writer.py",
+      "summary": "Repository file `app/export/json_writer.py` with 21 lines.",
+      "tokens": 84,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/export/json_writer.py"
+    },
+    {
+      "id": "file:app/export/markdown_writer.py",
+      "type": "file_summary",
+      "title": "app/export/markdown_writer.py",
+      "summary": "Repository file `app/export/markdown_writer.py` with 203 lines.",
+      "tokens": 812,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/export/markdown_writer.py"
+    },
+    {
+      "id": "file:app/export/midi_writer.py",
+      "type": "file_summary",
+      "title": "app/export/midi_writer.py",
+      "summary": "Repository file `app/export/midi_writer.py` with 138 lines.",
+      "tokens": 552,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/export/midi_writer.py"
+    },
+    {
+      "id": "file:app/fl_bridge/__init__.py",
+      "type": "file_summary",
+      "title": "app/fl_bridge/__init__.py",
+      "summary": "Repository file `app/fl_bridge/__init__.py` with 10 lines.",
+      "tokens": 40,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/fl_bridge/__init__.py"
+    },
+    {
+      "id": "file:app/fl_bridge/install_scripts.py",
+      "type": "file_summary",
+      "title": "app/fl_bridge/install_scripts.py",
+      "summary": "Repository file `app/fl_bridge/install_scripts.py` with 34 lines.",
+      "tokens": 136,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/fl_bridge/install_scripts.py"
+    },
+    {
+      "id": "file:app/fl_bridge/midi_drop_folder.py",
+      "type": "file_summary",
+      "title": "app/fl_bridge/midi_drop_folder.py",
+      "summary": "Repository file `app/fl_bridge/midi_drop_folder.py` with 28 lines.",
+      "tokens": 112,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/fl_bridge/midi_drop_folder.py"
+    },
+    {
+      "id": "file:app/fl_bridge/paths.py",
+      "type": "file_summary",
+      "title": "app/fl_bridge/paths.py",
+      "summary": "Repository file `app/fl_bridge/paths.py` with 24 lines.",
+      "tokens": 96,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/fl_bridge/paths.py"
+    },
+    {
+      "id": "file:app/fl_bridge/piano_roll_script_template.py",
+      "type": "file_summary",
+      "title": "app/fl_bridge/piano_roll_script_template.py",
+      "summary": "Repository file `app/fl_bridge/piano_roll_script_template.py` with 114 lines.",
+      "tokens": 456,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/fl_bridge/piano_roll_script_template.py"
+    },
+    {
+      "id": "file:app/logging_config.py",
+      "type": "file_summary",
+      "title": "app/logging_config.py",
+      "summary": "Repository file `app/logging_config.py` with 35 lines.",
+      "tokens": 140,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/logging_config.py"
+    },
+    {
+      "id": "file:app/main.py",
+      "type": "file_summary",
+      "title": "app/main.py",
+      "summary": "Repository file `app/main.py` with 70 lines.",
+      "tokens": 280,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/main.py"
+    },
+    {
+      "id": "file:app/music/__init__.py",
+      "type": "file_summary",
+      "title": "app/music/__init__.py",
+      "summary": "Repository file `app/music/__init__.py` with 34 lines.",
+      "tokens": 136,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/__init__.py"
+    },
+    {
+      "id": "file:app/music/analysis.py",
+      "type": "file_summary",
+      "title": "app/music/analysis.py",
+      "summary": "Repository file `app/music/analysis.py` with 84 lines.",
+      "tokens": 336,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/analysis.py"
+    },
+    {
+      "id": "file:app/music/arpeggios.py",
+      "type": "file_summary",
+      "title": "app/music/arpeggios.py",
+      "summary": "Repository file `app/music/arpeggios.py` with 68 lines.",
+      "tokens": 272,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/arpeggios.py"
+    },
+    {
+      "id": "file:app/music/arrangement.py",
+      "type": "file_summary",
+      "title": "app/music/arrangement.py",
+      "summary": "Repository file `app/music/arrangement.py` with 108 lines.",
+      "tokens": 432,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/arrangement.py"
+    },
+    {
+      "id": "file:app/music/automation.py",
+      "type": "file_summary",
+      "title": "app/music/automation.py",
+      "summary": "Repository file `app/music/automation.py` with 70 lines.",
+      "tokens": 280,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/automation.py"
+    },
+    {
+      "id": "file:app/music/bass.py",
+      "type": "file_summary",
+      "title": "app/music/bass.py",
+      "summary": "Repository file `app/music/bass.py` with 57 lines.",
+      "tokens": 228,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/bass.py"
+    },
+    {
+      "id": "file:app/music/chords.py",
+      "type": "file_summary",
+      "title": "app/music/chords.py",
+      "summary": "Repository file `app/music/chords.py` with 123 lines.",
+      "tokens": 492,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/chords.py"
+    },
+    {
+      "id": "file:app/music/constants.py",
+      "type": "file_summary",
+      "title": "app/music/constants.py",
+      "summary": "Repository file `app/music/constants.py` with 48 lines.",
+      "tokens": 192,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/constants.py"
+    },
+    {
+      "id": "file:app/music/drums.py",
+      "type": "file_summary",
+      "title": "app/music/drums.py",
+      "summary": "Repository file `app/music/drums.py` with 181 lines.",
+      "tokens": 724,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/drums.py"
+    },
+    {
+      "id": "file:app/music/groove.py",
+      "type": "file_summary",
+      "title": "app/music/groove.py",
+      "summary": "Repository file `app/music/groove.py` with 39 lines.",
+      "tokens": 156,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/groove.py"
+    },
+    {
+      "id": "file:app/music/melody.py",
+      "type": "file_summary",
+      "title": "app/music/melody.py",
+      "summary": "Repository file `app/music/melody.py` with 53 lines.",
+      "tokens": 212,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/melody.py"
+    },
+    {
+      "id": "file:app/music/notes.py",
+      "type": "file_summary",
+      "title": "app/music/notes.py",
+      "summary": "Repository file `app/music/notes.py` with 52 lines.",
+      "tokens": 208,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/notes.py"
+    },
+    {
+      "id": "file:app/music/rhythm.py",
+      "type": "file_summary",
+      "title": "app/music/rhythm.py",
+      "summary": "Repository file `app/music/rhythm.py` with 30 lines.",
+      "tokens": 120,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/rhythm.py"
+    },
+    {
+      "id": "file:app/music/scales.py",
+      "type": "file_summary",
+      "title": "app/music/scales.py",
+      "summary": "Repository file `app/music/scales.py` with 74 lines.",
+      "tokens": 296,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/scales.py"
+    },
+    {
+      "id": "file:app/music/validation.py",
+      "type": "file_summary",
+      "title": "app/music/validation.py",
+      "summary": "Repository file `app/music/validation.py` with 41 lines.",
+      "tokens": 164,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/validation.py"
+    },
+    {
+      "id": "file:app/music/variations.py",
+      "type": "file_summary",
+      "title": "app/music/variations.py",
+      "summary": "Repository file `app/music/variations.py` with 217 lines.",
+      "tokens": 868,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/variations.py"
+    },
+    {
+      "id": "file:app/music/voicings.py",
+      "type": "file_summary",
+      "title": "app/music/voicings.py",
+      "summary": "Repository file `app/music/voicings.py` with 71 lines.",
+      "tokens": 284,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/music/voicings.py"
+    },
+    {
+      "id": "file:app/orchestrator/__init__.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/__init__.py",
+      "summary": "Repository file `app/orchestrator/__init__.py` with 11 lines.",
+      "tokens": 44,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/__init__.py"
+    },
+    {
+      "id": "file:app/orchestrator/guardrails.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/guardrails.py",
+      "summary": "Repository file `app/orchestrator/guardrails.py` with 30 lines.",
+      "tokens": 120,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/guardrails.py"
+    },
+    {
+      "id": "file:app/orchestrator/model_router.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/model_router.py",
+      "summary": "Repository file `app/orchestrator/model_router.py` with 29 lines.",
+      "tokens": 116,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/model_router.py"
+    },
+    {
+      "id": "file:app/orchestrator/planner.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/planner.py",
+      "summary": "Repository file `app/orchestrator/planner.py` with 50 lines.",
+      "tokens": 200,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/planner.py"
+    },
+    {
+      "id": "file:app/orchestrator/run.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/run.py",
+      "summary": "Repository file `app/orchestrator/run.py` with 211 lines.",
+      "tokens": 844,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/run.py"
+    },
+    {
+      "id": "file:app/orchestrator/state_machine.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/state_machine.py",
+      "summary": "Repository file `app/orchestrator/state_machine.py` with 52 lines.",
+      "tokens": 208,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/state_machine.py"
+    },
+    {
+      "id": "file:app/orchestrator/tool_registry.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/tool_registry.py",
+      "summary": "Repository file `app/orchestrator/tool_registry.py` with 149 lines.",
+      "tokens": 596,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/tool_registry.py"
+    },
+    {
+      "id": "file:app/orchestrator/variation_run.py",
+      "type": "file_summary",
+      "title": "app/orchestrator/variation_run.py",
+      "summary": "Repository file `app/orchestrator/variation_run.py` with 196 lines.",
+      "tokens": 784,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/orchestrator/variation_run.py"
+    },
+    {
+      "id": "file:app/providers/__init__.py",
+      "type": "file_summary",
+      "title": "app/providers/__init__.py",
+      "summary": "Repository file `app/providers/__init__.py` with 33 lines.",
+      "tokens": 132,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/providers/__init__.py"
+    },
+    {
+      "id": "file:app/providers/anthropic_provider.py",
+      "type": "file_summary",
+      "title": "app/providers/anthropic_provider.py",
+      "summary": "Repository file `app/providers/anthropic_provider.py` with 85 lines.",
+      "tokens": 340,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/providers/anthropic_provider.py"
+    },
+    {
+      "id": "file:app/providers/base.py",
+      "type": "file_summary",
+      "title": "app/providers/base.py",
+      "summary": "Repository file `app/providers/base.py` with 54 lines.",
+      "tokens": 216,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/providers/base.py"
+    },
+    {
+      "id": "file:app/providers/ollama_provider.py",
+      "type": "file_summary",
+      "title": "app/providers/ollama_provider.py",
+      "summary": "Repository file `app/providers/ollama_provider.py` with 53 lines.",
+      "tokens": 212,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/providers/ollama_provider.py"
+    },
+    {
+      "id": "file:app/providers/openai_provider.py",
+      "type": "file_summary",
+      "title": "app/providers/openai_provider.py",
+      "summary": "Repository file `app/providers/openai_provider.py` with 57 lines.",
+      "tokens": 228,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/providers/openai_provider.py"
+    },
+    {
+      "id": "file:app/providers/openrouter_provider.py",
+      "type": "file_summary",
+      "title": "app/providers/openrouter_provider.py",
+      "summary": "Repository file `app/providers/openrouter_provider.py` with 58 lines.",
+      "tokens": 232,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/providers/openrouter_provider.py"
+    },
+    {
+      "id": "file:app/providers/provider_errors.py",
+      "type": "file_summary",
+      "title": "app/providers/provider_errors.py",
+      "summary": "Repository file `app/providers/provider_errors.py` with 21 lines.",
+      "tokens": 84,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/providers/provider_errors.py"
+    },
+    {
+      "id": "file:app/schemas/__init__.py",
+      "type": "file_summary",
+      "title": "app/schemas/__init__.py",
+      "summary": "Repository file `app/schemas/__init__.py` with 32 lines.",
+      "tokens": 128,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/__init__.py"
+    },
+    {
+      "id": "file:app/schemas/automation_event.py",
+      "type": "file_summary",
+      "title": "app/schemas/automation_event.py",
+      "summary": "Repository file `app/schemas/automation_event.py` with 26 lines.",
+      "tokens": 104,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/automation_event.py"
+    },
+    {
+      "id": "file:app/schemas/drum_event.py",
+      "type": "file_summary",
+      "title": "app/schemas/drum_event.py",
+      "summary": "Repository file `app/schemas/drum_event.py` with 23 lines.",
+      "tokens": 92,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/drum_event.py"
+    },
+    {
+      "id": "file:app/schemas/feedback.py",
+      "type": "file_summary",
+      "title": "app/schemas/feedback.py",
+      "summary": "Repository file `app/schemas/feedback.py` with 18 lines.",
+      "tokens": 72,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/feedback.py"
+    },
+    {
+      "id": "file:app/schemas/musical_idea.py",
+      "type": "file_summary",
+      "title": "app/schemas/musical_idea.py",
+      "summary": "Repository file `app/schemas/musical_idea.py` with 94 lines.",
+      "tokens": 376,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/musical_idea.py"
+    },
+    {
+      "id": "file:app/schemas/note_event.py",
+      "type": "file_summary",
+      "title": "app/schemas/note_event.py",
+      "summary": "Repository file `app/schemas/note_event.py` with 23 lines.",
+      "tokens": 92,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/note_event.py"
+    },
+    {
+      "id": "file:app/schemas/seion_score.py",
+      "type": "file_summary",
+      "title": "app/schemas/seion_score.py",
+      "summary": "Repository file `app/schemas/seion_score.py` with 36 lines.",
+      "tokens": 144,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/seion_score.py"
+    },
+    {
+      "id": "file:app/schemas/track.py",
+      "type": "file_summary",
+      "title": "app/schemas/track.py",
+      "summary": "Repository file `app/schemas/track.py` with 58 lines.",
+      "tokens": 232,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/track.py"
+    },
+    {
+      "id": "file:app/schemas/user_request.py",
+      "type": "file_summary",
+      "title": "app/schemas/user_request.py",
+      "summary": "Repository file `app/schemas/user_request.py` with 34 lines.",
+      "tokens": 136,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/schemas/user_request.py"
+    },
+    {
+      "id": "file:app/seion/__init__.py",
+      "type": "file_summary",
+      "title": "app/seion/__init__.py",
+      "summary": "Repository file `app/seion/__init__.py` with 5 lines.",
+      "tokens": 20,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/__init__.py"
+    },
+    {
+      "id": "file:app/seion/edges.py",
+      "type": "file_summary",
+      "title": "app/seion/edges.py",
+      "summary": "Repository file `app/seion/edges.py` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/edges.py"
+    },
+    {
+      "id": "file:app/seion/graph.py",
+      "type": "file_summary",
+      "title": "app/seion/graph.py",
+      "summary": "Repository file `app/seion/graph.py` with 48 lines.",
+      "tokens": 192,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/graph.py"
+    },
+    {
+      "id": "file:app/seion/memory.py",
+      "type": "file_summary",
+      "title": "app/seion/memory.py",
+      "summary": "Repository file `app/seion/memory.py` with 59 lines.",
+      "tokens": 236,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/memory.py"
+    },
+    {
+      "id": "file:app/seion/nodes.py",
+      "type": "file_summary",
+      "title": "app/seion/nodes.py",
+      "summary": "Repository file `app/seion/nodes.py` with 14 lines.",
+      "tokens": 56,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/nodes.py"
+    },
+    {
+      "id": "file:app/seion/novelty.py",
+      "type": "file_summary",
+      "title": "app/seion/novelty.py",
+      "summary": "Repository file `app/seion/novelty.py` with 33 lines.",
+      "tokens": 132,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/novelty.py"
+    },
+    {
+      "id": "file:app/seion/preference_model.py",
+      "type": "file_summary",
+      "title": "app/seion/preference_model.py",
+      "summary": "Repository file `app/seion/preference_model.py` with 36 lines.",
+      "tokens": 144,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/preference_model.py"
+    },
+    {
+      "id": "file:app/seion/scorer.py",
+      "type": "file_summary",
+      "title": "app/seion/scorer.py",
+      "summary": "Repository file `app/seion/scorer.py` with 224 lines.",
+      "tokens": 896,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/scorer.py"
+    },
+    {
+      "id": "file:app/seion/style_match.py",
+      "type": "file_summary",
+      "title": "app/seion/style_match.py",
+      "summary": "Repository file `app/seion/style_match.py` with 96 lines.",
+      "tokens": 384,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/style_match.py"
+    },
+    {
+      "id": "file:app/seion/tension_curve.py",
+      "type": "file_summary",
+      "title": "app/seion/tension_curve.py",
+      "summary": "Repository file `app/seion/tension_curve.py` with 61 lines.",
+      "tokens": 244,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/seion/tension_curve.py"
+    },
+    {
+      "id": "file:app/storage/__init__.py",
+      "type": "file_summary",
+      "title": "app/storage/__init__.py",
+      "summary": "Repository file `app/storage/__init__.py` with 5 lines.",
+      "tokens": 20,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/storage/__init__.py"
+    },
+    {
+      "id": "file:app/storage/db.py",
+      "type": "file_summary",
+      "title": "app/storage/db.py",
+      "summary": "Repository file `app/storage/db.py` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/storage/db.py"
+    },
+    {
+      "id": "file:app/storage/models.py",
+      "type": "file_summary",
+      "title": "app/storage/models.py",
+      "summary": "Repository file `app/storage/models.py` with 19 lines.",
+      "tokens": 76,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/storage/models.py"
+    },
+    {
+      "id": "file:app/storage/repositories.py",
+      "type": "file_summary",
+      "title": "app/storage/repositories.py",
+      "summary": "Repository file `app/storage/repositories.py` with 52 lines.",
+      "tokens": 208,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/storage/repositories.py"
+    },
+    {
+      "id": "file:app/storage/sqlite_store.py",
+      "type": "file_summary",
+      "title": "app/storage/sqlite_store.py",
+      "summary": "Repository file `app/storage/sqlite_store.py` with 176 lines.",
+      "tokens": 704,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/storage/sqlite_store.py"
+    },
+    {
+      "id": "file:app/tools/__init__.py",
+      "type": "file_summary",
+      "title": "app/tools/__init__.py",
+      "summary": "Repository file `app/tools/__init__.py` with 34 lines.",
+      "tokens": 136,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/__init__.py"
+    },
+    {
+      "id": "file:app/tools/compare_versions.py",
+      "type": "file_summary",
+      "title": "app/tools/compare_versions.py",
+      "summary": "Repository file `app/tools/compare_versions.py` with 16 lines.",
+      "tokens": 64,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/compare_versions.py"
+    },
+    {
+      "id": "file:app/tools/create_fl_piano_roll_script.py",
+      "type": "file_summary",
+      "title": "app/tools/create_fl_piano_roll_script.py",
+      "summary": "Repository file `app/tools/create_fl_piano_roll_script.py` with 11 lines.",
+      "tokens": 44,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/create_fl_piano_roll_script.py"
+    },
+    {
+      "id": "file:app/tools/export_markdown.py",
+      "type": "file_summary",
+      "title": "app/tools/export_markdown.py",
+      "summary": "Repository file `app/tools/export_markdown.py` with 11 lines.",
+      "tokens": 44,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/export_markdown.py"
+    },
+    {
+      "id": "file:app/tools/export_midi.py",
+      "type": "file_summary",
+      "title": "app/tools/export_midi.py",
+      "summary": "Repository file `app/tools/export_midi.py` with 36 lines.",
+      "tokens": 144,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/export_midi.py"
+    },
+    {
+      "id": "file:app/tools/generate_arp.py",
+      "type": "file_summary",
+      "title": "app/tools/generate_arp.py",
+      "summary": "Repository file `app/tools/generate_arp.py` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/generate_arp.py"
+    },
+    {
+      "id": "file:app/tools/generate_arrangement.py",
+      "type": "file_summary",
+      "title": "app/tools/generate_arrangement.py",
+      "summary": "Repository file `app/tools/generate_arrangement.py` with 14 lines.",
+      "tokens": 56,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/generate_arrangement.py"
+    },
+    {
+      "id": "file:app/tools/generate_bassline.py",
+      "type": "file_summary",
+      "title": "app/tools/generate_bassline.py",
+      "summary": "Repository file `app/tools/generate_bassline.py` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/generate_bassline.py"
+    },
+    {
+      "id": "file:app/tools/generate_chords.py",
+      "type": "file_summary",
+      "title": "app/tools/generate_chords.py",
+      "summary": "Repository file `app/tools/generate_chords.py` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/generate_chords.py"
+    },
+    {
+      "id": "file:app/tools/generate_drums.py",
+      "type": "file_summary",
+      "title": "app/tools/generate_drums.py",
+      "summary": "Repository file `app/tools/generate_drums.py` with 11 lines.",
+      "tokens": 44,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/generate_drums.py"
+    },
+    {
+      "id": "file:app/tools/log_feedback.py",
+      "type": "file_summary",
+      "title": "app/tools/log_feedback.py",
+      "summary": "Repository file `app/tools/log_feedback.py` with 11 lines.",
+      "tokens": 44,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/log_feedback.py"
+    },
+    {
+      "id": "file:app/tools/save_version.py",
+      "type": "file_summary",
+      "title": "app/tools/save_version.py",
+      "summary": "Repository file `app/tools/save_version.py` with 25 lines.",
+      "tokens": 100,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/save_version.py"
+    },
+    {
+      "id": "file:app/tools/score_idea.py",
+      "type": "file_summary",
+      "title": "app/tools/score_idea.py",
+      "summary": "Repository file `app/tools/score_idea.py` with 14 lines.",
+      "tokens": 56,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "app/tools/score_idea.py"
+    },
+    {
+      "id": "file:conftest.py",
+      "type": "file_summary",
+      "title": "conftest.py",
+      "summary": "Repository file `conftest.py` with 22 lines.",
+      "tokens": 88,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "conftest.py"
+    },
+    {
+      "id": "file:data/seed/groove_templates.seed.json",
+      "type": "file_summary",
+      "title": "data/seed/groove_templates.seed.json",
+      "summary": "Repository file `data/seed/groove_templates.seed.json` with 28 lines.",
+      "tokens": 112,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "json"
+      ],
+      "expand": "data/seed/groove_templates.seed.json"
+    },
+    {
+      "id": "file:data/seed/style_graph.seed.json",
+      "type": "file_summary",
+      "title": "data/seed/style_graph.seed.json",
+      "summary": "Repository file `data/seed/style_graph.seed.json` with 45 lines.",
+      "tokens": 180,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "json"
+      ],
+      "expand": "data/seed/style_graph.seed.json"
+    },
+    {
+      "id": "file:data/seed/user_preferences.seed.json",
+      "type": "file_summary",
+      "title": "data/seed/user_preferences.seed.json",
+      "summary": "Repository file `data/seed/user_preferences.seed.json` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "json"
+      ],
+      "expand": "data/seed/user_preferences.seed.json"
+    },
+    {
+      "id": "file:docs/agent_contract.md",
+      "type": "file_summary",
+      "title": "docs/agent_contract.md",
+      "summary": "Repository file `docs/agent_contract.md` with 42 lines.",
+      "tokens": 168,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "docs"
+      ],
+      "expand": "docs/agent_contract.md"
+    },
+    {
+      "id": "file:docs/architecture.md",
+      "type": "file_summary",
+      "title": "docs/architecture.md",
+      "summary": "Repository file `docs/architecture.md` with 57 lines.",
+      "tokens": 228,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "docs"
+      ],
+      "expand": "docs/architecture.md"
+    },
+    {
+      "id": "file:docs/fl_integration.md",
+      "type": "file_summary",
+      "title": "docs/fl_integration.md",
+      "summary": "Repository file `docs/fl_integration.md` with 54 lines.",
+      "tokens": 216,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "docs"
+      ],
+      "expand": "docs/fl_integration.md"
+    },
+    {
+      "id": "file:docs/musical_idea_schema.md",
+      "type": "file_summary",
+      "title": "docs/musical_idea_schema.md",
+      "summary": "Repository file `docs/musical_idea_schema.md` with 57 lines.",
+      "tokens": 228,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "docs"
+      ],
+      "expand": "docs/musical_idea_schema.md"
+    },
+    {
+      "id": "file:docs/roadmap.md",
+      "type": "file_summary",
+      "title": "docs/roadmap.md",
+      "summary": "Repository file `docs/roadmap.md` with 61 lines.",
+      "tokens": 244,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "docs"
+      ],
+      "expand": "docs/roadmap.md"
+    },
+    {
+      "id": "file:docs/seion_engine.md",
+      "type": "file_summary",
+      "title": "docs/seion_engine.md",
+      "summary": "Repository file `docs/seion_engine.md` with 54 lines.",
+      "tokens": 216,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "docs"
+      ],
+      "expand": "docs/seion_engine.md"
+    },
+    {
+      "id": "file:docs/style_language.md",
+      "type": "file_summary",
+      "title": "docs/style_language.md",
+      "summary": "Repository file `docs/style_language.md` with 41 lines.",
+      "tokens": 164,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md",
+        "docs"
+      ],
+      "expand": "docs/style_language.md"
+    },
+    {
+      "id": "file:fl_scripts/midi_controller/device_SEION_Controller.py",
+      "type": "file_summary",
+      "title": "fl_scripts/midi_controller/device_SEION_Controller.py",
+      "summary": "Repository file `fl_scripts/midi_controller/device_SEION_Controller.py` with 51 lines.",
+      "tokens": 204,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py"
+      ],
+      "expand": "fl_scripts/midi_controller/device_SEION_Controller.py"
+    },
+    {
+      "id": "file:opencode.json",
+      "type": "file_summary",
+      "title": "opencode.json",
+      "summary": "Repository file `opencode.json` with 227 lines.",
+      "tokens": 908,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "json"
+      ],
+      "expand": "opencode.json"
+    },
+    {
+      "id": "file:prompts/styles/computer_data_healing.md",
+      "type": "file_summary",
+      "title": "prompts/styles/computer_data_healing.md",
+      "summary": "Repository file `prompts/styles/computer_data_healing.md` with 17 lines.",
+      "tokens": 68,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/styles/computer_data_healing.md"
+    },
+    {
+      "id": "file:prompts/styles/dj_heartstring.md",
+      "type": "file_summary",
+      "title": "prompts/styles/dj_heartstring.md",
+      "summary": "Repository file `prompts/styles/dj_heartstring.md` with 16 lines.",
+      "tokens": 64,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/styles/dj_heartstring.md"
+    },
+    {
+      "id": "file:prompts/styles/floating_points.md",
+      "type": "file_summary",
+      "title": "prompts/styles/floating_points.md",
+      "summary": "Repository file `prompts/styles/floating_points.md` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/styles/floating_points.md"
+    },
+    {
+      "id": "file:prompts/styles/fred_again.md",
+      "type": "file_summary",
+      "title": "prompts/styles/fred_again.md",
+      "summary": "Repository file `prompts/styles/fred_again.md` with 15 lines.",
+      "tokens": 60,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/styles/fred_again.md"
+    },
+    {
+      "id": "file:prompts/styles/nto.md",
+      "type": "file_summary",
+      "title": "prompts/styles/nto.md",
+      "summary": "Repository file `prompts/styles/nto.md` with 16 lines.",
+      "tokens": 64,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/styles/nto.md"
+    },
+    {
+      "id": "file:prompts/styles/stephan_bodzin.md",
+      "type": "file_summary",
+      "title": "prompts/styles/stephan_bodzin.md",
+      "summary": "Repository file `prompts/styles/stephan_bodzin.md` with 16 lines.",
+      "tokens": 64,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/styles/stephan_bodzin.md"
+    },
+    {
+      "id": "file:prompts/system/composer.md",
+      "type": "file_summary",
+      "title": "prompts/system/composer.md",
+      "summary": "Repository file `prompts/system/composer.md` with 19 lines.",
+      "tokens": 76,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/system/composer.md"
+    },
+    {
+      "id": "file:prompts/system/critic.md",
+      "type": "file_summary",
+      "title": "prompts/system/critic.md",
+      "summary": "Repository file `prompts/system/critic.md` with 29 lines.",
+      "tokens": 116,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/system/critic.md"
+    },
+    {
+      "id": "file:prompts/system/orchestrator.md",
+      "type": "file_summary",
+      "title": "prompts/system/orchestrator.md",
+      "summary": "Repository file `prompts/system/orchestrator.md` with 34 lines.",
+      "tokens": 136,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/system/orchestrator.md"
+    },
+    {
+      "id": "file:prompts/system/reference_analyst.md",
+      "type": "file_summary",
+      "title": "prompts/system/reference_analyst.md",
+      "summary": "Repository file `prompts/system/reference_analyst.md` with 24 lines.",
+      "tokens": 96,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/system/reference_analyst.md"
+    },
+    {
+      "id": "file:prompts/system/sound_designer.md",
+      "type": "file_summary",
+      "title": "prompts/system/sound_designer.md",
+      "summary": "Repository file `prompts/system/sound_designer.md` with 25 lines.",
+      "tokens": 100,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/system/sound_designer.md"
+    },
+    {
+      "id": "file:prompts/system/teacher.md",
+      "type": "file_summary",
+      "title": "prompts/system/teacher.md",
+      "summary": "Repository file `prompts/system/teacher.md` with 19 lines.",
+      "tokens": 76,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/system/teacher.md"
+    },
+    {
+      "id": "file:prompts/tasks/create_variations.md",
+      "type": "file_summary",
+      "title": "prompts/tasks/create_variations.md",
+      "summary": "Repository file `prompts/tasks/create_variations.md` with 13 lines.",
+      "tokens": 52,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/tasks/create_variations.md"
+    },
+    {
+      "id": "file:prompts/tasks/critique_loop.md",
+      "type": "file_summary",
+      "title": "prompts/tasks/critique_loop.md",
+      "summary": "Repository file `prompts/tasks/critique_loop.md` with 13 lines.",
+      "tokens": 52,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/tasks/critique_loop.md"
+    },
+    {
+      "id": "file:prompts/tasks/generate_loop.md",
+      "type": "file_summary",
+      "title": "prompts/tasks/generate_loop.md",
+      "summary": "Repository file `prompts/tasks/generate_loop.md` with 14 lines.",
+      "tokens": 56,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/tasks/generate_loop.md"
+    },
+    {
+      "id": "file:prompts/tasks/remake_structure.md",
+      "type": "file_summary",
+      "title": "prompts/tasks/remake_structure.md",
+      "summary": "Repository file `prompts/tasks/remake_structure.md` with 11 lines.",
+      "tokens": 44,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "md"
+      ],
+      "expand": "prompts/tasks/remake_structure.md"
+    },
+    {
+      "id": "file:pyproject.toml",
+      "type": "file_summary",
+      "title": "pyproject.toml",
+      "summary": "Repository file `pyproject.toml` with 51 lines.",
+      "tokens": 204,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "toml"
+      ],
+      "expand": "pyproject.toml"
+    },
+    {
+      "id": "file:seion_music_lab.egg-info/SOURCES.txt",
+      "type": "file_summary",
+      "title": "seion_music_lab.egg-info/SOURCES.txt",
+      "summary": "Repository file `seion_music_lab.egg-info/SOURCES.txt` with 114 lines.",
+      "tokens": 456,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "txt"
+      ],
+      "expand": "seion_music_lab.egg-info/SOURCES.txt"
+    },
+    {
+      "id": "file:seion_music_lab.egg-info/dependency_links.txt",
+      "type": "file_summary",
+      "title": "seion_music_lab.egg-info/dependency_links.txt",
+      "summary": "Repository file `seion_music_lab.egg-info/dependency_links.txt` with 1 lines.",
+      "tokens": 12,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "txt"
+      ],
+      "expand": "seion_music_lab.egg-info/dependency_links.txt"
+    },
+    {
+      "id": "file:seion_music_lab.egg-info/entry_points.txt",
+      "type": "file_summary",
+      "title": "seion_music_lab.egg-info/entry_points.txt",
+      "summary": "Repository file `seion_music_lab.egg-info/entry_points.txt` with 2 lines.",
+      "tokens": 12,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "txt"
+      ],
+      "expand": "seion_music_lab.egg-info/entry_points.txt"
+    },
+    {
+      "id": "file:seion_music_lab.egg-info/requires.txt",
+      "type": "file_summary",
+      "title": "seion_music_lab.egg-info/requires.txt",
+      "summary": "Repository file `seion_music_lab.egg-info/requires.txt` with 21 lines.",
+      "tokens": 84,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "txt"
+      ],
+      "expand": "seion_music_lab.egg-info/requires.txt"
+    },
+    {
+      "id": "file:seion_music_lab.egg-info/top_level.txt",
+      "type": "file_summary",
+      "title": "seion_music_lab.egg-info/top_level.txt",
+      "summary": "Repository file `seion_music_lab.egg-info/top_level.txt` with 1 lines.",
+      "tokens": 12,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "txt"
+      ],
+      "expand": "seion_music_lab.egg-info/top_level.txt"
+    },
+    {
+      "id": "file:tests/fixtures/idea_basic_house.json",
+      "type": "file_summary",
+      "title": "tests/fixtures/idea_basic_house.json",
+      "summary": "Repository file `tests/fixtures/idea_basic_house.json` with 50 lines.",
+      "tokens": 200,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "tests"
+      ],
+      "expand": "tests/fixtures/idea_basic_house.json"
+    },
+    {
+      "id": "file:tests/fixtures/idea_melodic_techno.json",
+      "type": "file_summary",
+      "title": "tests/fixtures/idea_melodic_techno.json",
+      "summary": "Repository file `tests/fixtures/idea_melodic_techno.json` with 59 lines.",
+      "tokens": 236,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "tests"
+      ],
+      "expand": "tests/fixtures/idea_melodic_techno.json"
+    },
+    {
+      "id": "file:tests/fixtures/idea_trance.json",
+      "type": "file_summary",
+      "title": "tests/fixtures/idea_trance.json",
+      "summary": "Repository file `tests/fixtures/idea_trance.json` with 49 lines.",
+      "tokens": 196,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "json",
+        "tests"
+      ],
+      "expand": "tests/fixtures/idea_trance.json"
+    },
+    {
+      "id": "file:tests/test_arrangement.py",
+      "type": "file_summary",
+      "title": "tests/test_arrangement.py",
+      "summary": "Repository file `tests/test_arrangement.py` with 77 lines.",
+      "tokens": 308,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_arrangement.py"
+    },
+    {
+      "id": "file:tests/test_chords.py",
+      "type": "file_summary",
+      "title": "tests/test_chords.py",
+      "summary": "Repository file `tests/test_chords.py` with 50 lines.",
+      "tokens": 200,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_chords.py"
+    },
+    {
+      "id": "file:tests/test_fixtures.py",
+      "type": "file_summary",
+      "title": "tests/test_fixtures.py",
+      "summary": "Repository file `tests/test_fixtures.py` with 28 lines.",
+      "tokens": 112,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_fixtures.py"
+    },
+    {
+      "id": "file:tests/test_fl_bridge.py",
+      "type": "file_summary",
+      "title": "tests/test_fl_bridge.py",
+      "summary": "Repository file `tests/test_fl_bridge.py` with 45 lines.",
+      "tokens": 180,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_fl_bridge.py"
+    },
+    {
+      "id": "file:tests/test_midi_export.py",
+      "type": "file_summary",
+      "title": "tests/test_midi_export.py",
+      "summary": "Repository file `tests/test_midi_export.py` with 68 lines.",
+      "tokens": 272,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_midi_export.py"
+    },
+    {
+      "id": "file:tests/test_orchestrator.py",
+      "type": "file_summary",
+      "title": "tests/test_orchestrator.py",
+      "summary": "Repository file `tests/test_orchestrator.py` with 71 lines.",
+      "tokens": 284,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_orchestrator.py"
+    },
+    {
+      "id": "file:tests/test_scales.py",
+      "type": "file_summary",
+      "title": "tests/test_scales.py",
+      "summary": "Repository file `tests/test_scales.py` with 51 lines.",
+      "tokens": 204,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_scales.py"
+    },
+    {
+      "id": "file:tests/test_seion_score.py",
+      "type": "file_summary",
+      "title": "tests/test_seion_score.py",
+      "summary": "Repository file `tests/test_seion_score.py` with 115 lines.",
+      "tokens": 460,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_seion_score.py"
+    },
+    {
+      "id": "file:tests/test_sqlite_memory.py",
+      "type": "file_summary",
+      "title": "tests/test_sqlite_memory.py",
+      "summary": "Repository file `tests/test_sqlite_memory.py` with 73 lines.",
+      "tokens": 292,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_sqlite_memory.py"
+    },
+    {
+      "id": "file:tests/test_variations.py",
+      "type": "file_summary",
+      "title": "tests/test_variations.py",
+      "summary": "Repository file `tests/test_variations.py` with 89 lines.",
+      "tokens": 356,
+      "authority": 0.7,
+      "freshness": 1.0,
+      "tags": [
+        "py",
+        "tests"
+      ],
+      "expand": "tests/test_variations.py"
+    }
+  ]
+}

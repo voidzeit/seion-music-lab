@@ -1,0 +1,51 @@
+{
+  "status": "structural_pass",
+  "bpm": 156,
+  "bars": 160,
+  "approximately_seconds": 246.15,
+  "checks": "mido parses type-1 MIDI, contains notes, reaches full duration; no sound rendered or listened to",
+  "files": {
+    "drums": {
+      "file": "midi/drums.mid",
+      "tracks": 2,
+      "note_on_events": 1970,
+      "sha256": "abbba18a649056f0782689b8e52509f7ae775c43894d7b2dba781dd40cfa728a"
+    },
+    "latin_perc": {
+      "file": "midi/latin_perc.mid",
+      "tracks": 2,
+      "note_on_events": 2064,
+      "sha256": "e795ae32393dba55d70bc996ed35cba88adedeb6195e59626eb979a5f6d20bf0"
+    },
+    "bass": {
+      "file": "midi/bass.mid",
+      "tracks": 2,
+      "note_on_events": 540,
+      "sha256": "abd5e719750eabb1c147968823ff2dd603f98eab18955294256abd74694e821c"
+    },
+    "chords": {
+      "file": "midi/chords.mid",
+      "tracks": 2,
+      "note_on_events": 572,
+      "sha256": "60044e246262a1bedcaff99ecdf81074fe2a00467c1879707efd91d1b68309e4"
+    },
+    "arp": {
+      "file": "midi/arp.mid",
+      "tracks": 2,
+      "note_on_events": 640,
+      "sha256": "61c0c25394b671091085ea37f85ea68dba4ffea996a4e3d51524b81d328fced4"
+    },
+    "lead": {
+      "file": "midi/lead.mid",
+      "tracks": 2,
+      "note_on_events": 536,
+      "sha256": "468bb24dff68fe6f4f0f8d6a64adb11a9c911de9c95cc2c2c4130331cf12b249"
+    },
+    "full_song": {
+      "file": "midi/full_song.mid",
+      "tracks": 7,
+      "note_on_events": 6322,
+      "sha256": "a771a27fa259759876dbe57dde4386e4307c94991aa9c834ba7a72d8db621682"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "project_id": "seion-001-cumbia-de-los-monjes",
+  "version": "v001",
+  "preset_availability": "unverified - suggestions only",
+  "tracks": [
+    {
+      "role": "drums",
+      "sound": "dry punchy 909/hardgroove kick with short tail, clap, hats",
+      "effects": [
+        "gentle transient shaping",
+        "kick/bass separation"
+      ]
+    },
+    {
+      "role": "latin_perc",
+      "sound": "güiro/guacharaca-like scrape, congas, sonidero cowbell",
+      "effects": [
+        "highpass as needed",
+        "subtle room send"
+      ]
+    },
+    {
+      "role": "bass",
+      "sound": "mono offbeat rolling synth bass, optional donk layer on final drops",
+      "effects": [
+        "short envelope",
+        "sidechain to kick",
+        "saturation"
+      ],
+      "range": "E2-B2 roughly; MIDI notes definitive"
+    },
+    {
+      "role": "chords",
+      "sound": "nostalgic trance chord stabs + atmospheric pad",
+      "effects": [
+        "highpass",
+        "chorus",
+        "tempo delay",
+        "sidechain"
+      ]
+    },
+    {
+      "role": "arp",
+      "sound": "bright trance pluck / acid-leaning pulse",
+      "effects": [
+        "filter automation",
+        "short delay"
+      ]
+    },
+    {
+      "role": "lead",
+      "sound": "original cumbia-inspired call-and-response via brass/accordion-like synth",
+      "effects": [
+        "filter cut automation",
+        "brief stereo delay"
+      ]
+    }
+  ],
+  "creative_rule": "Latin percussion must stay legible even in peak-time sections; leave kick and bass center clean.",
+  "placeholder_policy": "No actual samples, plugins, soundfonts, presets or stems are bundled."
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "project_id": "seion-001-cumbia-de-los-monjes",
+  "slug": "cumbia-de-los-monjes-rave",
+  "title": "La Cumbia de los Monjes — Rave Rework (working title)",
+  "project_type": "unofficial_remix_concept",
+  "production_status": "composition_prototype",
+  "primary_daw": "ardour",
+  "render_backend_target": "ardour_headless_experimental",
+  "bpm": 158,
+  "bpm_note": "target from v002 on; v001 MIDI and drop_1 render are 156",
+  "key": "C# minor",
+  "key_status": "measured from separated stems (reference/reference_fingerprint.json): C# minor 0.647, bass on C# 30%; loop C#m-B-B-F#/G#m (i-bVII-IV, dorian colour). v001 MIDI is still G minor",
+  "time_signature": "4/4",
+  "length_bars": 160,
+  "approx_duration_seconds": 246.15,
+  "current_version": "v001",
+  "genres": [
+    "hypertechno",
+    "hardgroove",
+    "hard trance",
+    "hard bounce",
+    "sonidero cumbia"
+  ],
+  "reference_track": {
+    "title": "La Cumbia de los Monjes",
+    "artist": "Grupo G",
+    "composition_credit": "Jorge Mondragón (credit shown on releases)",
+    "original_audio_present": true,
+    "original_audio_location": "received/ (local only, git-ignored)",
+    "analysis_2026_10_13": {
+      "duration_seconds": 196.32,
+      "tempo_bpm": 89.1,
+      "key_estimate": "F# major (alt: B major), confidence 0.64 - full-mix estimate, superseded by stem-based C# minor",
+      "fingerprint": "reference/reference_fingerprint.json",
+      "tuning_offset_semitones": -0.04,
+      "integrated_lufs": -12.77,
+      "peak_dbfs": -0.52
+    }
+  },
+  "style_references": [
+    "DJ Heartstring",
+    "Funk Tribu",
+    "Noimage",
+    "Olmatri",
+    "Dr. Peacock",
+    "Odymel",
+    "DJ Bax",
+    "Computer Data",
+    "Noro$t",
+    "Butschi",
+    "Grand V"
+  ],
+  "rights_status": "user_declared_full_rights_except_commercial_distribution (2026-10-13); documentation not on file",
+  "publish_gate": "commercial_distribution_blocked; non-commercial use allowed per user declaration",
+  "notes": "Original MIDI draft; not a transcription or a remix containing the original source recording."
+}

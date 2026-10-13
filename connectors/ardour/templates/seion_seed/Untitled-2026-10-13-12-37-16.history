@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UndoHistory>
+  <UndoTransaction timestamp="2026-10-13T12:40:47-06" name="insert file">
+    <StatefulDiffCommand obj-id="267" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="297"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="53" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection/>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="188"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction timestamp="2026-10-13T12:40:47-06" name="insert file">
+    <StatefulDiffCommand obj-id="389" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="425"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="53" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="188"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="310"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction timestamp="2026-10-13T12:40:48-06" name="insert file">
+    <StatefulDiffCommand obj-id="516" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="558"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="53" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="310"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="437"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction timestamp="2026-10-13T12:40:48-06" name="insert file">
+    <StatefulDiffCommand obj-id="649" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="697"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="53" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="437"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="570"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction timestamp="2026-10-13T12:40:49-06" name="insert file">
+    <StatefulDiffCommand obj-id="788" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="842"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="53" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="570"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="709"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction timestamp="2026-10-13T12:40:49-06" name="insert file">
+    <StatefulDiffCommand obj-id="933" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="993"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="53" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="709"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1892" left-frame="0" y-origin="0">
+        <Selection>
+          <StripableView id="854"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+</UndoHistory>
