@@ -6,7 +6,7 @@ import json
 import mido
 import pytest
 
-from app.music.prototype_lab import BPM, MODES, ROLES, BARS, build_experiments, make_patterns
+from app.music.prototype_lab import BARS, BPM, MODES, ROLES, build_experiments, make_patterns
 
 
 def test_three_modes_have_distinct_low_end_and_arrangement():
