@@ -30,6 +30,8 @@ jobs:
           if-no-files-found: error
       - name: Synthesize three editable audition previews
         run: python -m app.audio.preview_synth --bundle "$RUNNER_TEMP/project001-a-b-c" --out "$RUNNER_TEMP/project001-wav" --sample-rate 16000
+      - name: Analyze A/B/C WAV technical evidence
+        run: python -m app.audio.audio_analysis --preview-root "$RUNNER_TEMP/project001-wav" --out "$RUNNER_TEMP/project001-wav/technical_comparison.json"
       - name: Upload synthetic WAV auditions and stems
         uses: actions/upload-artifact@v4
         with:
