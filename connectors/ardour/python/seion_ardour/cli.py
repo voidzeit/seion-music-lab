@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -37,6 +38,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--no-stems", action="store_true")
     args = ap.parse_args(argv)
 
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}", args.name):
+        ap.error("--name must be a safe identifier: letters, digits, _ and -")
     version_dir = args.version_dir.resolve()
     idea = json.loads((version_dir / "idea.json").read_text(encoding="utf-8"))
     beats_per_bar = int(idea.get("time_signature", "4/4").split("/")[0])
@@ -64,9 +67,9 @@ def main(argv: list[str] | None = None) -> int:
     kit = json.loads(Path(kit_file).read_text(encoding="utf-8")) if kit_file else {}
 
     out_dir = version_dir / "renders" / args.name
+    if out_dir.exists() and any(out_dir.iterdir()):
+        raise SystemExit(f"render already exists, refusing to overwrite: {out_dir}")
     out_dir.mkdir(parents=True, exist_ok=True)
-    for old in out_dir.glob("*.wav"):
-        old.unlink()
     job = write_job(
         out_dir / "job.lua",
         tracks=tracks,
@@ -82,6 +85,11 @@ def main(argv: list[str] | None = None) -> int:
     project_slug, version = version_dir.parents[1].name, version_dir.name
     session = prepare_session(workspace() / project_slug / f"{version}_{args.name}", args.seed)
     kit_applied = apply_kit(next(session.glob("*.ardour")), kit) if kit else {}
+    if kit:
+        wanted = set(kit.get("patches", kit))
+        missing = wanted - set(kit_applied)
+        if missing:
+            raise SystemExit(f"kit patches could not be assigned to session tracks: {sorted(missing)}")
     log = run_render(install, session, job)
 
     music_seconds = (end - start) * 60.0 / bpm

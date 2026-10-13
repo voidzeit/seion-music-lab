@@ -77,10 +77,15 @@ def seed_manifest(seed: str = "seion_seed") -> dict:
 
 
 def prepare_session(target: Path, seed: str = "seion_seed") -> Path:
-    """Copy the seed session to ``target`` (replaced on every render)."""
+    """Copy a seed into a new workspace; never overwrite an existing session."""
     source = seed_dir(seed)
+    boundary = workspace().resolve()
+    resolved = target.resolve()
+    if not resolved.is_relative_to(boundary) or resolved == boundary:
+        raise ArdourError(f"session target must be inside workspace {boundary}: {target}")
     if target.exists():
-        shutil.rmtree(target)
+        raise ArdourError(f"session already exists; choose a new --name: {target}")
+    target.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(
         source,
         target,

@@ -24,8 +24,13 @@ class BarRange:
 
     @classmethod
     def parse(cls, text: str) -> BarRange:
-        a, b = text.split("-")
-        return cls(int(a), int(b))
+        try:
+            a, b = (int(x) for x in text.split("-"))
+        except ValueError as exc:
+            raise ValueError("bar range must be FIRST-LAST, for example 65-96") from exc
+        if a < 1 or b < a:
+            raise ValueError("bar range must be positive and ascending")
+        return cls(a, b)
 
     def beats(self, beats_per_bar: int = 4) -> tuple[float, float]:
         return (self.first - 1) * beats_per_bar, self.last * beats_per_bar
@@ -57,11 +62,14 @@ def read_notes(path: Path) -> tuple[list[Note], float | None]:
 
 
 def slice_notes(notes: list[Note], start: float, end: float) -> list[Note]:
-    """Keep notes starting inside [start, end), shifted to 0 and clipped at end."""
+    """Include overlapping notes and clip both edges of [start, end)."""
+    if end <= start:
+        raise ValueError("invalid slice interval")
     out = []
     for s, length, note, vel, ch in notes:
-        if start <= s < end:
-            out.append((s - start, min(length, end - s), note, vel, ch))
+        left, right = max(start, s), min(end, s + length)
+        if right > left:
+            out.append((left - start, right - left, note, vel, ch))
     return out
 
 
@@ -97,6 +105,8 @@ def write_job(
 ) -> Path:
     """``preroll_beats`` of silence precede the music and are not exported, so
     synth start-up transients (e.g. Surge loading a patch) stay out of the WAV."""
+    if "]]" in str(export_dir):
+        raise ValueError("unsafe export directory for Lua long string")
     gains = ",".join(f'["{r}"] = {g:.2f}' for r, g in (gains_db or {}).items())
     lines = [
         "return {",

@@ -97,7 +97,7 @@ local function export(name)
 	return ok
 end
 
-export("master")
+assert(export("master"), "master WAV export failed")
 
 if job.stems then
 	local tracks = {}
@@ -107,7 +107,7 @@ if job.stems then
 			for _, t in ipairs(tracks) do
 				t:mute_control():set_value(t:name() == solo:name() and 0 or 1, PBD.GroupControlDisposition.NoGroup)
 			end
-			export("stem_" .. role_of(solo))
+			assert(export("stem_" .. role_of(solo)), "stem WAV export failed: " .. role_of(solo))
 		end
 	end
 	for _, t in ipairs(tracks) do
