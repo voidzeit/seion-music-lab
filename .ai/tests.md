@@ -1,21 +1,13 @@
-# Tests
+# Testing — factual commands
 
-## Required commands
+    python -m pip install -e ".[dev]"
+    python -m pytest -q
+    ruff check app tests connectors/ardour/python connectors/ardour/tests
+    python -m app.music.prototype_lab --out <new-empty-directory>
 
-No test commands configured yet.
+Ardour is NOT tested by default in CI. The historical AMO record claims 63
+tests passed on 2026-10-13; this is previous local testimony, NOT a fresh
+check for the current branch. Current tests and lint need their CI run.
 
-## Notes
-
-Update this file with project-specific validation commands.
-
-## Validation — 2026-10-13T17:42:33.052872+00:00
-
-55 pytest tests passed; ruff check passed; compileall passed; amo validate passed
-
-## Validation — 2026-10-13T18:46:08.681253+00:00
-
-60 pytest passed; ruff passed; drop_1 render_report passed
-
-## Validation — 2026-10-13T19:59:13.715242+00:00
-
-63 pytest passed; ruff passed; drop_1_surge render_report passed
+A MIDI file can be structurally valid while sounding bad. A WAV can be
+non-silent while sounding wrong. Audio sign-off requires listening.

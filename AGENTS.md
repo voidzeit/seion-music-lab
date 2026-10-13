@@ -1,9 +1,12 @@
-# Agent Instructions
+# SEION Music Lab — agent instructions
 
-This repository uses AMO memory.
+Read .ai/manifest.yaml, .ai/state.md, .ai/tasks.md, .ai/tests.md and
+docs/project001_review_gate.md. Generated .ai/machine/ indexes are disposable.
 
-Read `.ai/manifest.yaml`, `.ai/state.md`, `.ai/tasks.md`, and `.ai/packs/quick.md` if present.
+Project 001: invent a NEW electronic sound, not "Latin rave" or cultural
+national-identity branding. Do not conflate proposed artist traits and measured
+audio features. Never include commercial source recordings or stems in Git.
 
-Do not treat `.ai/runtime/` as canonical memory.
-
-Make the smallest safe change and update memory through postflight when project state changes.
+Keep v001 historical; protect existing Ardour sessions, WAVs and reference
+audio. Verify tests, lint and CI separately from human listening.
+Use feature branches and draft PRs; do not merge without approval.
