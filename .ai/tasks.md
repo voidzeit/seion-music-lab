@@ -4,7 +4,10 @@
 
 - [x] Preserve rejected v001 as legacy.
 - [x] Implement original 16-bar A/B/C 158 BPM experiments in C# minor context.
-- [ ] Run experiments locally, render with distinct synth sounds, audition A/B/C.
+- [x] Add three reproducible local WAV/stem synthesis profiles and CI audio preview.
+- [x] Add PCM audio features and acoustic A/B/C comparison.
+- [x] Add hash-bound human listening review and selection gate.
+- [ ] Render the real Ardour/Surge version and listen to all three on Windows.
 - [ ] Select one compelling 16-bar groove and write real listening feedback.
 - [ ] Build the approved 32-bar drop; defer full song until approval.
 
