@@ -59,3 +59,24 @@
 - automatic mastering / "sounds professional" claims without audio
 - commercial-track remakes
 - 100-layer arrangements with no structure
+
+
+## Project 001 recovery (2026-10-13) — actively verified in CI
+
+- Legacy v001 (156 BPM, G minor) is rejected as an artistic direction, retained for history.
+- v002 generates three original 16-bar 158-BPM / C# minor MIDI experiments
+  (groove / trance_bounce / hardcore_hybrid). These are **unheard prototypes**.
+- The original Grupo G stem analysis is **derived evidence**, while the 11
+  artist style descriptions remain **hypotheses**, not measured fingerprints.
+- A Python Ardour adapter can select a v002 prototype and merge its extra
+  percussion into GM drums for the experimental seed; no overwrite of
+  prior render/session paths.
+- Unit tests and Linux CI cover the core prototype and adapter without
+  installing the DAW. A real Windows Ardour/Surge rendering test and human
+  audition are mandatory before calling production "ready".
+- AMO canonical state and test commands are updated; large regenerated
+  machine indexes are excluded from the repository.
+
+Next musical gate: audition three independently sound-designed, rendered
+16-bar previews, approve one, then expand to a 32-bar drop. Do not generate
+another unreviewed 160-bar song.
