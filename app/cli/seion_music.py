@@ -360,6 +360,39 @@ def review_status(root: Path = typer.Argument(...)) -> None:
         console.print(f"  {mode}: {'rated' if entry['rating'] else 'unrated'}")
 
 
+
+
+@app.command(name="analyze-wav")
+def analyze_wav_command(
+    audio: Path = typer.Argument(..., help="PCM WAV render or stem to inspect."),
+    out: Path = typer.Option(..., "--out", help="New JSON report path."),
+    bpm: float | None = typer.Option(None, "--bpm"),
+) -> None:
+    """Measure technical audio features, not mastering quality or artistic merit."""
+    import json
+
+    from app.audio.audio_analysis import analyze_wav
+
+    if out.exists():
+        raise typer.BadParameter("Output already exists; refusing to overwrite")
+    result = analyze_wav(audio, bpm=bpm)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    console.print(f"[green]Signal-analysis evidence:[/green] {out}")
+
+
+@app.command(name="compare-audio")
+def compare_audio_command(
+    root: Path = typer.Argument(..., help="A/B/C preview folder."),
+    out: Path = typer.Option(..., "--out", help="New JSON comparison path."),
+) -> None:
+    """Compare A/B/C WAV statistics without declaring a creative winner."""
+    from app.audio.audio_analysis import analyze_prototypes
+
+    analyze_prototypes(root, out=out)
+    console.print(f"[green]Technical A/B/C comparison:[/green] {out}")
+    console.print("[dim]Human listening is still required.[/dim]")
+
 @app.command()
 def version() -> None:
     """Print the SEION Music Lab version."""
