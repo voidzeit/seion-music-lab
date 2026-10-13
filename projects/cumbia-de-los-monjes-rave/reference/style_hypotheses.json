@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "classification": "hypotheses_only_not_measured_artist_audio",
+  "use_case": "Creative experiment design, not sound-alike or factual fingerprints",
+  "required_verification": [
+    "reference_file_sha256",
+    "licence_and_provenance",
+    "tempo_grid",
+    "kick_envelope",
+    "bass_onsets",
+    "swing_microtiming",
+    "motif_interval_distribution",
+    "harmonic_rhythm",
+    "stereo_spectral_balance",
+    "section_energy",
+    "human_listening_notes"
+  ],
+  "artists": [
+    {
+      "name": "DJ Heartstring",
+      "hypothesis": "euphoric melodic hook over fast club beat"
+    },
+    {
+      "name": "Funk Tribu",
+      "hypothesis": "nu-trance lead motif and build-up tension"
+    },
+    {
+      "name": "Noimage",
+      "hypothesis": "club percussion and bouncing short loops"
+    },
+    {
+      "name": "Olmatri",
+      "hypothesis": "distorted high-impact timbres and hardcore contrast"
+    },
+    {
+      "name": "Dr. Peacock",
+      "hypothesis": "pitch-related distorted kick tail and peak-energy contrast"
+    },
+    {
+      "name": "Odymel",
+      "hypothesis": "trance/eurodance hooks with house/techno movement"
+    },
+    {
+      "name": "DJ Bax",
+      "hypothesis": "resonant donk and elastic call-response bass"
+    },
+    {
+      "name": "COMPUTER DATA",
+      "hypothesis": "soft nostalgic harmony, texture and spaciousness"
+    },
+    {
+      "name": "Noro$t",
+      "hypothesis": "rhythmic reconstruction of motifs into fast club patterns"
+    },
+    {
+      "name": "Butschi",
+      "hypothesis": "emotional trance breakdown and vocal breathing space"
+    },
+    {
+      "name": "Grand V",
+      "hypothesis": "driving trance leads contrasted against introspective sections"
+    }
+  ],
+  "constraints": [
+    "These are tentative production prompts, not audio analysis",
+    "No copyrighted melodies or master audio bundled",
+    "An artist name never determines a preset or musical result by itself"
+  ]
+}
