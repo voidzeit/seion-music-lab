@@ -21,3 +21,10 @@ jobs:
         run: ruff check app tests connectors/ardour/python connectors/ardour/tests
       - name: Generate Project 001 prototypes
         run: python -m app.music.prototype_lab --out "$RUNNER_TEMP/project001-a-b-c"
+      - name: Upload Project 001 editable MIDI prototypes
+        uses: actions/upload-artifact@v4
+        with:
+          name: seion-project001-abc-midi
+          path: ${{ runner.temp }}/project001-a-b-c/
+          retention-days: 14
+          if-no-files-found: error
