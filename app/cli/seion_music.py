@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import typer
 from rich.console import Console
 from rich.panel import Panel
@@ -16,7 +18,7 @@ from app.tools import compare_versions, log_user_feedback
 app = typer.Typer(
     no_args_is_help=True,
     add_completion=False,
-    help="SEION Music Lab - generate editable, explained musical ideas for FL Studio.",
+    help="SEION Music Lab - compose, render experimental audio and review editable ideas.",
 )
 console = Console()
 
@@ -270,6 +272,126 @@ def install_fl(
         "script. Run `seion-music generate` first so latest_idea.json exists.[/dim]"
     )
 
+
+
+review_app = typer.Typer(help="Human audition and approval of A/B/C previews.")
+app.add_typer(review_app, name="review")
+
+
+@app.command(name="prototype")
+def prototype(
+    out: Path = typer.Option(..., "--out", help="New Project 001 MIDI output folder."),
+    seed: int = typer.Option(1001, "--seed"),
+) -> None:
+    """Generate three original editable MIDI experiments."""
+    from app.music.prototype_lab import build_experiments
+
+    result = build_experiments(out, seed=seed)
+    console.print(f"[green]Generated {len(result['experiments'])} A/B/C prototypes:[/green] {out}")
+    console.print("[dim]Symbolic MIDI only; listening required.[/dim]")
+
+
+@app.command(name="preview")
+def preview(
+    bundle: Path = typer.Option(..., "--bundle"),
+    out: Path = typer.Option(..., "--out"),
+    mode: str = typer.Option("all", "--mode"),
+) -> None:
+    """Synthesize independent previews with the optional NumPy audio engine."""
+    from app.audio.preview_synth import MODES, render_mode
+
+    if mode not in (*MODES, "all"):
+        raise typer.BadParameter(f"Expected all or one of {MODES}", param_hint="--mode")
+    for current in (MODES if mode == "all" else (mode,)):
+        report = render_mode(bundle, out / current, current)
+        console.print(f"[green]{current}:[/green] {out / current / 'preview.wav'}")
+        console.print(f"[dim]{report['quality_status']} — listen before approval[/dim]")
+
+
+@review_app.command(name="init")
+def review_init(root: Path = typer.Argument(...)) -> None:
+    """Create a fresh review bound to verified WAV hashes."""
+    from app.audio.listening_gate import init_review
+
+    init_review(root)
+    console.print(f"[green]Review initialized:[/green] {root / 'listening_review.json'}")
+
+
+@review_app.command(name="rate")
+def review_rate(
+    root: Path = typer.Argument(...),
+    mode: str = typer.Argument(...),
+    groove: int = typer.Option(..., "--groove", min=1, max=5),
+    low_end: int = typer.Option(..., "--low-end", min=1, max=5),
+    hook: int = typer.Option(..., "--hook", min=1, max=5),
+    timbre: int = typer.Option(..., "--timbre", min=1, max=5),
+    notes: str = typer.Option(..., "--notes"),
+) -> None:
+    """Record detailed listening notes and ratings."""
+    from app.audio.listening_gate import rate
+
+    state = rate(root, mode, {"groove": groove, "low_end": low_end,
+                             "hook": hook, "timbre": timbre}, notes)
+    console.print(f"[green]Saved {mode} review:[/green] {state['decision']}")
+
+
+@review_app.command(name="approve")
+def review_approve(
+    root: Path = typer.Argument(...),
+    mode: str = typer.Argument(...),
+    reason: str = typer.Option(..., "--reason"),
+    heard_all: bool = typer.Option(False, "--heard-all"),
+) -> None:
+    """Explicitly approve a variant for 32-bar development, not for release."""
+    from app.audio.listening_gate import approve
+
+    state = approve(root, mode, reason, heard_all=heard_all)
+    console.print(f"[green]Approved for development:[/green] {state['approval']['mode']}")
+
+
+@review_app.command(name="status")
+def review_status(root: Path = typer.Argument(...)) -> None:
+    """Show the recorded A/B/C listening state."""
+    from app.audio.listening_gate import load_review
+
+    state = load_review(root)
+    console.print(f"Status: {state['decision']}")
+    for mode, entry in state["variants"].items():
+        console.print(f"  {mode}: {'rated' if entry['rating'] else 'unrated'}")
+
+
+
+
+@app.command(name="analyze-wav")
+def analyze_wav_command(
+    audio: Path = typer.Argument(..., help="PCM WAV render or stem to inspect."),
+    out: Path = typer.Option(..., "--out", help="New JSON report path."),
+    bpm: float | None = typer.Option(None, "--bpm"),
+) -> None:
+    """Measure technical audio features, not mastering quality or artistic merit."""
+    import json
+
+    from app.audio.audio_analysis import analyze_wav
+
+    if out.exists():
+        raise typer.BadParameter("Output already exists; refusing to overwrite")
+    result = analyze_wav(audio, bpm=bpm)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    console.print(f"[green]Signal-analysis evidence:[/green] {out}")
+
+
+@app.command(name="compare-audio")
+def compare_audio_command(
+    root: Path = typer.Argument(..., help="A/B/C preview folder."),
+    out: Path = typer.Option(..., "--out", help="New JSON comparison path."),
+) -> None:
+    """Compare A/B/C WAV statistics without declaring a creative winner."""
+    from app.audio.audio_analysis import analyze_prototypes
+
+    analyze_prototypes(root, out=out)
+    console.print(f"[green]Technical A/B/C comparison:[/green] {out}")
+    console.print("[dim]Human listening is still required.[/dim]")
 
 @app.command()
 def version() -> None:

@@ -48,3 +48,16 @@ Thumbs.db
 .vscode/
 *.swp
 .ai/runtime/
+
+# AMO: generated indexes are disposable, not canonical memory
+.ai/machine/
+.ai/graph.md
+.ai/packs/quick.md
+
+# Reproducible A/B/C prototype outputs and renders stay local
+projects/cumbia-de-los-monjes-rave/versions/v002/generated/
+
+# Original synthetic audio audition WAVs/stems and local review files
+projects/**/preview_wav/
+projects/**/audition_audio/
+projects/**/auditions/

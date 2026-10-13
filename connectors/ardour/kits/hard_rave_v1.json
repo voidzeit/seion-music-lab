@@ -1,11 +1,11 @@
 {
-  "description": "Surge XT patches (arp = factory FM Pluck: 3rd-party Trance Pluck emitted DC + only a start-up burst). Gains tuned on drop_1 renders so the master does not clip; no limiter yet.",
+  "description": "LEGACY experiment only: unapproved preset choices, not the user’s target sound. Paths use portable surge:// URIs and must resolve from SEION_SURGE_ROOT. Compare with synthetic A/B/C audition before making any musical judgment.",
   "patches": {
-    "kick": "C:/ProgramData/Surge XT/patches_3rdparty/Cybersoda/Drums/Destroyed Kick.fxp",
-    "bass": "C:/ProgramData/Surge XT/patches_3rdparty/Giana Brotherz/Basses/Rave Detuner.fxp",
-    "chords": "C:/ProgramData/Surge XT/patches_3rdparty/Giana Brotherz/Chords/Synth Stab Minor.fxp",
-    "arp": "C:/ProgramData/Surge XT/patches_factory/Plucks/FM Pluck.fxp",
-    "lead": "C:/ProgramData/Surge XT/patches_3rdparty/Argitoth/Leads/Trance Lead 1.fxp"
+    "kick": "surge://patches_3rdparty/Cybersoda/Drums/Destroyed Kick.fxp",
+    "bass": "surge://patches_3rdparty/Giana Brotherz/Basses/Rave Detuner.fxp",
+    "chords": "surge://patches_3rdparty/Giana Brotherz/Chords/Synth Stab Minor.fxp",
+    "arp": "surge://patches_factory/Plucks/FM Pluck.fxp",
+    "lead": "surge://patches_3rdparty/Argitoth/Leads/Trance Lead 1.fxp"
   },
   "gains_db": {
     "kick": -6,

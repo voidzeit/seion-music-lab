@@ -1,25 +1,46 @@
-# Proyecto 001 — La Cumbia de los Monjes (Rave Rework)
+# SEION Project 001 — La Cumbia de los Monjes (Rave Rework)
 
-## Concepto
-Una reimaginación de la cumbia sonidera mexicana en clave **Latin rave / hypertechno / hardgroove / hardbounce**. No es copiar once artistas: es tomar funciones específicas de ellos para producir un track con identidad propia.
+## Creative direction (approved brief, not approved audio)
 
-## Identidad
-- **Tempo inicial:** 156 BPM, 4/4.
-- **Tonalidad de composición provisional:** G minor. No se ha medido la tonalidad de la grabación de Grupo G.
-- **Duración de esta maqueta:** 160 compases, ~4:06.
-- **Hook:** motivo original de llamada-respuesta con timbre de acordeón/brass sintetizado.
-- **Firma rítmica:** kick 4-on-floor + bajos a contratiempo + güiro/congas/campana con acentos 3-3-2; 3-3-2 es una decisión de diseño, no una transcripción de Grupo G.
-- **Contraste:** intro de percusión sonidera, drop hardbounce, break emocional trance y drop final con acento hardcore.
+Build a **new electronic sound language**, not a conventional Latin rave,
+a Mexican-identity production, or a speed-up of an existing cumbia.
+The original Grupo G track is reference *material* and its harmonic/rhythmic
+relationships can inform our experiments. Source recordings and derived stems
+remain private.
 
-## Referencias organizadas por función
-- **Groove/melodía rave:** DJ Heartstring, Funk Tribu, Odymel, Grand V.
-- **Club/drive:** Noimage, Noro$t.
-- **Donk/bounce:** DJ Bax.
-- **Clímax acelerado/hardcore:** Dr. Peacock, Olmatri.
-- **Emoción y atmósfera:** Butschi, Computer Data.
+- Target: **158 BPM**, 4/4.
+- Tonal centre: **C# minor, candidate**; stem-derived chroma correlation
+  score 0.647 is NOT a calibrated confidence probability.
+- Candidate four-bar chord loop: **C#m – B – B – F#** with intentional Dorian
+  colour. The published fingerprint also finds G#m alternatives.
+- Source tempo: approximately **89.1 BPM**; preserve phrase relationships
+  selectively rather than mechanically time-stretching the whole source.
+- v001: **rejected** 156 BPM / G-minor MIDI + arbitrary synth presets.
+- v002: **three original A/B/C sketches**, 16 bars each at 158 BPM / C# minor.
 
-## Qué incluye v001
-MIDI **nuevo y original** (borrador), separado en drums, latin_perc, bass, chords, arp y lead; manifiestos de planificación Waveform y PoC Ardour; no se incluye audio de Grupo G, stems, sonidos finales, voces ni mezcla.
+## A/B/C contrasts
 
-## Objetivo de revisión v002
-Escuchar en DAW, elegir kick y bajo, verificar pegada de la percusión latina y evaluar si el motivo propuesto tiene personalidad. Registrar feedback y crear variación.
+A. **groove:** four-on-floor, asymmetrical percussion, restrained bass,
+   minimalist motifs. Evaluate bodily drive before lead timbre.
+B. **trance_bounce:** open harmony, fast arp, offbeat bass and melodic lift.
+C. **hardcore_hybrid:** more extreme kick gestures, lower bass density,
+   contrasting melodic punctuation. Distortion is a sound-design task,
+   not something MIDI alone can accomplish.
+
+Do not stack rolling, donk and distorted kick-tail sub-bass simultaneously.
+Use arrangement changes and role arbitration instead.
+
+## Reference artist hypotheses
+
+DJ Heartstring, Funk Tribu, Noimage, Olmatri, Dr. Peacock, Odymel, DJ Bax,
+COMPUTER DATA, Noro$t, Butschi, Grand V. Hypotheses are recorded separately
+from actual audio measurements at reference/style_hypotheses.json.
+
+## Approval path
+
+Generate A/B/C -> render three real sound kits -> normalize audition levels
+approximately -> listen and annotate groove, kick/bass compatibility, melody,
+emotion, space and novelty -> approve one 16-bar foundation -> expand to 32
+bars -> only then build the full arrangement.
+
+MIDI structural validity or a non-silent WAV is not creative approval.

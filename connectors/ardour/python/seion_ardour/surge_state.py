@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import base64
 import json
+import os
 import re
 import struct
 import sys
@@ -71,6 +72,57 @@ def apply_kit(session_file: Path, kit: dict) -> dict[str, str]:
     tree.write(session_file, encoding="UTF-8", xml_declaration=True)
     return applied
 
+
+
+def resolve_kit_paths(kit: dict, root: Path | None = None) -> dict:
+    """Resolve portable surge:// URIs and migrate machine-specific path references.
+
+    SEION_SURGE_ROOT may specify the Surge XT data directory. Missing patches
+    are errors: no audio preset is silently invented or substituted.
+    """
+    if not kit:
+        return {}
+    source = kit.get("patches", kit)
+    if not isinstance(source, dict):
+        raise ValueError("Surge kit patches must be a dictionary")
+    base = root or Path(os.environ.get(
+        "SEION_SURGE_ROOT",
+        str(Path(os.environ.get("PROGRAMDATA", "C:/ProgramData")) / "Surge XT"),
+    ))
+    result = dict(kit)
+    resolved = {}
+    for role, declared in source.items():
+        if not isinstance(declared, str) or not declared.strip():
+            raise ValueError(f"Invalid patch reference for {role}")
+        path = Path(declared)
+        if path.is_file():
+            candidate = path.resolve()
+        else:
+            text = declared.replace("\\", "/")
+            if text.startswith("surge://"):
+                relative = text.removeprefix("surge://")
+            elif "/Surge XT/" in text:
+                relative = text.split("/Surge XT/", 1)[1]
+            elif not path.is_absolute() and ":" not in text:
+                relative = text
+            else:
+                raise FileNotFoundError(f"Surge patch {role} not found: {declared}")
+            candidate = (base / relative).resolve()
+            if not candidate.is_relative_to(base.resolve()):
+                raise ValueError(f"Unsafe Surge patch path for {role}: {declared}")
+            if not candidate.is_file():
+                raise FileNotFoundError(
+                    f"Missing patch for {role}: {candidate}. Set SEION_SURGE_ROOT "
+                    "to your local Surge XT directory or use a different --kit."
+                )
+        if candidate.suffix.lower() != ".fxp":
+            raise ValueError(f"Surge patch for {role} must be .fxp: {candidate}")
+        resolved[role] = str(candidate)
+    if "patches" in kit:
+        result["patches"] = resolved
+    else:
+        result = resolved
+    return result
 
 def main(argv: list[str] | None = None) -> int:
     argv = argv if argv is not None else sys.argv[1:]

@@ -1,46 +1,55 @@
-# State
+# SEION Music Lab — canonical state (2026-10-13)
 
-## Project Identity
+## Identity
 
-Unknown generic project.
+An offline-first, explainable electronic music composition and production system.
+Python/MIDI engine + versioning; experimental Ardour 9/Surge XT headless render
+connector; optional FL Studio bridge. No proprietary artist sound clones.
 
-## Current Truth
+## Confirmed code in repository
 
-- AMO memory is initialized.
-- Canonical memory lives in `.ai/`.
+- Music schemas, deterministic generation, variation and symbolic SEION scoring.
+- Project 001 reference analysis, v001 legacy MIDI and Ardour experimental bridge.
+- A/B/C 16-bar MIDI prototype generator in app/music/prototype_lab.py (158 BPM).
+- Ardour protection against replacing session folders or existing render outputs.
 
-## Implemented
+## Historically reported, not freshly verified by this GitHub session
 
-- Memory scaffold.
+AMO postflight claimed 63 tests and a non-silent Ardour render on Windows.
+New CI results must be consulted for the current commit. No audition or sound
+approval has occurred in this session.
 
-## In Progress
+## Creative truth for Project 001
 
-- Project-specific scan.
+- The goal is a NEW electronic sonic language, NOT national identity or Latin rave.
+- Source reference approximately 89.1 BPM, harmonic C# minor candidate.
+- The C# minor correlation (0.647) is NOT a calibrated probability.
+- v001 156 BPM / G minor is a rejected sketch, retained for historical comparison.
+- Three v002 hypotheses: groove / trance_bounce / hardcore_hybrid.
+- Do not claim 11 artists have been measured: reference traits remain hypotheses.
+- Start with a heard 16-bar drop, then expand to 32 bars, then full arrangement.
 
 ## Risks
 
-- Project memory needs review.
-## Postflight — 2026-10-13T17:42:33.052872+00:00
+Ardour Windows Lua crashes; plugin state mutation may be version-fragile;
+local preset paths; technical WAV validity does NOT prove good production.
+Publishing a recognizable remix requires documented permissions.
 
-Task: Analyze SEION Music Lab and Ardour integration
+## Next
 
-Summary: Reviewed the synchronized SEION repository and its existing deterministic MIDI pipeline. Confirmed 55 tests pass in .venv, ruff and compileall pass, AMO scan and graph build pass. Current product is an explainable local-first MIDI composition assistant for FL Studio with SQLite preference/project memory; it has no waveform synthesis, audio analysis, stems, voice, or Ardour adapter yet. Ardour should begin as a file-based MIDI/audio handoff with an optional Lua EditorAction layer. AMO remains coding-project memory; SEION remains musical memory.
+Read .ai/tasks.md and docs/project001_review_gate.md.
 
-Outcome: completed
-Changed files: .ai, .amo.yaml, AGENTS.md, .gitignore
-## Postflight — 2026-10-13T18:46:08.681253+00:00
 
-Task: Ardour headless render connector + Project 001
+## Further development — 2026-10-13
 
-Summary: Added connectors/ardour (EXPERIMENTAL): seed session built once in Ardour 9 GUI (6 GM tracks), headless ardour9-lua render_job.lua rewrites region notes and exports master + stems; Python seion_ardour (midi_job, runner, validation, cli). Windows findings: ardour9-lua crashes creating tracks, cannot import MIDI headless, needs ARDOUR_* env vars; renders are not bit-exact (~-38 dB run-to-run). Imported Project 001 (cumbia-de-los-monjes-rave v001, 156 BPM, 160 bars); rendered Drop 1 bars 65-96: master + 6 stems all PASS (non-silent, 51.2 s). Reference MP3 in received/ (git-ignored): 89.1 BPM, F# major (low confidence). User declares full rights except commercial distribution. Ardour workspace: D:\Documents\Music-Ardour.
-
-Outcome: completed
-Changed files: .gitignore, pyproject.toml, connectors/ardour, projects/cumbia-de-los-monjes-rave
-## Postflight — 2026-10-13T19:59:13.715242+00:00
-
-Task: Surge XT sound kits for Ardour headless renders + reference fingerprint
-
-Summary: Installed torch 2.11 cu128 + demucs 4.1 in .venv; app/audio/separation.py and reference_fingerprint.py measured the original: 89.1 BPM, C# minor, loop C#m-B-B-F#/G#m, vocal recites on B, intro chant bars 1-7 without drums. Project target now 158 BPM / C# minor (v001 still 156 / G minor). Surge XT installed (VST3, C:). Seed v2 built headlessly (latin_perc track -> kick, Surge XT on kick/bass/chords/arp/lead); kits/hard_rave_v1.json selects .fxp patches written into VST3 state by surge_state.py. Render guards: 1-bar preroll, master 25 Hz HPF (DC), per-stem activity check, accept teardown crash only after 'done'. drop_1_surge: -14.7 LUFS, 0 clipped samples, all stems active.
-
-Outcome: completed
-Changed files: app/audio, connectors/ardour, projects/cumbia-de-los-monjes-rave, pyproject.toml
+- Local original NumPy preview engine generates master and seven editable-role
+  audio stems for all A/B/C modes (not a DAW mix or commercial master).
+- PCM technical analysis records picos/RMS, spectrum, silences, transients and
+  SHA-256 audio provenance. It does not declare artistic quality.
+- Hash-bound human review enforces ratings for all modes and an explicit
+  selection before 32-bar expansion; no human approval has been fabricated.
+- CLI commands: prototype, preview, analyze-wav, compare-audio, review.
+- CI installs optional preview extras, verifies the end-to-end pipeline and
+  publishes MIDI and synthetic WAV artifacts.
+- Surge kit resolver supports portable paths; legacy hard-rave patch choices
+  remain unapproved and subject to manual sound design in Ardour/Surge.

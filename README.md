@@ -1,9 +1,9 @@
 # SEION Music Lab
 
-**A local-first, AI-assisted electronic music production lab for FL Studio.**
+**A local-first, explainable MIDI composition platform with experimental audio-production connectors.**
 
 SEION Music Lab turns a musical *intention* into **editable, explained** material
-for FL Studio:
+for editable production in a DAW:
 
 ```
 prompt -> plan -> MusicalIdea (JSON) -> MIDI -> SEION score -> explanation -> feedback -> next version
@@ -18,7 +18,7 @@ pattern designer + critic + style archivist that helps you:
 - train your ear,
 - and slowly build your own musical language.
 
-The first version (this MVP) runs **fully offline** with **deterministic** music
+The deterministic core runs **fully offline** with **deterministic** music
 generation — **no LLM API keys required**. LLM providers (OpenAI, Anthropic,
 OpenRouter, Ollama) are wired as optional layers for later.
 
@@ -184,8 +184,84 @@ tests/          pytest suite + fixtures
 
 ## Status & roadmap
 
-This is **Sprint 1**: deterministic generation, scoring, explanation, export.
-Next up: feedback-driven variations, drums/arrangement depth, then Piano Roll
-scripting. See [`docs/roadmap.md`](docs/roadmap.md).
+Core Sprints 1–4 are recorded as complete in the roadmap. Ardour headless
+rendering with Surge XT is **experimental**, while FL Studio remains an
+optional Piano Roll integration. The first song is undergoing creative rebuild:
+its earlier v001 sketch is not approved sound. Read
+[`docs/project001_review_gate.md`](docs/project001_review_gate.md).
+
 
 License: MIT.
+
+
+## Project 001 — three original sound experiments
+
+The experimental remix **La Cumbia de los Monjes** is NOT defined as "Latin
+rave" or national-identity music. The goal is a novel electronic sound informed
+by eleven style references, with measured evidence separated from hypotheses.
+
+Old v001 (156 BPM, G minor) is archived as an **unapproved sketch**.
+
+Generate three independent 16-bar MIDI tests (158 BPM, C# minor candidate):
+
+```powershell
+python -m app.music.prototype_lab --out projects/cumbia-de-los-monjes-rave/versions/v002/generated
+```
+
+Outputs are original MIDI: groove, trance_bounce and hardcore_hybrid modes.
+Every mode has separate editable drums, kick, percussion, bass, chords, arp
+and lead MIDI plus a combined Type-1 MIDI. They are not finished music and
+have not been listened to or accepted.
+
+To render one mode through an existing Ardour 9 seed on your machine:
+
+```powershell
+$env:PYTHONPATH="connectors/ardour/python"
+python -m seion_ardour.cli projects/cumbia-de-los-monjes-rave/versions/v002/generated --prototype groove --name groove_take01 --no-stems
+```
+
+Replace `groove` with `trance_bounce` or `hardcore_hybrid`. Leave
+`--no-stems` out to request stems. The connector requires local Ardour 9,
+a working seed session and compatible Surge XT patches; kit references still
+may use machine-specific paths. Output goes to `versions/v002/renders/` and
+will NOT overwrite a previous take. Do not claim sonic quality from WAV
+integrity alone. See [`docs/project001_review_gate.md`](docs/project001_review_gate.md).
+
+
+## Project 001 — reproducible WAV listening and analysis (preview runtime)
+
+Install the optional local synthesizer (requires NumPy, no network at runtime,
+no external models, no Ardour or plugin patches):
+
+    python -m pip install -e ".[dev,preview]"
+
+**Run in a fresh folder** (all generated folders refuse overwrites):
+
+    seion-music prototype --out projects/cumbia-de-los-monjes-rave/versions/v002/generated
+    seion-music preview --bundle projects/cumbia-de-los-monjes-rave/versions/v002/generated --out projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav
+
+The 3 variants each produce preview.wav and 7 individual WAV stems.
+These are original algorithmic synth textures only, **not** a released remix,
+not high-end sound design, and not a substitute for Ardour/Surge mixing.
+
+Analyze acoustic evidence (no artistic scoring):
+
+    seion-music compare-audio projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav --out projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav/technical_comparison.json
+
+Review after genuinely hearing all three (values below are placeholders; enter
+your actual scores and notes):
+
+    seion-music review init projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav
+    seion-music review rate <preview-dir> groove --groove 4 --low-end 3 --hook 3 --timbre 3 --notes "Actual listening notes"
+    seion-music review rate <preview-dir> trance_bounce --groove 3 --low-end 4 --hook 4 --timbre 3 --notes "Actual listening notes"
+    seion-music review rate <preview-dir> hardcore_hybrid --groove 3 --low-end 3 --hook 2 --timbre 4 --notes "Actual listening notes"
+    seion-music review approve <preview-dir> <selected-mode> --reason "Minimum 15 characters describing actual listening" --heard-all
+
+The approval gate is strictly **approval for further 32-bar development**, not
+permission to publish copyrighted source audio or a mastering certification.
+The project contains no original Grupo G recording or copied hook.
+
+GitHub Actions runs MIDI generation, NumPy audition rendering, PCM analysis
+and unit tests, then provides two downloadable artifacts: editable MIDI and
+synthetic WAV+stems+technical-comparison JSON. The audio is preview quality,
+mono PCM, not a finished master.

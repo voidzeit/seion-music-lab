@@ -11,8 +11,13 @@ from pathlib import Path
 import pytest
 from mido import Message, MetaMessage, MidiFile, MidiTrack, bpm2tempo
 from seion_ardour.midi_job import BarRange, read_notes, slice_notes, split_role, write_job
-from seion_ardour.runner import ArdourError, session_name
-from seion_ardour.surge_state import SURGE_XT_CLASS_ID, apply_kit, build_vstpreset
+from seion_ardour.runner import ArdourError, prepare_session, session_name
+from seion_ardour.surge_state import (
+    SURGE_XT_CLASS_ID,
+    apply_kit,
+    build_vstpreset,
+    resolve_kit_paths,
+)
 from seion_ardour.validation import check_wav, note_coverage
 
 
@@ -122,3 +127,64 @@ def test_session_name_requires_single_state_file(tmp_path):
         session_name(tmp_path)
     (tmp_path / "Untitled-1.ardour").write_text("<Session/>")
     assert session_name(tmp_path) == "Untitled-1"
+
+
+def test_prepare_session_refuses_existing_and_escapes(tmp_path, monkeypatch):
+    from seion_ardour import runner
+    workspace = tmp_path / "workspace"
+    workspace.mkdir()
+    seed = tmp_path / "seed"
+    seed.mkdir()
+    (seed / "s.ardour").write_text("<Session/>", encoding="utf-8")
+    monkeypatch.setattr(runner, "seed_dir", lambda _name: seed)
+    monkeypatch.setenv("SEION_ARDOUR_WORKSPACE", str(workspace))
+    target = workspace / "song" / "first"
+    prepare_session(target)
+    (target / "keep.txt").write_text("do not delete", encoding="utf-8")
+    with pytest.raises(ArdourError, match="already exists"):
+        prepare_session(target)
+    assert (target / "keep.txt").read_text() == "do not delete"
+    with pytest.raises(ArdourError, match="inside workspace"):
+        prepare_session(tmp_path / "outside")
+
+
+def test_slice_notes_includes_notes_spanning_boundary():
+    notes = [(3.5, 1.5, 60, 90, 0), (11.5, 2.0, 62, 80, 0)]
+    assert slice_notes(notes, 4, 12) == [
+        (0, 1.0, 60, 90, 0), (7.5, 0.5, 62, 80, 0)
+    ]
+
+
+def test_bar_range_rejects_negative_inverted_and_invalid():
+    for value in ("0-2", "10-2", "hi-3", "1-2-3"):
+        with pytest.raises(ValueError):
+            BarRange.parse(value)
+
+
+def test_lua_job_rejects_unsafe_path(tmp_path):
+    with pytest.raises(ValueError, match="unsafe"):
+        write_job(tmp_path / "job.lua", tracks={}, bpm=158, length_beats=4,
+                  export_dir=tmp_path / "bad]]path")
+
+
+
+def test_resolve_surges_portable_uri_and_legacy_windows_path(tmp_path):
+    patches = tmp_path / "patches_factory" / "Plucks"
+    patches.mkdir(parents=True)
+    patch = patches / "FM Pluck.fxp"
+    patch.write_bytes(b"placeholder for path resolution only")
+    kit = {"patches": {
+        "arp": "surge://patches_factory/Plucks/FM Pluck.fxp",
+        "lead": "C:/ProgramData/Surge XT/patches_factory/Plucks/FM Pluck.fxp",
+    }, "master_gain_db": -4}
+    resolved = resolve_kit_paths(kit, root=tmp_path)
+    assert resolved["patches"]["arp"] == str(patch.resolve())
+    assert resolved["patches"]["lead"] == str(patch.resolve())
+    assert resolved["master_gain_db"] == -4
+
+
+def test_resolve_surges_fails_closed_for_missing_and_escape(tmp_path):
+    with pytest.raises(FileNotFoundError, match="Missing patch"):
+        resolve_kit_paths({"patches": {"kick": "surge://missing.fxp"}}, root=tmp_path)
+    with pytest.raises(ValueError, match="Unsafe"):
+        resolve_kit_paths({"patches": {"kick": "surge://../outside.fxp"}}, root=tmp_path)

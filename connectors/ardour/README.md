@@ -72,3 +72,27 @@ JSON edit (`--kit other.json`). Findings:
 - Tempo changes / time-signature changes inside a song are not supported yet.
 - The seed also contains an unused `MIDI 1` track from the first GUI attempt; it
   is silenced (no notes) on every render.
+
+
+## Portable Surge XT presets and Project 001 v002
+
+The former hard_rave_v1 kit was a *placeholder*, not an approved sound.
+Its patch URIs now use the format
+surge://patches_factory/Plucks/FM Pluck.fxp rather than absolute C: paths.
+Set SEION_SURGE_ROOT to your real Surge XT data folder, such as:
+
+    $env:SEION_SURGE_ROOT = "C:\ProgramData\Surge XT"
+
+The connector does not download or create factory presets. If a requested
+FXP is missing or outside the configured data folder, rendering fails closed.
+
+For the independent v002 prototypes:
+
+    python -m app.music.prototype_lab --out projects/cumbia-de-los-monjes-rave/versions/v002/generated
+    $env:PYTHONPATH = "connectors/ardour/python"
+    python -m seion_ardour.cli projects/cumbia-de-los-monjes-rave/versions/v002/generated --prototype groove --name groove_take01
+
+Change prototype to trance_bounce or hardcore_hybrid, and specify a new name
+for every take. The Ardour 9/SURGE integration is still Windows-experimental.
+For listenable previews with NO DAW, use app.audio.preview_synth and the
+human review gate; see the repository README.
