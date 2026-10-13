@@ -24,7 +24,7 @@ from seion_ardour.runner import (
     seed_manifest,
     workspace,
 )
-from seion_ardour.surge_state import apply_kit
+from seion_ardour.surge_state import apply_kit, resolve_kit_paths
 from seion_ardour.validation import check_wav, note_coverage
 
 
@@ -89,7 +89,7 @@ def main(argv: list[str] | None = None) -> int:
             tracks = split_role(tracks, new_role, rule["from"], set(rule["notes"]))
 
     kit_file = args.kit or (CONNECTOR_DIR / manifest["kit"] if "kit" in manifest else None)
-    kit = json.loads(Path(kit_file).read_text(encoding="utf-8")) if kit_file else {}
+    kit = resolve_kit_paths(json.loads(Path(kit_file).read_text(encoding="utf-8"))) if kit_file else {}
 
     # v002/generated is an input bundle, not the song version root.
     version_root = version_dir.parent if args.prototype else version_dir
