@@ -27,6 +27,8 @@ dependencies = [
 server = ["fastapi>=0.110", "uvicorn>=0.27"]
 # Optional LLM providers. The MVP runs without any of these.
 llm = ["httpx>=0.27"]
+# Deterministic local WAV auditions (no Ardour or external model required).
+preview = ["numpy>=1.26"]
 # Optional richer MIDI / audio analysis.
 audio = ["pretty_midi>=0.2.10", "numpy>=1.26", "librosa>=0.10", "soundfile>=0.12", "pyloudnorm>=0.1"]
 # Reference source separation (Demucs). Install torch first from the CUDA index:
