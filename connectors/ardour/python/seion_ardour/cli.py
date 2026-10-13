@@ -143,7 +143,7 @@ def main(argv: list[str] | None = None) -> int:
         "seed": seed_name,
         "kit": str(kit_file) if kit_file else None,
         "patches": kit_applied,
-        "bars": [args.bars.first, args.bars.last] if args.bars else [1, idea["bars"]],
+        "bars": [args.bars.first, args.bars.last] if args.bars else [1, total_bars],
         "bpm": bpm,
         "note_counts": {role: len(n) for role, n in tracks.items()},
         "files": reports,
