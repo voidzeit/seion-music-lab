@@ -9,9 +9,9 @@ from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
+from seion_ardour import cli
 
 from app.music.prototype_lab import build_experiments
-from seion_ardour import cli
 
 
 def _wav(path: Path) -> None:
