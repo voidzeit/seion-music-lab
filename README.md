@@ -226,3 +226,42 @@ a working seed session and compatible Surge XT patches; kit references still
 may use machine-specific paths. Output goes to `versions/v002/renders/` and
 will NOT overwrite a previous take. Do not claim sonic quality from WAV
 integrity alone. See [`docs/project001_review_gate.md`](docs/project001_review_gate.md).
+
+
+## Project 001 — reproducible WAV listening and analysis (preview runtime)
+
+Install the optional local synthesizer (requires NumPy, no network at runtime,
+no external models, no Ardour or plugin patches):
+
+    python -m pip install -e ".[dev,preview]"
+
+**Run in a fresh folder** (all generated folders refuse overwrites):
+
+    seion-music prototype --out projects/cumbia-de-los-monjes-rave/versions/v002/generated
+    seion-music preview --bundle projects/cumbia-de-los-monjes-rave/versions/v002/generated --out projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav
+
+The 3 variants each produce preview.wav and 7 individual WAV stems.
+These are original algorithmic synth textures only, **not** a released remix,
+not high-end sound design, and not a substitute for Ardour/Surge mixing.
+
+Analyze acoustic evidence (no artistic scoring):
+
+    seion-music compare-audio projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav --out projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav/technical_comparison.json
+
+Review after genuinely hearing all three (values below are placeholders; enter
+your actual scores and notes):
+
+    seion-music review init projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav
+    seion-music review rate <preview-dir> groove --groove 4 --low-end 3 --hook 3 --timbre 3 --notes "Actual listening notes"
+    seion-music review rate <preview-dir> trance_bounce --groove 3 --low-end 4 --hook 4 --timbre 3 --notes "Actual listening notes"
+    seion-music review rate <preview-dir> hardcore_hybrid --groove 3 --low-end 3 --hook 2 --timbre 4 --notes "Actual listening notes"
+    seion-music review approve <preview-dir> <selected-mode> --reason "Minimum 15 characters describing actual listening" --heard-all
+
+The approval gate is strictly **approval for further 32-bar development**, not
+permission to publish copyrighted source audio or a mastering certification.
+The project contains no original Grupo G recording or copied hook.
+
+GitHub Actions runs MIDI generation, NumPy audition rendering, PCM analysis
+and unit tests, then provides two downloadable artifacts: editable MIDI and
+synthetic WAV+stems+technical-comparison JSON. The audio is preview quality,
+mono PCM, not a finished master.
