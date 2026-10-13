@@ -34,3 +34,15 @@ must be rechecked against the original recording and the selected remix hook.
 
 Eleven measured artist fingerprints, sound-kit listening evaluation, stable
 Windows Ardour end-to-end integration and v002 manifest-to-Ardour adapter.
+
+
+## New evidence requirements
+
+- Three independently synthesized stereo/mono WAV previews and stems must be
+  verified before comparisons (current engine produces mono PCM previews).
+- Technical A/B/C comparison includes hashes and derived energy/spectrum
+  measures; it must not assert sonic quality, genre authenticity or LUFS.
+- A real listener must rate all three on groove/low end/hook/timbre and provide
+  concrete notes and an explicit selection to unlock 32-bar development.
+- Surge preset paths are resolved from SEION_SURGE_ROOT, and missing .fxp
+  files cause a hard error rather than silent substitution.

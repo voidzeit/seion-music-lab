@@ -21,3 +21,15 @@ New current pipeline:
 The preview engine is an original NumPy synthesizer and is NOT Ardour/Surge.
 CI confirms deterministic hashes, WAV integrity, distinct modes, paths and
 technical measurements; **human sound selection remains unverified**.
+
+
+Current GitHub Actions runs in Python 3.12 verify:
+- Core/connector and preview unit tests
+- CLI end-to-end smoke test
+- Ruff lint
+- 3 MIDI A/B/C artifacts
+- 3 synthetic PCM WAV master previews, individual stems
+- Technical WAV A/B/C JSON comparison
+- Human review must remain pending until a real listener rates files
+
+No CI test executes licensed original stems or a local Ardour/Surge installation.

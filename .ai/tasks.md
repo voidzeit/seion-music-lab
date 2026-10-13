@@ -17,7 +17,8 @@
 - [x] Validate bar ranges and include notes crossing crop boundaries.
 - [x] Require Lua export success.
 - [ ] Test Ardour headless on the target Windows machine with actual plugins.
-- [ ] Replace brittle hard-coded preset paths and confirm output integrity.
+- [x] Implement portable Surge XT patch URI resolution (SEION_SURGE_ROOT).
+- [ ] Confirm actual plugin audio on Windows; select new approved synth patches.
 
 ## P1 — Governance
 

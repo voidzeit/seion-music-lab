@@ -33,3 +33,15 @@ No original audio or source-song melody is included.
 Render previews are separated by groove, trance_bounce, hardcore_hybrid.
 One can audition without installing Ardour. Listen and rate all three before
 explicit selection. Technical signal integrity never implies sonic approval.
+
+
+## Complete local audible preview flow
+
+    python -m pip install -e ".[dev,preview]"
+    seion-music prototype --out projects/cumbia-de-los-monjes-rave/versions/v002/generated
+    seion-music preview --bundle projects/cumbia-de-los-monjes-rave/versions/v002/generated --out projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav
+    seion-music compare-audio projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav --out projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav/technical_comparison.json
+    seion-music review init projects/cumbia-de-los-monjes-rave/versions/v002/preview_wav
+
+Listen on real speakers/headphones before rating and approving anything.
+This is NumPy preview synthesis, NOT recorded artist audio or Ardour/Surge.

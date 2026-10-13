@@ -38,3 +38,18 @@ Publishing a recognizable remix requires documented permissions.
 ## Next
 
 Read .ai/tasks.md and docs/project001_review_gate.md.
+
+
+## Further development — 2026-10-13
+
+- Local original NumPy preview engine generates master and seven editable-role
+  audio stems for all A/B/C modes (not a DAW mix or commercial master).
+- PCM technical analysis records picos/RMS, spectrum, silences, transients and
+  SHA-256 audio provenance. It does not declare artistic quality.
+- Hash-bound human review enforces ratings for all modes and an explicit
+  selection before 32-bar expansion; no human approval has been fabricated.
+- CLI commands: prototype, preview, analyze-wav, compare-audio, review.
+- CI installs optional preview extras, verifies the end-to-end pipeline and
+  publishes MIDI and synthetic WAV artifacts.
+- Surge kit resolver supports portable paths; legacy hard-rave patch choices
+  remain unapproved and subject to manual sound design in Ardour/Surge.
