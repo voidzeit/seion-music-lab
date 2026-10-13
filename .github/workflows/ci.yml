@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: python -m pip install -e ".[dev]"
+        run: python -m pip install -e ".[dev,preview]"
       - name: Tests
         run: python -m pytest -q
       - name: Lint
@@ -26,5 +26,14 @@ jobs:
         with:
           name: seion-project001-abc-midi
           path: ${{ runner.temp }}/project001-a-b-c/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Synthesize three editable audition previews
+        run: python -m app.audio.preview_synth --bundle "$RUNNER_TEMP/project001-a-b-c" --out "$RUNNER_TEMP/project001-wav" --sample-rate 16000
+      - name: Upload synthetic WAV auditions and stems
+        uses: actions/upload-artifact@v4
+        with:
+          name: seion-project001-abc-synthetic-wav
+          path: ${{ runner.temp }}/project001-wav/
           retention-days: 14
           if-no-files-found: error
